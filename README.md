@@ -8,7 +8,7 @@
 [![build](https://github.com/remarkablegames/assembly-city/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablegames/assembly-city/actions/workflows/build.yml)
 [![lint](https://github.com/remarkablegames/assembly-city/actions/workflows/lint.yml/badge.svg)](https://github.com/remarkablegames/assembly-city/actions/workflows/lint.yml)
 
-📖 Write visual novels with Ren'Py Template.
+🏛️ Welcome to Assembly City!
 
 Play the game on:
 
@@ -51,16 +51,6 @@ Clone the repository to the `Projects Directory`:
 ```sh
 git clone https://github.com/remarkablegames/assembly-city.git
 cd assembly-city
-```
-
-Rename the project:
-
-```sh
-git grep -l 'Assembly City' | xargs sed -i '' -e 's/Assembly City/My Novel/g'
-```
-
-```sh
-git grep -l 'assembly-city' | xargs sed -i '' -e 's/assembly-city/my-novel/g'
 ```
 
 Replace the assets:
