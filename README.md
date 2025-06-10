@@ -1,18 +1,18 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/remarkablegames/renpy-template/master/game/gui/window_icon.png" alt="Renpy Template">
+  <img src="https://raw.githubusercontent.com/remarkablegames/assembly-city/master/game/gui/window_icon.png" alt="Assembly City">
 </p>
 
-# Renpy Template
+# Assembly City
 
-![release](https://img.shields.io/github/v/release/remarkablegames/renpy-template)
-[![build](https://github.com/remarkablegames/renpy-template/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablegames/renpy-template/actions/workflows/build.yml)
-[![lint](https://github.com/remarkablegames/renpy-template/actions/workflows/lint.yml/badge.svg)](https://github.com/remarkablegames/renpy-template/actions/workflows/lint.yml)
+![release](https://img.shields.io/github/v/release/remarkablegames/assembly-city)
+[![build](https://github.com/remarkablegames/assembly-city/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablegames/assembly-city/actions/workflows/build.yml)
+[![lint](https://github.com/remarkablegames/assembly-city/actions/workflows/lint.yml/badge.svg)](https://github.com/remarkablegames/assembly-city/actions/workflows/lint.yml)
 
 📖 Write visual novels with Ren'Py Template.
 
 Play the game on:
 
-- [remarkablegames](https://remarkablegames.org/renpy-template)
+- [remarkablegames](https://remarkablegames.org/assembly-city)
 
 ## Credits
 
@@ -49,18 +49,18 @@ renpy --version
 Clone the repository to the `Projects Directory`:
 
 ```sh
-git clone https://github.com/remarkablegames/renpy-template.git
-cd renpy-template
+git clone https://github.com/remarkablegames/assembly-city.git
+cd assembly-city
 ```
 
 Rename the project:
 
 ```sh
-git grep -l 'Renpy Template' | xargs sed -i '' -e 's/Renpy Template/My Novel/g'
+git grep -l 'Assembly City' | xargs sed -i '' -e 's/Assembly City/My Novel/g'
 ```
 
 ```sh
-git grep -l 'renpy-template' | xargs sed -i '' -e 's/renpy-template/my-novel/g'
+git grep -l 'assembly-city' | xargs sed -i '' -e 's/assembly-city/my-novel/g'
 ```
 
 Replace the assets:
