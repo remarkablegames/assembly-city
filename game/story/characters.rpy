@@ -1,7 +1,4 @@
-﻿# Declare characters used by this game. The color argument colorizes the
-# name of the character.
-
-define e = Character("Eileen")
+﻿define player = Character("[player_name]", color="#fff")
 
 define athlete = Character("Atlas")
 define baker = Character("Blake")
