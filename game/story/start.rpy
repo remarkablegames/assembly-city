@@ -18,10 +18,6 @@ label open_letter:
     "We need your help in solving a key issue facing our city."
     "We’re looking for a group of people to come together to make recommendations on:"
     "{i}How do we reduce congestion, improve air quality, and enhance public transportation?"
-    "To help us answer this question, you’re invited to attend a Citizens’ Assembly."
-    "The Citizens’ Assembly brings people from all walks of life to discuss and make recommendations on important issues."
-    "There are no easy answers and this is an opportunity to tell us what you think needs to be done."
-    "All we require from you are your views and ideas – you don't need to have any prior knowledge of the issues to take part."
     "We thank you for your interest and look forward to hearing from you."
 
     menu:
