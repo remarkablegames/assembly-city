@@ -18,7 +18,7 @@ Play the game on:
 
 ### Art
 
-- [Tainara-P](https://tainara-p.itch.io/school-visual-novel-backgrounds-free)
+- [Tainara-P](https://tainara-p.itch.io/)
 
 ### Audio
 
