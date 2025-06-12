@@ -18,7 +18,7 @@ Play the game on:
 
 ### Art
 
-- [Uncle Mugen](https://lemmasoft.renai.us/forums/viewtopic.php?t=17302)
+- [Tainara-P](https://tainara-p.itch.io/school-visual-novel-backgrounds-free)
 
 ### Audio
 
