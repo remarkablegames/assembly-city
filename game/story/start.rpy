@@ -1,5 +1,7 @@
 label start:
 
+    scene bg dining room day with fade
+
     "You receive a letter from the “Citizens’ Assembly”..."
 
     menu:
