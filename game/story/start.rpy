@@ -42,3 +42,24 @@ label register_interest:
     $ player_name = renpy.input("My name is...", length=32).strip() or player_name
 
     player "Fingers crossed!"
+
+    jump assembly_outside
+
+label assembly_outside:
+
+    scene bg gate day with fade
+
+    player "I can’t believe I was chosen!"
+    player "I’m feeling a bit nervous..."
+
+    menu:
+        "What should you do?"
+
+        "Enter the assembly":
+            "You take a deep breath and exhale."
+            player "Alright, here I come!"
+            jump end
+
+        "Go home":
+            player "Maybe I sit this one out..."
+            jump end
