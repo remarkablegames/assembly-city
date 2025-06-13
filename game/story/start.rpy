@@ -70,22 +70,22 @@ label assembly_hall:
 
     player "Hmm... which room is it?"
 
-    show expert with dissolve
+    show facilitator with dissolve
 
-    expert "Hey there! Are you here for the Citizens’ Assembly?"
+    facilitator "Hi there! Are you here for the Citizens’ Assembly?"
 
     menu:
         "What should I say?"
 
         "Yep":
-            "Yes I am."
-            expert @ happy "Awesome, let me get you signed up."
+            facilitator @ happy "Awesome, let me get you signed up."
             player "Much appreciated."
-            expert "Here’s your badge. Feel free to grab a seat, we’ll get started soon."
+            facilitator "Here’s your badge. Feel free to grab a seat, we’ll get started soon."
             jump end
 
         "Nah":
+            facilitator concerned "What are you here for?"
             player "Is this the game jam convention?"
-            expert concerned "I think you’re in the wrong place..."
+            facilitator "I think you’re in the wrong place..."
             player "Ah, my bad. Let me check my location."
             jump end
