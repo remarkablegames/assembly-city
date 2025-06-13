@@ -41,4 +41,4 @@ label register_interest:
 
     $ player_name = renpy.input("My name is...", length=32).strip() or player_name
 
-    player "Fingers crosssed!"
+    player "Fingers crossed!"
