@@ -81,7 +81,7 @@ label assembly_hall:
             facilitator @ happy "Awesome, let me get you signed up."
             player "Much appreciated."
             facilitator "Here’s your badge. Feel free to grab a seat, we’ll get started soon."
-            jump end
+            jump assembly_room
 
         "Nah":
             facilitator concerned "What are you here for?"
@@ -89,3 +89,9 @@ label assembly_hall:
             facilitator "I think you’re in the wrong place..."
             player "Ah, my bad. Let me check my location."
             jump end
+
+label assembly_room:
+
+    scene bg refectory day with fade
+
+    player "Which table am I assigned to again?"
