@@ -97,48 +97,120 @@ label assembly1_room:
     facilitator @ concerned "...that the city is overrun by cats."
     facilitator "I’d like to introduce you to our cat expert."
 
-    show facilitator at left
-    with moveinleft
+    show facilitator at left with moveinleft
+    show expert with moveinbottom
 
-    show expert
-    with moveinbottom
+    expert "I’m happy to answer any questions about cats."
 
-    expert "I’m happy to answer any questions you may have about cats."
+    hide expert with moveoutbottom
+    show facilitator at center with moveinright
 
-    hide expert
-    with moveoutbottom
+    facilitator "By the end of this assembly, I’ll be looking forward to your proposal on how to solve this problem."
+    facilitator @ happy "Now let’s learn, deliberate, and decide!"
 
-    show facilitator at center
-    with moveinright
-
-    facilitator "By the end of the day, I’ll be looking forward to your recommendations on how to solve this problem."
-    facilitator @ happy "Now let’s learn, deliberate, and decide with one another!"
-
-    hide facilitator
-    with dissolve
+    hide facilitator with dissolve
 
     jump assembly1_citizens
 
 label assembly1_citizens:
 
-    "You walk towards the two other citizens at this assembly."
+    "You walk towards the two other citizens here."
 
-    show student at left
-    with moveinleft
-
-    show trainer at right
-    with moveinright
-
-    show trainer at opacity(0.5)
+    show student at left with moveinleft
+    show trainer at right with moveinright
 
     player "Hello there! I’m [player_name]."
 
-    student "Nice to meet you. I’m a fourth-year student studying at the nearby city college."
+    show trainer at opacity(0.5)
+    student "Nice to meet you. I’m a fourth-year student studying at a nearby university."
 
     show student at opacity(0.5)
     show trainer at opacity
 
-    trainer "I’m a personal trainer at the local gym."
+    trainer "I’m a personal trainer at a local gym."
 
-    # student = study cats, learn their language, perform research
-    # trainer = train cats into workout buddies, generate electricity
+    hide student with dissolve
+    hide trainer with dissolve
+
+    jump assembly1_talk
+
+label assembly1_talk:
+
+    menu:
+        "What do you want to do?"
+
+        "Talk to Student":
+            jump assembly1_student
+
+        "Talk to Trainer":
+            jump assembly1_trainer
+
+        "Talk to Expert":
+            jump assembly1_expert
+
+        "Vote on a proposal":
+            jump assembly1_vote
+
+label assembly1_student:
+
+    show student at center with dissolve
+
+    menu:
+        "What would you like to talk about?"
+
+        "What’s your idea?":
+            student "We should study cats to learn their language."
+            player "Okay..."
+            student "Then we can communicate with their leader and ask them to migrate elsewhere."
+            player "Interesting..."
+            jump assembly1_student
+
+        "Nevermind":
+            hide student with dissolve
+            jump assembly1_talk
+
+label assembly1_trainer:
+
+    show trainer at center with dissolve
+
+    menu:
+        "What would you like to talk about?"
+
+        "What’s your idea?":
+            trainer "I believe we can train cats into helpful workers of society."
+            player "I see..."
+            trainer "Then we can leverage their strength to produce electricity, agriculture, and other goods."
+            player "Gotcha..."
+            jump assembly1_trainer
+
+        "Nevermind":
+            hide trainer with dissolve
+            jump assembly1_talk
+
+label assembly1_expert:
+
+    show expert at center with dissolve
+
+    menu:
+        "What would you like to ask?"
+
+        "Nevermind":
+            hide expert with dissolve
+            jump assembly1_talk
+
+label assembly1_vote:
+
+    show facilitator with dissolve
+
+    facilitator "Are you ready to vote on a proposal?"
+
+    menu:
+        "Am I ready to vote on a proposal?"
+
+        "Yes":
+            player "Yes I am."
+            jump end
+
+        "No":
+            hide facilitator with dissolve
+            jump assembly1_talk
