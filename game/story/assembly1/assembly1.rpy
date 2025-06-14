@@ -91,10 +91,10 @@ label assembly1_room:
 
     show facilitator with dissolve
 
-    facilitator @ happy "Welcome everybody to today’s Citizens’ Assembly."
+    facilitator @ happy "Welcome to today’s Citizens’ Assembly."
     facilitator "You’re probably curious about today’s issue."
     facilitator "So without further ado, the problem we’ll be talking about is..."
-    facilitator @ concerned "...the city is overrun by cats."
+    facilitator @ concerned "...that the city is overrun by cats."
     facilitator "I’d like to introduce you to our cat expert."
 
     show facilitator at left
@@ -111,4 +111,34 @@ label assembly1_room:
     show facilitator at center
     with moveinright
 
-    facilitator "By the end of the day, I’ll be looking forward to hear your recommendation on how to solve this problem!"
+    facilitator "By the end of the day, I’ll be looking forward to your recommendations on how to solve this problem."
+    facilitator @ happy "Now let’s learn, deliberate, and decide with one another!"
+
+    hide facilitator
+    with dissolve
+
+    jump assembly1_citizens
+
+label assembly1_citizens:
+
+    "You walk towards the two other citizens at this assembly."
+
+    show student at left
+    with moveinleft
+
+    show trainer at right
+    with moveinright
+
+    show trainer at opacity(0.5)
+
+    player "Hello there! I’m [player_name]."
+
+    student "Nice to meet you. I’m a fourth-year student studying at the nearby city college."
+
+    show student at opacity(0.5)
+    show trainer at opacity
+
+    trainer "I’m a personal trainer at the local gym."
+
+    # student = study cats, learn their language, perform research
+    # trainer = train cats into workout buddies, generate electricity
