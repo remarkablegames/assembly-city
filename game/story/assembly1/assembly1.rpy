@@ -15,17 +15,17 @@ label assembly1_outside:
         "Enter the assembly":
             "You take a deep breath and exhale."
             player "Alright, here I come!"
-            jump assembly1_hall
+            jump assembly1_signup
 
         "Go home":
             player "Maybe I sit this one out..."
             jump end
 
-label assembly1_hall:
+label assembly1_signup:
 
     scene bg hall day with fade
 
-    player "Hmm... which room is it?"
+    player "Hmm... where should I go next?"
 
     show facilitator with dissolve
 
@@ -38,7 +38,7 @@ label assembly1_hall:
             facilitator @ happy "Awesome, let me get you signed up."
             player "Much appreciated."
             facilitator "Here’s your badge. Feel free to grab a seat, we’ll get started soon."
-            jump assembly1_room
+            jump assembly1_hall
 
         "Nah":
             facilitator concerned "What are you here for?"
@@ -46,6 +46,44 @@ label assembly1_hall:
             facilitator "I think you’re in the wrong place..."
             player "Ah, my bad. Let me check my location."
             jump end
+
+label assembly1_hall:
+
+    menu:
+        "What should I do?"
+
+        "Enter the room":
+            jump assembly1_room
+
+        "Talk to the facilitator":
+            jump assembly1_facilitator
+
+label assembly1_facilitator:
+
+    menu:
+        "What do I want to ask?"
+
+        "What’s a Citizens’ Assembly?":
+            facilitator @ happy "Great question!"
+            facilitator "A Citizens’ Assembly brings together people from all walks of life to hear evidence, discuss, and make recommendations on important issues."
+            facilitator "Think of it as an innovative democratic tool!"
+            jump assembly1_facilitator
+
+        "What’s the issue?":
+            facilitator "You’ll find out later today!"
+            jump assembly1_facilitator
+
+        "How was I selected?":
+            facilitator "We randomly select from 1,000 addresses within the city who’s a permanent resident over 18 years old."
+            facilitator "And you’re one of the lucky three people selected!"
+            jump assembly1_facilitator
+
+        "What happens after the event?":
+            facilitator "Your ideas and recommendations will be presented to the local government."
+            jump assembly1_facilitator
+
+        "Nevermind":
+            jump assembly1_hall
 
 label assembly1_room:
 

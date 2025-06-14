@@ -11,16 +11,14 @@ label start:
             jump open_letter
 
         "Discard it":
-            "Eh... it’s probably junk mail or a scam."
+            "Eh... it’s probably a junk mail or scam."
             jump end
 
 label open_letter:
 
     "Dear Householder,"
-    "We need your help in solving a key issue facing our city."
-    "We’re looking for a group of people to come together to make recommendations on:"
-    "{i}How do we reduce congestion, improve air quality, and enhance public transportation?"
-    "We thank you for your interest and look forward to hearing from you."
+    "We need your help in solving a pressing issue facing our city."
+    "We look forward to hearing from you."
 
     menu:
         "What should you do?"
