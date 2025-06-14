@@ -89,4 +89,26 @@ label assembly1_room:
 
     scene bg refectory day with fade
 
-    player "Which table was I assigned to again?"
+    show facilitator with dissolve
+
+    facilitator @ happy "Welcome everybody to today’s Citizens’ Assembly."
+    facilitator "You’re probably curious about today’s issue."
+    facilitator "So without further ado, the problem we’ll be talking about is..."
+    facilitator @ concerned "...the city is overrun by cats."
+    facilitator "I’d like to introduce you to our cat expert."
+
+    show facilitator at left
+    with moveinleft
+
+    show expert
+    with moveinbottom
+
+    expert "I’m happy to answer any questions you may have about cats."
+
+    hide expert
+    with moveoutbottom
+
+    show facilitator at center
+    with moveinright
+
+    facilitator "By the end of the day, I’ll be looking forward to hear your recommendation on how to solve this problem!"
