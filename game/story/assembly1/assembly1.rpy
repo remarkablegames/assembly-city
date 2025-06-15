@@ -160,9 +160,20 @@ label assembly1_student:
 
         "What’s your idea?":
             student "We should study cats to learn their language."
-            player "Okay..."
             student "Then we can communicate with their leader and ask them to migrate elsewhere."
-            player "Interesting..."
+            student "What do you think?"
+
+            menu:
+                "I think..."
+
+                "It’s a good idea":
+                    student "Great!"
+
+                "It’s a bad idea":
+                    student "Do you have any evidence why it’s a bad idea?"
+                    player "Not really..."
+                    student "Then I’ll stick with my idea."
+
             jump assembly1_student
 
         "Nevermind":
