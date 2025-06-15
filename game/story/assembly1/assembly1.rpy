@@ -189,9 +189,20 @@ label assembly1_trainer:
 
         "What’s your idea?":
             trainer "I believe we can train cats into helpful workers of society."
-            player "I see..."
             trainer "Then we can leverage their strength to produce electricity, agriculture, and other goods."
-            player "Gotcha..."
+            trainer "What do you think?"
+
+            menu:
+                "I think..."
+
+                "It’s a good idea":
+                    trainer "Excellent!"
+
+                "It’s a bad idea":
+                    trainer "Do you have any proof why it’s a bad idea?"
+                    player "Not really..."
+                    trainer "Then I’ll stick with my idea."
+
             jump assembly1_trainer
 
         "Nevermind":
