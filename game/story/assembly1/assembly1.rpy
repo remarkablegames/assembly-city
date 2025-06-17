@@ -93,8 +93,8 @@ label assembly1_room:
 
     facilitator @ happy "Welcome to today’s Citizens’ Assembly."
     facilitator "You’re probably curious about today’s issue."
-    facilitator "So without further ado, the problem we’ll be talking about is..."
-    facilitator @ concerned "...that the city is overrun by cats."
+    facilitator "So without further ado, the problem we’ll be discussing is..."
+    facilitator @ concerned "...the city is overrun by cats."
     facilitator "I’d like to introduce you to our cat expert."
 
     show facilitator at left with moveinleft
@@ -105,7 +105,7 @@ label assembly1_room:
     hide expert with moveoutbottom
     show facilitator at center with moveinright
 
-    facilitator "By the end of this assembly, I’ll be looking forward to your proposal on how to solve this problem."
+    facilitator "By the end of this assembly, I’m looking to hear your solution on this problem."
     facilitator @ happy "Now let’s learn, deliberate, and decide!"
 
     hide facilitator with dissolve
@@ -114,20 +114,26 @@ label assembly1_room:
 
 label assembly1_citizens:
 
-    "You walk towards the two other citizens here."
-
     show student at left with moveinleft
     show trainer at right with moveinright
 
-    player "Hello there! I’m [player_name]."
-
     show trainer at opacity(0.5)
-    student "Nice to meet you. I’m a fourth-year student studying at a nearby university."
+    student "Hey there! I’m a fourth-year student at the nearby university."
 
     show student at opacity(0.5)
     show trainer at opacity
 
-    trainer "I’m a personal trainer at a local gym."
+    trainer "I’m a personal trainer at a gym."
+
+    # player talks to citizens + expert to gather info
+    # player selects an idea
+    # each citizen has a bar that shows how convinced they are
+    # each dialogue option can +/- citizen influence
+    # if player reaches a certain persuasion score, citizen will vote for that idea
+    # player wins if idea wins majority vote and player wins $$
+    # player can buy items to improve persuasion
+    # player has hp/mp (mental power?) where bad arguments will hurt player
+    # deckbuilding?
 
     hide student with dissolve
     hide trainer with dissolve
