@@ -37,7 +37,45 @@ label assembly1_signup:
         "Yep":
             facilitator @ happy "Awesome, let me get you signed up."
             player "Much appreciated."
-            facilitator "Here’s your badge. Feel free to grab a seat, we’ll get started soon."
+            facilitator "Here’s your badge."
+
+            facilitator "Before we head in, let me quickly explain how the assembly works."
+
+            facilitator "Your goal is to convince other participants to support your proposal."
+
+            facilitator @ happy "You’ll use cards — each one represents an argument, a resource, or a tactic."
+
+            # Show pictures of cards here
+
+            facilitator "Each card affects your performance in two ways..."
+            facilitator "Agreement measures how much someone supports your idea."
+            facilitator "Energy represents your mental stamina. Playing cards uses energy. If you run out, you can’t keep persuading."
+
+            facilitator @ happy "Each turn gives you 3 actions. Most cards cost 1 to 3 actions to play."
+
+            facilitator "You’ll have a limited number of turns to build consensus."
+
+            facilitator "If a majority of participants support your idea, you win the vote and earn money."
+
+            facilitator @ happy "You can spend money at the shop between assemblies to upgrade or buy new cards."
+
+            facilitator @ happy "Here are some example cards you'll come across..."
+
+            # Show pictures of cards here
+            # Maybe decrease amount of cards? TBD
+            
+            facilitator "Discuss: +2 Agreement, -1 Energy"
+            facilitator "Discuss: +2 Agreement, -1 Energy"
+            facilitator "Coffee: +1 Energy, +1 Agreement"
+            facilitator "Fatigue: -1 to -3 Energy"
+            facilitator "Soda: +2 Energy"
+            facilitator "Insults: +3 Energy, -1 Agreement for everyone"
+            facilitator "Doubt: -1 to -3 Agreement"
+            facilitator "Pizza: +1 Energy for everyone"
+            facilitator "Expert: +3 Agreement for all, -2 Energy for everyone"
+
+            facilitator @ happy "Alright, go ahead and grab a seat. We’ll get started soon!"
+
             jump assembly1_hall
 
         "Nah":
@@ -93,7 +131,6 @@ label assembly1_room:
 
     facilitator @ happy "Welcome to today’s Citizens’ Assembly."
     facilitator "You’re probably curious about today’s issue."
-    facilitator "So without further ado, the problem we’ll be discussing is..."
     facilitator @ concerned "...the city is overrun by cats."
     facilitator "I’d like to introduce you to our cat expert."
 
