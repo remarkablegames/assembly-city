@@ -1,4 +1,4 @@
-﻿################################################################################
+################################################################################
 ## Initialization
 ################################################################################
 
@@ -27,6 +27,7 @@ style gui_text:
 
 style button:
     properties gui.button_properties("button")
+    hover_sound "ui/mouserelease1.ogg"
     activate_sound "ui/click_003.ogg"
 
 style button_text is gui_text:
@@ -211,7 +212,24 @@ screen choice(items):
 
     vbox:
         for i in items:
-            textbutton i.caption action i.action
+            $ caption = i.caption.split("{tooltip}")
+            if len(caption) == 1:
+                textbutton i.caption action i.action
+            else:
+                textbutton caption[0]:
+                    action i.action
+                    tooltip caption[1]
+
+    $ tooltip = GetTooltip()
+
+    if tooltip:
+        # Position the tooltip relative to the captured focus
+        nearrect:
+            focus "tooltip"
+            prefer_top True
+            frame:
+                background "#000"
+                text tooltip color "#fff"
 
 
 style choice_vbox is vbox
@@ -227,6 +245,8 @@ style choice_vbox:
 
 style choice_button is default:
     properties gui.button_properties("choice_button")
+    hover_sound "ui/mouserelease1.ogg"
+    activate_sound "ui/rollover2.ogg"
 
 style choice_button_text is default:
     properties gui.text_properties("choice_button")
