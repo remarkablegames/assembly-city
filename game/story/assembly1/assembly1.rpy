@@ -19,8 +19,8 @@ label assembly1_signup:
     menu:
         "What should I say?"
 
-        "Yep":
-            facilitator @ happy "Awesome, let me get you signed up."
+        "Yes. Am I in the right place?":
+            facilitator @ happy "Yes, this is it. Let me get you signed up."
             player "Much appreciated."
 
             show facilitator at left with moveinleft
@@ -94,7 +94,7 @@ label assembly1_signup:
 
             jump assembly1_hall
 
-        "Nah":
+        "No, I’m not here for that.":
             facilitator concerned "What are you here for?"
             player "Is this the game jam convention?"
             facilitator "I think you’re in the wrong place..."
