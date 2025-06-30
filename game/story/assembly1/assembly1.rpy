@@ -22,7 +22,16 @@ label assembly1_signup:
         "Yep":
             facilitator @ happy "Awesome, let me get you signed up."
             player "Much appreciated."
-            facilitator "Here’s your badge."
+
+            show facilitator at left with moveinleft
+
+            show badge at badge_size with dissolve
+
+            facilitator @ happy "Here’s your badge."
+
+            hide badge with dissolve
+
+            show facilitator at center with moveinright
 
             facilitator "Before we head in, let me quickly explain how the assembly works."
 
