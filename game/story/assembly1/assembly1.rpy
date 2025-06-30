@@ -45,8 +45,6 @@ label assembly1_signup:
 
             facilitator @ happy "You’ll use cards — each one represents an argument, a resource, or a tactic."
 
-            # Show pictures of cards here
-
             facilitator "Each card affects your performance in two ways..."
             facilitator "Agreement measures how much someone supports your idea."
             facilitator "Energy represents your mental stamina. Playing cards uses energy. If you run out, you can’t keep persuading."
@@ -61,18 +59,42 @@ label assembly1_signup:
 
             facilitator @ happy "Here are some example cards you'll come across..."
 
-            # Show pictures of cards here
-            # Maybe decrease amount of cards? TBD
-            
+            show facilitator at left with moveinleft
+
+            show discuss_card at card_size with dissolve
+
             facilitator "Discuss: +2 Agreement, -1 Energy"
-            facilitator "Discuss: +2 Agreement, -1 Energy"
+            hide discuss_card with dissolve
+
+            show coffee_card at card_size with dissolve
             facilitator "Coffee: +1 Energy, +1 Agreement"
+            hide coffee_card with dissolve
+
+            show fatigue_card at card_size with dissolve
             facilitator "Fatigue: -1 to -3 Energy"
+            hide fatigue_card with dissolve
+
+            show soda_card at card_size with dissolve
             facilitator "Soda: +2 Energy"
-            facilitator "Insults: +3 Energy, -1 Agreement for everyone"
+            hide soda_card with dissolve
+
+            show overconfidence_card at card_size with dissolve
+            facilitator "Overconfidence: +3 Energy, -1 Agreement for everyone"
+            hide overconfidence_card with dissolve
+
+            show doubt_card at card_size with dissolve
             facilitator "Doubt: -1 to -3 Agreement"
+            hide doubt_card with dissolve
+
+            show pizza_card at card_size with dissolve
             facilitator "Pizza: +1 Energy for everyone"
+            hide pizza_card with dissolve
+
+            show expert_card at card_size with dissolve
             facilitator "Expert: +3 Agreement for all, -2 Energy for everyone"
+            hide expert_card with dissolve
+
+            show facilitator at center with moveinright
 
             facilitator @ happy "Alright, go ahead and grab a seat. We’ll get started soon!"
 
