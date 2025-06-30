@@ -91,7 +91,7 @@ label assembly1_signup:
             hide pizza_card with dissolve
 
             show expert_card at card_size with dissolve
-            facilitator "Expert: +3 Agreement for all, -2 Energy for everyone"
+            facilitator "Expert: Both +3 Agreement and -2 Energy for everyone"
             hide expert_card with dissolve
 
             show facilitator at center with moveinright
