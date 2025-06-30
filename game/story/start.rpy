@@ -4,16 +4,6 @@ label start:
 
     "You receive a letter from the “Citizens’ Assembly”..."
 
-    menu:
-        "What should you do?"
-
-        "Open it":
-            jump open_letter
-
-        "Discard it":
-            "Eh... it’s probably a junk mail or scam."
-            jump end
-
 label open_letter:
 
     "Dear Householder,"
