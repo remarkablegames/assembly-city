@@ -1,25 +1,10 @@
 label assembly1:
 
-    jump assembly1_outside
+    jump assembly1_signup
 
-label assembly1_outside:
 
-    scene bg gate day with fade
+#Removed assembly1_outside from script because it was a bit boring and tedious
 
-    player "I can’t believe I was chosen!"
-    player "I’m feeling a bit nervous..."
-
-    menu:
-        "What should you do?"
-
-        "Enter the assembly":
-            "You take a deep breath and exhale."
-            player "Alright, here I come!"
-            jump assembly1_signup
-
-        "Go home":
-            player "Maybe I sit this one out..."
-            jump end
 
 label assembly1_signup:
 

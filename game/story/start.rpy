@@ -24,9 +24,7 @@ label open_letter:
         "What should you do?"
 
         "Register interest":
-            "Hmm... I don’t have plans this weekend and I can meet new people."
-            "Plus, they cover the meals and transportation costs."
-            "I’ll apply and see if I get chosen – I've got nothing to lose."
+            "Interesting. I may actually have a say in what happens."
             jump register_interest
 
         "Ignore the opportunity":
