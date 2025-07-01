@@ -8,6 +8,9 @@ init python:
             self.name = kwargs.get("name", "")
             self.image = kwargs.get("image", self.name.replace(" ", "_").lower())
 
+            self.width = 550
+            self.height = 650
+
             self.health = self.health_max = kwargs.get("health", 0)
             self.energy = self.energy_max = kwargs.get("energy", 0)
 

@@ -49,14 +49,14 @@ init python:
 
 screen player_hand:
     draggroup:
-        for citizen_index, citizen in enumerate(citizens.citizens):
+        for citizen in citizens.citizens:
             if citizen.health > 0:
                 drag:
                     drag_name citizen.id
                     draggable False
                     droppable True
                     focus_mask True
-                    idle_child f"battle {citizen.image}"
+                    idle_child Solid((0, 0, 0, 0), xsize=citizen.width, ysize=citizen.height)
                     selected_idle_child f"battle {citizen.image} hover"
                     xalign citizens.xalign_position(citizen) yalign Citizens.YALIGN
 
