@@ -2,7 +2,7 @@ init python:
     from uuid import uuid4
 
     class Card:
-        IMAGE = "cards/blank.png"
+        IMAGE = "cards/soda_card.png"
         WIDTH = 250
         HEIGHT = 350
         OFFSET = 80
@@ -23,7 +23,7 @@ init python:
             """
             Description label.
             """
-            label = "{color=[colors.black]}"
+            label = "{color=[colors.white]}{size=*0.85}"
             for action, data in self.action.items():
                 label += action.capitalize()
                 label += f" {data['value']}"

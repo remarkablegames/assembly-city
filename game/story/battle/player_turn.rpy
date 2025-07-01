@@ -56,8 +56,8 @@ screen player_hand:
                     draggable False
                     droppable True
                     focus_mask True
-                    idle_child f"citizens/{citizen.image}.png"
-                    selected_idle_child f"citizens/{citizen.image} hover.png"
+                    idle_child f"drop {citizen.image}"
+                    selected_idle_child f"drop {citizen.image} hover"
                     xalign citizens.xalign_position(citizen) yalign Citizens.YALIGN
 
         for card in deck.hand:
@@ -72,7 +72,7 @@ screen player_hand:
                 frame:
                     background Frame(Card.IMAGE)
                     label card.label_cost()
-                    label card.label_description() xalign 0.5 yalign 0.5
+                    label card.label_description() xalign 0.5 yalign 0.85
                     xysize Card.WIDTH, Card.HEIGHT
 
                     mousearea:

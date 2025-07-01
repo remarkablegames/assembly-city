@@ -2,15 +2,7 @@
     "0": {
         "citizens": [
             {
-                "name": "Swimmer",
-                "health": 5,
-                "attack_min": 1,
-                "attack_max": 2,
-                "heal_min": 1,
-                "heal_max": 2
-            },
-            {
-                "name": "Teacher",
+                "name": "Lawyer",
                 "health": 5,
                 "attack_min": 1,
                 "attack_max": 2,
