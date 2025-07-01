@@ -1,6 +1,5 @@
 label start:
 
-    jump battle
     scene bg dining room day with fade
 
     "You receive a letter from the “Citizens’ Assembly”..."
