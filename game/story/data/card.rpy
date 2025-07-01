@@ -129,7 +129,7 @@ init python:
                         if is_citizen:
                             if attack.get("stun"):
                                 target.stunned = True
-                            renpy.show(target.image, at_list=[shake])
+                            renpy.show(f"battle {target.image}", at_list=[shake])
                         else:
                             renpy.invoke_in_thread(renpy.with_statement, vpunch)
 

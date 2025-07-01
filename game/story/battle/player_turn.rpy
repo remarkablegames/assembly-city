@@ -56,8 +56,8 @@ screen player_hand:
                     draggable False
                     droppable True
                     focus_mask True
-                    idle_child f"drop {citizen.image}"
-                    selected_idle_child f"drop {citizen.image} hover"
+                    idle_child f"battle {citizen.image}"
+                    selected_idle_child f"battle {citizen.image} hover"
                     xalign citizens.xalign_position(citizen) yalign Citizens.YALIGN
 
         for card in deck.hand:

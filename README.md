@@ -18,7 +18,9 @@ Play the game on:
 
 ### Art
 
+- [Sraye](https://sraye.itch.io/mature-male-character-sprites)
 - [Tainara-P](https://tainara-p.itch.io/)
+- [sutemo](https://sutemo.itch.io/)
 
 ### Audio
 
