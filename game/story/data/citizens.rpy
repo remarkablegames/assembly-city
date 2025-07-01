@@ -1,0 +1,122 @@
+init python:
+    class Citizens:
+        # Names that are mapped to their respective images.
+        # E.g., name "Student 1" -> image "student_1".
+        NAMES = ["Swimmer", "Teacher"]
+        YALIGN = 0.2
+
+        def __init__(self) -> None:
+            self.citizens = []
+            self.count = 0
+
+        def generate(self) -> None:
+            """
+            Generate citizens.
+            """
+            citizens = levels.get(wins)["citizens"]
+
+            self.citizens = []
+            self.count = len(citizens)
+
+            for citizen in citizens:
+                self.citizens.append(RPGCharacter(**citizen))
+
+        def show(self) -> None:
+            """
+            Show citizens.
+            """
+            self.generate()
+
+            for index, citizen in enumerate(self.citizens):
+                xalign_position = self.xalign_position(citizen)
+                renpy.show_screen(f"citizen_stats{index}", citizen, xalign_position)
+                renpy.show(citizen.image, at_list=[position(xalign_position)])
+
+            renpy.with_statement(dissolve)
+
+        def hide(self, citizen: RPGCharacter) -> None:
+            """
+            Hide citizen.
+            """
+            renpy.hide(citizen.image)
+            renpy.with_statement(dissolve)
+            renpy.hide_screen(f"citizen_stats{citizens.index(citizen)}")
+
+        def get(self, citizen_id: str) -> RPGCharacter:
+            """
+            Get citizen by id.
+            """
+            return find_by_id(self.citizens, citizen_id)
+
+        def index(self, citizen: RPGCharacter) -> int:
+            """
+            Get citizen index.
+            """
+            return self.citizens.index(citizen)
+
+        def dead(self) -> bool:
+            """
+            Whether citizens are dead.
+            """
+            return not bool(len(self.alive()))
+
+        def xalign_position(self, citizen: RPGCharacter) -> float:
+            """
+            Get citizen xalign position.
+            """
+            count = self.count
+            index = self.citizens.index(citizen)
+
+            xalign_position = 0.5
+
+            if count == 2:
+                if index == 0:
+                    xalign_position = 0.25
+                elif index == 1:
+                    xalign_position = 0.75
+            elif count == 3:
+                if index == 0:
+                    xalign_position = 0.1
+                elif index == 2:
+                    xalign_position = 0.9
+
+            return xalign_position
+
+        def alive(self) -> list:
+            """
+            Get alive citizens.
+            """
+            return list(filter(lambda citizen: citizen.health > 0, self.citizens))
+
+        def turn(self) -> None:
+            """
+            Citizen turn.
+            """
+            for citizen in self.alive():
+                if citizen.stunned:
+                    narrator(f"{citizen.name} is stunned!")
+                    continue
+
+                citizen.turn_rng()
+
+                if citizen.heal_value and citizen.health < citizen.health_max and renpy.random.random() < 0.5:
+                    narrator(f"{citizen.name} healed {citizen.heal_value} health.")
+                    citizen.heal(citizen.heal_value)
+                else:
+                    narrator(f"{citizen.name} dealt {citizen.attack} damage to you.")
+                    renpy.with_statement(vpunch)
+                    player.character.hurt(citizen.attack)
+
+                    if player.character.health <= 0:
+                        renpy.jump("lose")
+
+            self.end_turn()
+
+        def end_turn(self) -> None:
+            """
+            Citizen end turn.
+            """
+            for citizen in self.alive():
+                citizen.stunned = False
+
+default citizens = Citizens()
