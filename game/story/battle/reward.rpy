@@ -13,15 +13,8 @@ label reward:
             $ money -= wins // 2
             jump reward
 
-        "Increase max health by {color=[colors.heal]}+[reward_heal * 2]" if renpy.random.random() < 0.5:
-            $ player.character.health += reward_heal * 2
-            $ player.character.health_max += reward_heal * 2
-
         "Increase max moves by {color=[colors.moves]}+1" if renpy.random.random() < 0.1:
-            $ player.character.moves_max += 1
-
-        "Recover all health" if player.character.health < player.character.health_max:
-            $ player.character.health = player.character.health_max
+            $ Player.moves_max += 1
 
         "Pass":
             pass

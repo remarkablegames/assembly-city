@@ -95,17 +95,17 @@ init python:
             """
             Use card.
             """
-            if player.character.moves < self.cost:
+            if Player.moves < self.cost:
                 return
 
             deck.discard_card(self)
 
-            player.character.moves -= self.cost
+            Player.moves -= self.cost
 
             moves = self.action.get("moves")
             if moves:
                 renpy.sound.queue("sound/powerup.ogg")
-                player.character.moves += moves["value"]
+                Player.moves += moves["value"]
 
             energy = self.action.get("energy")
             if energy:

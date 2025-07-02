@@ -1,7 +1,7 @@
 init python:
     from uuid import uuid4
 
-    class RPGCharacter():
+    class Citizen():
         def __init__(self, **kwargs) -> None:
             self.id = str(uuid4())
 

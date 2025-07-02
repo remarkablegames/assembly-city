@@ -19,7 +19,7 @@ init python:
             self.count = len(citizens)
 
             for citizen in citizens:
-                self.citizens.append(RPGCharacter(**citizen))
+                self.citizens.append(Citizen(**citizen))
 
         def show(self) -> None:
             """
@@ -34,7 +34,7 @@ init python:
 
             renpy.with_statement(dissolve)
 
-        def hide(self, citizen: RPGCharacter) -> None:
+        def hide(self, citizen: Citizen) -> None:
             """
             Hide citizen.
             """
@@ -42,13 +42,13 @@ init python:
             renpy.with_statement(dissolve)
             renpy.hide_screen(f"citizen_stats{citizens.index(citizen)}")
 
-        def get(self, citizen_id: str) -> RPGCharacter:
+        def get(self, citizen_id: str) -> Citizen:
             """
             Get citizen by id.
             """
             return find_by_id(self.citizens, citizen_id)
 
-        def index(self, citizen: RPGCharacter) -> int:
+        def index(self, citizen: Citizen) -> int:
             """
             Get citizen index.
             """
@@ -60,7 +60,7 @@ init python:
             """
             return not bool(len(self.alive()))
 
-        def xalign_position(self, citizen: RPGCharacter) -> float:
+        def xalign_position(self, citizen: Citizen) -> float:
             """
             Get citizen xalign position.
             """
@@ -102,13 +102,6 @@ init python:
                 if citizen.heal_value and citizen.health < citizen.health_max and renpy.random.random() < 0.5:
                     narrator(f"{citizen.name} healed {citizen.heal_value} health.")
                     citizen.heal(citizen.heal_value)
-                else:
-                    narrator(f"{citizen.name} dealt {citizen.attack} damage to you.")
-                    renpy.with_statement(vpunch)
-                    player.character.hurt(citizen.attack)
-
-                    if player.character.health <= 0:
-                        renpy.jump("lose")
 
             self.end_turn()
 

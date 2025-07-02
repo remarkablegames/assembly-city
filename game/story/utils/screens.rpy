@@ -15,9 +15,7 @@ screen player_stats:
 
         frame:
             vbox:
-                use stat("Health", player.character.health, player.character.health_max)
-                null height 15
-                use stat("Moves", player.character.moves, player.character.moves_max)
+                use stat("Moves", Player.moves, Player.moves_max)
                 null height 15
                 text "Money: $[money]"
 
@@ -27,7 +25,7 @@ screen player_end_turn:
         xalign 1.0 yalign 1.0
 
         textbutton "End Turn":
-            action Function(player.character.end_turn)
+            action Function(Player.end_turn)
 
 screen citizen_stats0(citizen, xalign_position = 0.5):
     frame:

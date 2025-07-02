@@ -16,9 +16,6 @@ label player_hand:
     if citizens.dead():
         jump win
 
-    elif player.character.health <= 0:
-        jump lose
-
     call screen player_hand
 
 init python:
@@ -32,9 +29,7 @@ init python:
             return
 
         character_id = drop.drag_name
-        if player.character.id == character_id:
-            card.use(player.character)
-        elif character_id:
+        if character_id:
             citizen = citizens.get(character_id)
             card.use(citizen)
 
@@ -78,14 +73,3 @@ screen player_hand:
                     mousearea:
                         area (0, 0, Card.OFFSET, Card.HEIGHT)
                         hovered Function(onhovered, draggable)
-
-        drag:
-            drag_name player.character.id
-            draggable False
-            droppable True
-            selected_idle_child Solid((255, 255, 255, 100), xsize=312, ysize=235)
-            yalign 1.0
-
-            frame:
-                background Solid((0, 0, 0, 0))
-                xysize 312, 235
