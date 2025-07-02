@@ -17,7 +17,7 @@ screen player_stats:
             vbox:
                 use stat("Health", player.character.health, player.character.health_max)
                 null height 15
-                use stat("Energy", player.character.energy, player.character.energy_max)
+                use stat("Moves", player.character.moves, player.character.moves_max)
                 null height 15
                 text "Money: $[money]"
 

@@ -43,7 +43,7 @@ label assembly1_signup:
             facilitator "Agreement measures how much someone supports your idea."
             facilitator "Energy represents your mental stamina. Playing cards uses energy. If you run out, you can’t keep persuading."
 
-            facilitator @ happy "Each turn gives you 3 actions. Most cards cost 1 to 3 actions to play."
+            facilitator @ happy "Each turn gives you 3 moves. Most cards cost 1 to 3 moves to play."
 
             facilitator "You’ll have a limited number of turns to build consensus."
 

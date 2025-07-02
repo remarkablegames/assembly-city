@@ -13,5 +13,5 @@ init python:
 
     player.character = Player(
         health=15,
-        energy=3,
+        moves=3,
     )

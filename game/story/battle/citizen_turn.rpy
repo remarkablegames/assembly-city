@@ -1,6 +1,6 @@
 label citizen_turn:
 
     $ citizens.turn()
-    $ player.character.energy = player.character.energy_max
+    $ player.character.moves = player.character.moves_max
 
     jump player_turn

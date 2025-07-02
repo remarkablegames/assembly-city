@@ -91,22 +91,26 @@ init python:
             """
             return self.get_xpos(), self.get_ypos()
 
-        def use(self, target) -> None:
+        def use(self, citizen) -> None:
             """
             Use card.
             """
-            if player.character.energy < self.cost:
+            if player.character.moves < self.cost:
                 return
 
             deck.discard_card(self)
 
-            player.character.energy -= self.cost
-            is_citizen = target != player.character
+            player.character.moves -= self.cost
+
+            moves = self.action.get("moves")
+            if moves:
+                renpy.sound.queue("sound/powerup.ogg")
+                player.character.moves += moves["value"]
 
             energy = self.action.get("energy")
             if energy:
                 renpy.sound.queue("sound/powerup.ogg")
-                player.character.energy += energy["value"]
+                citizen.energy += energy["value"]
 
             draw = self.action.get("draw")
             if draw:
@@ -115,23 +119,16 @@ init python:
             heal = self.action.get("heal")
             if heal:
                 for _ in range(heal.get("times", 1)):
-                    target.heal(heal["value"])
+                    citizen.heal(heal["value"])
 
             attack = self.action.get("attack")
             if attack:
                 for _ in range(attack.get("times", 1)):
-                    if is_citizen and attack.get("all"):
-                        targets = citizens.alive()
-                    else:
-                        targets = [target]
-                    for target in targets:
-                        target.hurt(attack["value"])
-                        if is_citizen:
-                            if attack.get("stun"):
-                                target.stunned = True
-                            renpy.show(f"battle {target.image}", at_list=[shake])
-                        else:
-                            renpy.invoke_in_thread(renpy.with_statement, vpunch)
+                    for citizen in citizens.alive() if attack.get("all") else [citizen]:
+                        citizen.hurt(attack["value"])
+                        if attack.get("stun"):
+                            citizen.stunned = True
+                        renpy.show(f"battle {citizen.image}", at_list=[shake])
 
         @staticmethod
         def generate(count=1) -> list:

@@ -6,13 +6,14 @@ init python:
             self.id = str(uuid4())
 
             self.name = kwargs.get("name", "")
-            self.image = kwargs.get("image", self.name.replace(" ", "_").lower())
+            self.image = kwargs.get("image", self.name.lower())
 
             self.width = 550
             self.height = 650
 
-            self.health = self.health_max = kwargs.get("health", 0)
             self.energy = self.energy_max = kwargs.get("energy", 0)
+            self.health = self.health_max = kwargs.get("health", 0)
+            self.moves = self.moves_max = kwargs.get("moves", 0)
 
             self.attack = 0
             self.attack_min = kwargs.get("attack_min", 0)

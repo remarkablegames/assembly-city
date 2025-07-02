@@ -1,5 +1,6 @@
 init python:
     class Colors:
+        moves = "#add8e6"
         attack = "#ee4b2b"
         black = "#000"
         energy = "#add8e6"
