@@ -9,12 +9,10 @@ init python:
             self.citizens = []
             self.count = 0
 
-        def generate(self) -> None:
+        def generate(self, citizens: list) -> None:
             """
             Generate citizens.
             """
-            citizens = levels.get(wins)["citizens"]
-
             self.citizens = []
             self.count = len(citizens)
 
@@ -25,8 +23,6 @@ init python:
             """
             Show citizens.
             """
-            self.generate()
-
             for index, citizen in enumerate(self.citizens):
                 xalign_position = self.xalign_position(citizen)
                 renpy.show_screen(f"citizen_stats{index}", citizen, xalign_position)

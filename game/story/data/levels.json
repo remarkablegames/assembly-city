@@ -1,5 +1,6 @@
 {
     "0": {
+        "turns": 5,
         "citizens": [
             {
                 "name": "Lawyer",

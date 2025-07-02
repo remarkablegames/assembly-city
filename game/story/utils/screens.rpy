@@ -17,13 +17,13 @@ screen player_stats:
             vbox:
                 use stat("Moves", Player.moves, Player.moves_max)
                 null height 15
+                use stat("Turns", Player.turns, Player.turns_max)
+                null height 15
                 text "Money: $[money]"
 
 screen player_end_turn:
     frame:
-        padding (10, 10)
-        xalign 1.0 yalign 1.0
-
+        padding (10, 10) xalign 1.0 yalign 1.0
         textbutton "End Turn":
             action Function(Player.end_turn)
 
