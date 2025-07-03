@@ -9,8 +9,5 @@ label battle:
     show screen player_stats
 
     $ Level.start()
-    $ citizens.show()
-    $ Player.moves = Player.moves_max
-    $ deck.shuffle()
 
     jump player_turn

@@ -9,11 +9,9 @@ default wins = 0
 
 label win:
 
-    $ battle = False
-
     hide screen player_end_turn
 
-    "You won the battle!"
+    "You were able to reach a consensus!"
 
     $ wins += 1
     $ interest = ceil(money * 0.4)

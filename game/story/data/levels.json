@@ -1,10 +1,12 @@
 {
     "0": {
-        "turns": 5,
+        "turns": 3,
+        "consensus": 10,
         "citizens": [
             {
                 "name": "Lawyer",
-                "energy": 5,
+                "consensus": 0,
+                "energy": 0,
                 "attack_min": 1,
                 "attack_max": 2,
                 "heal_min": 1,

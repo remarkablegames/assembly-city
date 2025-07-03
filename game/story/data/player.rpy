@@ -10,7 +10,7 @@ init python:
             """
             End player turn.
             """
+            Player.turns -= 1
             deck.discard_hand()
             renpy.hide_screen("player_end_turn")
             renpy.jump("citizen_turn")
-            Player.turns -= 1

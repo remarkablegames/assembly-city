@@ -1,5 +1,9 @@
 label player_turn:
 
+    if Player.turns <= 0:
+        $ battle = False
+        $ Level.end()
+
     $ deck.draw_cards()
 
     show screen player_end_turn

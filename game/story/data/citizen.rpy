@@ -11,9 +11,8 @@ init python:
             self.width = 550
             self.height = 650
 
+            self.consensus = self.consensus_max = kwargs.get("consensus", 0)
             self.energy = self.energy_max = kwargs.get("energy", 0)
-            self.energy = self.energy_max = kwargs.get("energy", 0)
-            self.moves = self.moves_max = kwargs.get("moves", 0)
 
             self.attack = 0
             self.attack_min = kwargs.get("attack_min", 0)
