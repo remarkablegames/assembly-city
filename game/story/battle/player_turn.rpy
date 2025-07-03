@@ -8,14 +8,6 @@ label player_turn:
 
 label player_hand:
 
-    python:
-        for citizen in citizens.citizens:
-            if renpy.showing(citizen.image) and citizen.energy <= 0:
-                citizens.hide(citizen)
-
-    if citizens.dead():
-        jump win
-
     call screen player_hand
 
 init python:
@@ -45,15 +37,14 @@ init python:
 screen player_hand:
     draggroup:
         for citizen in citizens.citizens:
-            if citizen.energy > 0:
-                drag:
-                    drag_name citizen.id
-                    draggable False
-                    droppable True
-                    focus_mask True
-                    idle_child Solid((0, 0, 0, 0), xsize=citizen.width, ysize=citizen.height)
-                    selected_idle_child f"battle {citizen.image} hover"
-                    xalign citizens.xalign_position(citizen) yalign Citizens.YALIGN
+            drag:
+                drag_name citizen.id
+                draggable False
+                droppable True
+                focus_mask True
+                idle_child Solid((0, 0, 0, 0), xsize=citizen.width, ysize=citizen.height)
+                selected_idle_child f"battle {citizen.image} hover"
+                xalign citizens.xalign_position(citizen) yalign Citizens.YALIGN
 
         for card in deck.hand:
             drag:

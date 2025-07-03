@@ -124,7 +124,7 @@ init python:
             attack = self.action.get("attack")
             if attack:
                 for _ in range(attack.get("times", 1)):
-                    for citizen in citizens.alive() if attack.get("all") else [citizen]:
+                    for citizen in citizens.citizens if attack.get("all") else [citizen]:
                         citizen.hurt(attack["value"])
                         if attack.get("stun"):
                             citizen.stunned = True

@@ -50,12 +50,6 @@ init python:
             """
             return self.citizens.index(citizen)
 
-        def dead(self) -> bool:
-            """
-            Whether citizens are dead.
-            """
-            return not bool(len(self.alive()))
-
         def xalign_position(self, citizen: Citizen) -> float:
             """
             Get citizen xalign position.
@@ -78,17 +72,11 @@ init python:
 
             return xalign_position
 
-        def alive(self) -> list:
-            """
-            Get alive citizens.
-            """
-            return list(filter(lambda citizen: citizen.energy > 0, self.citizens))
-
         def turn(self) -> None:
             """
             Citizen turn.
             """
-            for citizen in self.alive():
+            for citizen in self.citizens:
                 if citizen.stunned:
                     narrator(f"{citizen.name} is stunned!")
                     continue
@@ -105,7 +93,7 @@ init python:
             """
             Citizen end turn.
             """
-            for citizen in self.alive():
+            for citizen in self.citizens:
                 citizen.stunned = False
 
 default citizens = Citizens()
