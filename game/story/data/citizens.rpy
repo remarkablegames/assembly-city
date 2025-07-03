@@ -83,9 +83,13 @@ init python:
 
                 citizen.turn_rng()
 
-                if citizen.heal_value and citizen.energy < citizen.energy_max and renpy.random.random() < 0.5:
-                    narrator(f"{citizen.name} healed {citizen.heal_value} energy.")
-                    citizen.heal(citizen.heal_value)
+                if citizen.energy > 0 and renpy.random.random() < 0.5:
+                    narrator(f"{citizen.name} lost 1 energy.")
+                    citizen.energize(-1)
+
+                if citizen.consensus > 0 and renpy.random.random() < 0.5:
+                    narrator(f"{citizen.name} lost 1 consensus.")
+                    citizen.consense(-1)
 
             self.end_turn()
 

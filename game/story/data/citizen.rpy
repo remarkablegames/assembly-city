@@ -11,17 +11,11 @@ init python:
             self.width = 550
             self.height = 650
 
-            self.consensus = self.consensus_max = kwargs.get("consensus", 0)
-            self.energy = self.energy_max = kwargs.get("energy", 0)
+            self.energy = kwargs.get("energy", 0)
+            self.energy_max = kwargs.get("energy_max", 0)
 
-            self.attack = 0
-            self.attack_min = kwargs.get("attack_min", 0)
-            self.attack_max = kwargs.get("attack_max", 0)
-            self.attack_multiplier = kwargs.get("attack_multiplier", 1)
-
-            self.heal_value = 0
-            self.heal_min = kwargs.get("heal_min", 0)
-            self.heal_max = kwargs.get("heal_max", 0)
+            self.consensus = kwargs.get("consensus", 0)
+            self.consensus_max = kwargs.get("consensus_max", 0)
 
             self.stunned = False
 
@@ -29,22 +23,21 @@ init python:
             """
             Generate random numbers for turn.
             """
-            self.attack = round(renpy.random.randint(self.attack_min, self.attack_max) * self.attack_multiplier)
-            self.heal_value = renpy.random.randint(self.heal_min, self.heal_max)
+            pass
 
-        def hurt(self, value: int) -> None:
+        def consense(self, value: int) -> None:
             """
-            Attack character.
+            Update consensus.
             """
             renpy.sound.queue("sound/punch.ogg", relative_volume=0.5)
-            self.energy -= value
+            self.consensus += value
 
-        def heal(self, value: int, overheal=False) -> None:
+        def energize(self, value: int, over_energize=False) -> None:
             """
-            Heal character.
+            Update energy.
             """
             renpy.sound.queue("sound/potion.ogg", relative_volume=0.5)
-            if not overheal and self.energy + value >= self.energy_max:
+            if not over_energize and self.energy + value >= self.energy_max:
                 self.energy = self.energy_max
             else:
                 self.energy += value

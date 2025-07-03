@@ -16,9 +16,9 @@ screen player_stats:
         frame:
             vbox:
                 use stat("Moves", Player.moves, Player.moves_max)
-                null height 15
+                null height 10
                 use stat("Turns", Player.turns, Player.turns_max)
-                null height 15
+                null height 10
                 text "Money: $[money]"
 
 screen player_end_turn:
@@ -27,22 +27,28 @@ screen player_end_turn:
         textbutton "End Turn":
             action Function(Player.end_turn)
 
-screen citizen_stats0(citizen, xalign_position = 0.5):
+screen citizen_stats0(citizen, xalign_position=0.5):
     frame:
         xalign xalign_position
         vbox:
+            use stat("Consensus", citizen.consensus, citizen.consensus_max)
+            null height 10
             use stat("Energy", citizen.energy, citizen.energy_max)
 
-screen citizen_stats1(citizen, xalign_position = 0.5):
+screen citizen_stats1(citizen, xalign_position=0.5):
     frame:
         xalign xalign_position
         vbox:
+            use stat("Consensus", citizen.consensus, citizen.consensus_max)
+            null height 10
             use stat("Energy", citizen.energy, citizen.energy_max)
 
-screen citizen_stats2(citizen, xalign_position = 0.5):
+screen citizen_stats2(citizen, xalign_position=0.5):
     frame:
         xalign xalign_position
         vbox:
+            use stat("Consensus", citizen.consensus, citizen.consensus_max)
+            null height 10
             use stat("Energy", citizen.energy, citizen.energy_max)
 
 screen draw_pile:

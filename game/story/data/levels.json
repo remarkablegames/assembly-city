@@ -1,16 +1,14 @@
 {
     "0": {
-        "turns": 3,
-        "consensus": 10,
+        "player_turns": 3,
+        "consensus_goal": 8,
         "citizens": [
             {
                 "name": "Lawyer",
                 "consensus": 0,
+                "consensus_max": 10,
                 "energy": 0,
-                "attack_min": 1,
-                "attack_max": 2,
-                "heal_min": 1,
-                "heal_max": 2
+                "energy_max": 5
             }
         ]
     }

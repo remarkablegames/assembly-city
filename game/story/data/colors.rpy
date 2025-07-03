@@ -1,10 +1,9 @@
 init python:
     class Colors:
-        moves = "#add8e6"
-        attack = "#ee4b2b"
         black = "#000"
+        consensus = "#ee4b2b"
         energy = "#add8e6"
-        heal = "#af0"
+        moves = "#add8e6"
         white = "#fff"
 
 default colors = Colors()

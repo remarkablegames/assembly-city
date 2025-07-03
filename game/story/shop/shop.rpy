@@ -19,11 +19,10 @@ label shop:
                 config.menu_include_disabled = False
                 upgrade_card_type = renpy.random.choice(
                     ["all"] * 1 +
-                    ["attack"] * 6 +
+                    ["consensus"] * 6 +
                     ["cost"] * 1 +
                     ["draw"] * 3 +
                     ["energy"] * 3 +
-                    ["heal"] * 3 +
                     ["stun"] * 1 +
                     ["times"] * 1 +
                     []

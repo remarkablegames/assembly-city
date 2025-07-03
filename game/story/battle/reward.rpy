@@ -3,9 +3,6 @@ label reward:
     if not rewards:
         jump shop
 
-    $ reward_attack = renpy.random.randint(1, 2 + wins // 2)
-    $ reward_heal = renpy.random.randint(1, 3 + wins // 2)
-
     menu:
         "Claim your reward (remaining: [rewards]):"
 

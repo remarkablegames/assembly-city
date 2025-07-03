@@ -2,15 +2,13 @@ init python:
     class Deck:
         def __init__(self) -> None:
             self.cards = [
-                Card(action={"attack": {"value": 3, "all": 1}}, cost=2),
-                Card(action={"attack": {"value": 3, "stun": 1}}, cost=2),
-                Card(action={"attack": {"value": 3}}, cost=1),
-                Card(action={"attack": {"value": 6}, "draw": {"value": 1}}, cost=2),
+                Card(action={"consensus": {"value": 3, "all": 1}}, cost=2),
+                Card(action={"consensus": {"value": 3, "stun": 1}}, cost=2),
+                Card(action={"consensus": {"value": 3}}, cost=1),
+                Card(action={"consensus": {"value": 6}, "draw": {"value": 1}}, cost=2),
                 Card(action={"draw": {"value": 2}}, cost=1),
-                Card(action={"energy": {"value": 1}}, cost=0),
-                Card(action={"energy": {"value": 2}}, cost=1),
-                Card(action={"heal": {"value": 3, "times": 2}}, cost=2),
-                Card(action={"heal": {"value": 3}}, cost=1),
+                Card(action={"energy": {"value": 1}}, cost=1),
+                Card(action={"energy": {"value": 2, "times": 2}}, cost=1),
             ]
 
             self.draw_pile = []
@@ -31,11 +29,11 @@ init python:
             renpy.random.shuffle(copy)
 
             if upgrade_card_type in ["all", "stun"]:
-                copy = list(filter(lambda card: card.action.get("attack") and not card.action["attack"].get(upgrade_card_type), copy))
+                copy = list(filter(lambda card: card.action.get("consensus") and not card.action["consensus"].get(upgrade_card_type), copy))
             elif upgrade_card_type == "cost":
                 copy = list(filter(lambda card: card.cost > 0, copy))
             elif upgrade_card_type == "times":
-                copy = list(filter(lambda card: card.action.get("attack") or card.action.get("heal"), copy))
+                copy = list(filter(lambda card: card.action.get("consensus") or card.action.get("energy"), copy))
             else:
                 copy = list(filter(lambda card: card.action.get(upgrade_card_type), copy))
 

@@ -57,11 +57,11 @@ init python:
             Upgrade card.
             """
             if action in ["all", "stun"]:
-                self.action["attack"][action] = 1
+                self.action["consensus"][action] = 1
             elif action == "cost" and self.cost > 0:
                 self.cost -= 1
             elif action == "times":
-                action = self.action.get("attack") if self.action.get("attack") else self.action.get("heal")
+                action = self.action.get("consensus") if self.action.get("consensus") else self.action.get("energy")
                 action["times"] = action.get("times", 1)
                 action["times"] += 1
             else:
@@ -102,31 +102,28 @@ init python:
 
             Player.moves -= self.cost
 
-            moves = self.action.get("moves")
-            if moves:
-                renpy.sound.queue("sound/powerup.ogg")
-                Player.moves += moves["value"]
+            draw = self.action.get("draw")
+            if draw:
+                for _ in range(draw.get("times", 1)):
+                    deck.draw_cards(draw["value"])
 
             energy = self.action.get("energy")
             if energy:
-                renpy.sound.queue("sound/powerup.ogg")
-                citizen.energy += energy["value"]
+                for _ in range(energy.get("times", 1)):
+                    citizen.energize(energy["value"])
 
-            draw = self.action.get("draw")
-            if draw:
-                deck.draw_cards(draw["value"])
+            moves = self.action.get("moves")
+            if moves:
+                for _ in range(moves.get("times", 1)):
+                    renpy.sound.queue("sound/powerup.ogg")
+                    Player.moves += moves["value"]
 
-            heal = self.action.get("heal")
-            if heal:
-                for _ in range(heal.get("times", 1)):
-                    citizen.heal(heal["value"])
-
-            attack = self.action.get("attack")
-            if attack:
-                for _ in range(attack.get("times", 1)):
-                    for citizen in citizens.citizens if attack.get("all") else [citizen]:
-                        citizen.hurt(attack["value"])
-                        if attack.get("stun"):
+            consensus = self.action.get("consensus")
+            if consensus:
+                for _ in range(consensus.get("times", 1)):
+                    for citizen in citizens.citizens if consensus.get("all") else [citizen]:
+                        citizen.consense(consensus["value"])
+                        if consensus.get("stun"):
                             citizen.stunned = True
                         renpy.show(f"battle {citizen.image}", at_list=[shake])
 
@@ -141,7 +138,7 @@ init python:
                 card = Card(
                     cost=renpy.random.randint(1, 3),
                     action={
-                        renpy.random.choice(["attack", "draw", "energy", "heal"]): {
+                        renpy.random.choice(["consensus", "draw", "energy"]): {
                             "value": renpy.random.randint(1, 6)
                         },
                     },

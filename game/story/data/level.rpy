@@ -23,7 +23,7 @@ init python:
             """
             data = Level.data()
 
-            Player.turns = Player.turns_max = data["turns"]
+            Player.turns = Player.turns_max = data["player_turns"]
             Player.moves = Player.moves_max
 
             citizens.generate(data["citizens"])
@@ -39,7 +39,7 @@ init python:
             data = Level.data()
 
             consensus = sum(list(map(lambda citizen: citizen.consensus, citizens.citizens)))
-            if consensus >= data["consensus"]:
+            if consensus >= data["consensus_goal"]:
                 renpy.jump("win")
             else:
                 renpy.jump("lose")
