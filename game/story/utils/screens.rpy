@@ -31,19 +31,19 @@ screen citizen_stats0(citizen, xalign_position = 0.5):
     frame:
         xalign xalign_position
         vbox:
-            use stat("Health", citizen.health, citizen.health_max)
+            use stat("Energy", citizen.energy, citizen.energy_max)
 
 screen citizen_stats1(citizen, xalign_position = 0.5):
     frame:
         xalign xalign_position
         vbox:
-            use stat("Health", citizen.health, citizen.health_max)
+            use stat("Energy", citizen.energy, citizen.energy_max)
 
 screen citizen_stats2(citizen, xalign_position = 0.5):
     frame:
         xalign xalign_position
         vbox:
-            use stat("Health", citizen.health, citizen.health_max)
+            use stat("Energy", citizen.energy, citizen.energy_max)
 
 screen draw_pile:
 

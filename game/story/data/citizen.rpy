@@ -12,7 +12,7 @@ init python:
             self.height = 650
 
             self.energy = self.energy_max = kwargs.get("energy", 0)
-            self.health = self.health_max = kwargs.get("health", 0)
+            self.energy = self.energy_max = kwargs.get("energy", 0)
             self.moves = self.moves_max = kwargs.get("moves", 0)
 
             self.attack = 0
@@ -38,14 +38,14 @@ init python:
             Attack character.
             """
             renpy.sound.queue("sound/punch.ogg", relative_volume=0.5)
-            self.health -= value
+            self.energy -= value
 
         def heal(self, value: int, overheal=False) -> None:
             """
             Heal character.
             """
             renpy.sound.queue("sound/potion.ogg", relative_volume=0.5)
-            if not overheal and self.health + value >= self.health_max:
-                self.health = self.health_max
+            if not overheal and self.energy + value >= self.energy_max:
+                self.energy = self.energy_max
             else:
-                self.health += value
+                self.energy += value

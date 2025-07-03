@@ -10,7 +10,7 @@ label player_hand:
 
     python:
         for citizen in citizens.citizens:
-            if renpy.showing(citizen.image) and citizen.health <= 0:
+            if renpy.showing(citizen.image) and citizen.energy <= 0:
                 citizens.hide(citizen)
 
     if citizens.dead():
@@ -45,7 +45,7 @@ init python:
 screen player_hand:
     draggroup:
         for citizen in citizens.citizens:
-            if citizen.health > 0:
+            if citizen.energy > 0:
                 drag:
                     drag_name citizen.id
                     draggable False

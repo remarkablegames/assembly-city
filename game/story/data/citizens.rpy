@@ -82,7 +82,7 @@ init python:
             """
             Get alive citizens.
             """
-            return list(filter(lambda citizen: citizen.health > 0, self.citizens))
+            return list(filter(lambda citizen: citizen.energy > 0, self.citizens))
 
         def turn(self) -> None:
             """
@@ -95,8 +95,8 @@ init python:
 
                 citizen.turn_rng()
 
-                if citizen.heal_value and citizen.health < citizen.health_max and renpy.random.random() < 0.5:
-                    narrator(f"{citizen.name} healed {citizen.heal_value} health.")
+                if citizen.heal_value and citizen.energy < citizen.energy_max and renpy.random.random() < 0.5:
+                    narrator(f"{citizen.name} healed {citizen.heal_value} energy.")
                     citizen.heal(citizen.heal_value)
 
             self.end_turn()
