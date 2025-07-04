@@ -102,6 +102,10 @@ init python:
             if Player.moves < self.cost:
                 return
 
+            energy = self.action.get("energy")
+            if energy and citizen.energy + energy["value"] < 0:
+                return
+
             deck.discard_card(self)
 
             Player.moves -= self.cost
@@ -111,7 +115,6 @@ init python:
                 for _ in range(draw.get("times", 1)):
                     deck.draw_cards(draw["value"])
 
-            energy = self.action.get("energy")
             if energy:
                 for _ in range(energy.get("times", 1)):
                     citizen.energize(energy["value"])
