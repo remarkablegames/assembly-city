@@ -7,12 +7,10 @@ screen stat(name, current, max):
 screen player_stats:
     vbox:
         yalign 1.0
-
         frame:
             padding (10, 10)
             textbutton f"{'View Draw Pile' if battle else 'View Deck'}":
                 action Show("draw_pile")
-
         frame:
             vbox:
                 use stat("Moves", Player.moves, Player.moves_max)
@@ -34,6 +32,11 @@ screen citizen_stats0(citizen, xalign_position=0.5):
             use stat("Consensus", citizen.consensus, citizen.consensus_max)
             null height 10
             use stat("Energy", citizen.energy, citizen.energy_max)
+    frame:
+        padding (180, 10)
+        xalign xalign_position
+        yalign 0.65
+        text "[citizen.name]"
 
 screen citizen_stats1(citizen, xalign_position=0.5):
     frame:
@@ -42,6 +45,11 @@ screen citizen_stats1(citizen, xalign_position=0.5):
             use stat("Consensus", citizen.consensus, citizen.consensus_max)
             null height 10
             use stat("Energy", citizen.energy, citizen.energy_max)
+    frame:
+        padding (180, 10)
+        xalign xalign_position
+        yalign 0.65
+        text "[citizen.name]"
 
 screen citizen_stats2(citizen, xalign_position=0.5):
     frame:
@@ -50,6 +58,11 @@ screen citizen_stats2(citizen, xalign_position=0.5):
             use stat("Consensus", citizen.consensus, citizen.consensus_max)
             null height 10
             use stat("Energy", citizen.energy, citizen.energy_max)
+    frame:
+        padding (180, 10)
+        xalign xalign_position
+        yalign 0.65
+        text "[citizen.name]"
 
 screen draw_pile:
 
