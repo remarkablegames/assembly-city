@@ -25,19 +25,20 @@ init python:
             """
             pass
 
-        def consense(self, value: int) -> None:
+        def consense(self, value: int, over=False) -> None:
             """
             Update consensus.
             """
             renpy.sound.queue("sound/punch.ogg", relative_volume=0.5)
             self.consensus += value
+            if not over and self.consensus > self.consensus_max:
+                self.consensus = self.consensus_max
 
-        def energize(self, value: int, over_energize=False) -> None:
+        def energize(self, value: int, over=False) -> None:
             """
             Update energy.
             """
             renpy.sound.queue("sound/potion.ogg", relative_volume=0.5)
-            if not over_energize and self.energy + value >= self.energy_max:
+            self.energy += value
+            if not over and self.energy > self.energy_max:
                 self.energy = self.energy_max
-            else:
-                self.energy += value
