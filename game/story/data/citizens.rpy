@@ -82,7 +82,7 @@ init python:
                     continue
 
                 action = citizen.actions.pop(0)
-                narrator(action["narrator"])
+                narrator(action["say"])
 
                 energy = action.get("energy")
                 if energy:

@@ -11,14 +11,14 @@
                 "energy_max": 5,
                 "actions": [
                     {
-                        "narrator": "Lawyer is thinking..."
+                        "say": "Lawyer is thinking..."
                     },
                     {
-                        "narrator": "Lawyer is tired. Lawyer loses 1 energy.",
+                        "say": "Lawyer is tired. Lawyer loses 1 energy.",
                         "energy": -1
                     },
                     {
-                        "narrator": "Lawyer disagrees. Lawyer loses 1 consensus.",
+                        "say": "Lawyer disagrees. Lawyer loses 1 consensus.",
                         "consensus": -1
                     }
                 ]
