@@ -62,7 +62,7 @@ screen player_hand:
                 frame:
                     background Frame(card.image)
                     label card.label_cost()
-                    label card.label_description() xalign 0.5 yalign 0.85
+                    label card.label_description() xalign 0.5 ypos 250
                     xysize card.width, card.height
 
                     mousearea:

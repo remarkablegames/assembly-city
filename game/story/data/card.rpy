@@ -2,7 +2,6 @@ init python:
     from uuid import uuid4
 
     class Card:
-        image = "cards/soda_card.png"
         width = 250
         height = 350
         offset = 80
@@ -12,6 +11,7 @@ init python:
             self.cost = kwargs.get("cost", 0)
             self.action = kwargs.get("action", {})
             self.value = kwargs.get("value", 0)
+            self.image = f"cards/{kwargs.get('image')}.png"
 
         def label_cost(self) -> str:
             """
@@ -26,7 +26,11 @@ init python:
             label = "{color=[colors.white]}{size=*0.85}"
             for action, data in self.action.items():
                 label += action.capitalize()
-                label += f" {data['value']}"
+                value = data["value"]
+                if value > 0:
+                    label += f" +{value}"
+                else:
+                    label += f" {value}"
                 if data.get("times", 1) > 1:
                     label += f" ×{data.get('times')}"
                 if data.get("stun"):
