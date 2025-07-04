@@ -83,10 +83,10 @@ screen draw_pile:
 
                 for card in deck.draw_pile if battle else deck.cards:
                     frame:
-                        background Frame(Card.IMAGE)
+                        background Frame(card.image)
                         label card.label_cost()
                         label card.label_description() xalign 0.5 yalign 0.5
-                        xysize Card.WIDTH, Card.HEIGHT
+                        xysize card.width, card.height
 
         null height 50
 

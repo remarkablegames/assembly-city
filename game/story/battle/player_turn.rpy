@@ -60,11 +60,11 @@ screen player_hand:
                 pos card.get_pos()
 
                 frame:
-                    background Frame(Card.IMAGE)
+                    background Frame(card.image)
                     label card.label_cost()
                     label card.label_description() xalign 0.5 yalign 0.85
-                    xysize Card.WIDTH, Card.HEIGHT
+                    xysize card.width, card.height
 
                     mousearea:
-                        area (0, 0, Card.OFFSET, Card.HEIGHT)
+                        area (0, 0, card.offset, card.height)
                         hovered Function(onhovered, draggable)

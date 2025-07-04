@@ -67,10 +67,10 @@ screen add_card:
                     action [Function(deck.cards.append, card), Jump("shop")]
 
                     frame:
-                        background Frame(Card.IMAGE)
+                        background Frame(card.image)
                         label card.label_cost()
                         label card.label_description() xalign 0.5 yalign 0.5
-                        xysize Card.WIDTH, Card.HEIGHT
+                        xysize card.width, card.height
 
         null height 25
 
@@ -99,10 +99,10 @@ screen upgrade_card:
                     action [Function(card.upgrade, upgrade_card_type, upgrade_card_value), Jump("shop")]
 
                     frame:
-                        background Frame(Card.IMAGE)
+                        background Frame(card.image)
                         label card.label_cost()
                         label card.label_description() xalign 0.5 yalign 0.5
-                        xysize Card.WIDTH, Card.HEIGHT
+                        xysize card.width, card.height
 
         null height 25
 
@@ -131,10 +131,10 @@ screen remove_card:
                         action [Function(deck.cards.remove, card), Jump("shop")]
 
                         frame:
-                            background Frame(Card.IMAGE)
+                            background Frame(card.image)
                             label card.label_cost()
                             label card.label_description() xalign 0.5 yalign 0.5
-                            xysize Card.WIDTH, Card.HEIGHT
+                            xysize card.width, card.height
 
         null height 50
 

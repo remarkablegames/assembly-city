@@ -2,10 +2,10 @@ init python:
     from uuid import uuid4
 
     class Card:
-        IMAGE = "cards/soda_card.png"
-        WIDTH = 250
-        HEIGHT = 350
-        OFFSET = 80
+        image = "cards/soda_card.png"
+        width = 250
+        height = 350
+        offset = 80
 
         def __init__(self, **kwargs) -> None:
             self.id = str(uuid4())
@@ -75,15 +75,15 @@ init python:
             Calculate x-position.
             """
             x = config.screen_width / 2
-            x -= (self.WIDTH + self.OFFSET * (len(deck.hand) - 1)) / 2
-            x += deck.hand.index(self) * self.OFFSET
+            x -= (self.width + self.offset * (len(deck.hand) - 1)) / 2
+            x += deck.hand.index(self) * self.offset
             return int(x)
 
         def get_ypos(self) -> int:
             """
             Calculate y-position.
             """
-            return config.screen_height - self.HEIGHT
+            return config.screen_height - self.height
 
         def get_pos(self) -> int:
             """
