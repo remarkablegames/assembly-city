@@ -6,7 +6,7 @@ init python:
             self.id = str(uuid4())
 
             self.name = kwargs.get("name", "")
-            self.image = kwargs.get("image", self.name.lower())
+            self.id = kwargs.get("id", self.name.lower())
 
             self.width = 550
             self.height = 650

@@ -125,7 +125,7 @@ init python:
                         citizen.consense(consensus["value"])
                         if consensus.get("stun"):
                             citizen.stunned = True
-                        renpy.show(f"battle {citizen.image}", at_list=[shake])
+                        renpy.show(f"battle {citizen.id}", at_list=[shake])
 
         @staticmethod
         def generate(count=1) -> list:
