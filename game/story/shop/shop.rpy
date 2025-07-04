@@ -45,6 +45,7 @@ label shop:
 
         "Battle":
             $ config.menu_include_disabled = False
+            $ Level.next()
             jump battle
 
 screen add_card:

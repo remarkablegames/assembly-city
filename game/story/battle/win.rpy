@@ -22,9 +22,7 @@ label win:
 
     if wins % 3 == 1:
         $ rewards += 1
-
         jump reward
 
     else:
-
         jump shop
