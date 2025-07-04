@@ -2,10 +2,10 @@ init python:
     class Deck:
         def __init__(self) -> None:
             self.cards = [
-                Card(image="expert", cost=2, action={"consensus": {"value": 3, "all": 1}}),
-                Card(image="overconfidence", cost=2, action={"consensus": {"value": 3, "stun": 1}}),
-                Card(image="discuss", cost=1, action={"consensus": {"value": 3}}),
-                Card(image="discuss", cost=2, action={"consensus": {"value": 6}, "draw": {"value": 1}}),
+                Card(image="expert", cost=2, action={"consensus": {"value": 3, "all": 1}, "energy": {"value": -2, "all": 1}}),
+                Card(image="overconfidence", cost=2, action={"consensus": {"value": 3, "stun": 1}, "energy": {"value": -3}}),
+                Card(image="discuss", cost=1, action={"consensus": {"value": 3}, "energy": {"value": -2}}),
+                Card(image="discuss", cost=2, action={"consensus": {"value": 6}, "energy": {"value": -3}, "draw": {"value": 1}}),
                 Card(image="coffee", cost=1, action={"draw": {"value": 2}}),
                 Card(image="soda", cost=1, action={"energy": {"value": 1}}),
                 Card(image="pizza", cost=1, action={"energy": {"value": 2, "times": 2}}),
