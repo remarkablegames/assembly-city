@@ -81,15 +81,18 @@ init python:
                     narrator(f"{citizen.name} is stunned!")
                     continue
 
-                citizen.turn_rng()
+                action = citizen.actions.pop(0)
+                narrator(action["narrator"])
 
-                if citizen.energy > 0 and renpy.random.random() < 0.5:
-                    narrator(f"{citizen.name} lost 1 energy.")
-                    citizen.energize(-1)
+                energy = action.get("energy")
+                if energy:
+                    citizen.energize(energy)
 
-                if citizen.consensus > 0 and renpy.random.random() < 0.5:
-                    narrator(f"{citizen.name} lost 1 consensus.")
-                    citizen.consense(-1)
+                consensus = action.get("consensus")
+                if consensus:
+                    citizen.consense(consensus)
+
+                citizen.actions.append(action)
 
             self.end_turn()
 

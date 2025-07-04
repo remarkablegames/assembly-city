@@ -17,28 +17,28 @@ init python:
             self.consensus = kwargs.get("consensus", 0)
             self.consensus_max = kwargs.get("consensus_max", 0)
 
+            self.actions = kwargs.get("actions", [])
+
             self.stunned = False
 
-        def turn_rng(self) -> None:
-            """
-            Generate random numbers for turn.
-            """
-            pass
-
-        def consense(self, value: int, over=False) -> None:
+        def consense(self, value: int) -> None:
             """
             Update consensus.
             """
             renpy.sound.queue("sound/punch.ogg", relative_volume=0.5)
             self.consensus += value
-            if not over and self.consensus > self.consensus_max:
+            if self.consensus > self.consensus_max:
                 self.consensus = self.consensus_max
+            elif self.consensus < 0:
+                self.consensus = 0
 
-        def energize(self, value: int, over=False) -> None:
+        def energize(self, value: int) -> None:
             """
             Update energy.
             """
             renpy.sound.queue("sound/potion.ogg", relative_volume=0.5)
             self.energy += value
-            if not over and self.energy > self.energy_max:
+            if self.energy > self.energy_max:
                 self.energy = self.energy_max
+            elif self.energy < 0:
+                self.energy = 0
