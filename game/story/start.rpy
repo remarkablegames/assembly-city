@@ -1,5 +1,7 @@
 label start:
 
+    show screen player_money
+
     scene bg dining room day with fade
 
     "You receive a letter from the “Citizens’ Assembly”..."

@@ -17,6 +17,16 @@ init python:
                 renpy.jump("end")
 
         @staticmethod
+        def consensus() -> dict:
+            """
+            Get consensus data.
+            """
+            return {
+                "current": sum(list(map(lambda citizen: citizen.consensus, citizens.citizens))),
+                "goal": Level.data()["consensus_goal"],
+            }
+
+        @staticmethod
         def start() -> None:
             """
             Start level.
@@ -36,10 +46,9 @@ init python:
             """
             End level.
             """
-            data = Level.data()
+            consensus = Level.consensus()
 
-            consensus = sum(list(map(lambda citizen: citizen.consensus, citizens.citizens)))
-            if consensus >= data["consensus_goal"]:
-                renpy.jump("win")
-            else:
+            if consensus["current"] < consensus["goal"]:
                 renpy.jump("lose")
+            else:
+                renpy.jump("win")

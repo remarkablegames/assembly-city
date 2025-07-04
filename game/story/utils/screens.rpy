@@ -4,6 +4,12 @@ screen stat(name, current, max):
         xalign 0.5
         xsize 300
 
+screen player_money:
+    frame:
+        background Solid((0, 0, 0, 100))
+        text "Money: $[money]"
+        xpos (40 if renpy.variant("web") else 0)
+
 screen player_stats:
     vbox:
         yalign 1.0
@@ -14,10 +20,10 @@ screen player_stats:
         frame:
             vbox:
                 use stat("Moves", Player.moves, Player.moves_max)
-                null height 10
+                null height 15
                 use stat("Turns", Player.turns, Player.turns_max)
-                null height 10
-                text "Money: $[money]"
+                null height 15
+                use stat("Consensus", Level.consensus()["current"], Level.consensus()["goal"])
 
 screen player_end_turn:
     frame:

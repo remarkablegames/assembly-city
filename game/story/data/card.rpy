@@ -97,7 +97,7 @@ init python:
 
         def use(self, citizen) -> None:
             """
-            Use card.
+            Use card on citizen.
             """
             if Player.moves < self.cost:
                 return
