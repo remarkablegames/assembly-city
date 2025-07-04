@@ -39,10 +39,10 @@ screen citizen_stats0(citizen, xalign_position=0.5):
             null height 10
             use stat("Energy", citizen.energy, citizen.energy_max)
     frame:
+        background Solid((0, 0, 0, 200))
         padding (180, 10)
-        xalign xalign_position
-        yalign 0.65
         text "[citizen.name]"
+        xalign xalign_position yalign 0.65
 
 screen citizen_stats1(citizen, xalign_position=0.5):
     frame:
@@ -52,10 +52,10 @@ screen citizen_stats1(citizen, xalign_position=0.5):
             null height 10
             use stat("Energy", citizen.energy, citizen.energy_max)
     frame:
+        background Solid((0, 0, 0, 200))
         padding (180, 10)
-        xalign xalign_position
-        yalign 0.65
         text "[citizen.name]"
+        xalign xalign_position yalign 0.65
 
 screen citizen_stats2(citizen, xalign_position=0.5):
     frame:
@@ -65,10 +65,10 @@ screen citizen_stats2(citizen, xalign_position=0.5):
             null height 10
             use stat("Energy", citizen.energy, citizen.energy_max)
     frame:
+        background Solid((0, 0, 0, 200))
         padding (180, 10)
-        xalign xalign_position
-        yalign 0.65
         text "[citizen.name]"
+        xalign xalign_position yalign 0.65
 
 screen draw_pile:
 
