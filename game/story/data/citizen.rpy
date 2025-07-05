@@ -1,4 +1,5 @@
 init python:
+    from math import ceil
     from uuid import uuid4
 
     class Citizen():
@@ -8,8 +9,8 @@ init python:
             self.name = kwargs.get("name", "")
             self.id = kwargs.get("id", self.name.lower())
 
-            self.width = 550
-            self.height = 650
+            self.width = ceil(825 / oversample)
+            self.height = ceil(975 / oversample)
 
             self.energy = kwargs.get("energy", 0)
             self.energy_max = kwargs.get("energy_max", 0)
