@@ -31,17 +31,31 @@ screen player_end_turn:
         textbutton "End Turn":
             action Function(Player.end_turn)
 
+screen tooltip:
+    $ tooltip = GetTooltip()
+    if tooltip:
+        nearrect:
+            focus "tooltip"
+            prefer_top True
+            frame:
+                background "#fff"
+                text tooltip color "#000"
+                xalign 0.5
+
 screen citizen_stats0(citizen, xalign_position=0.5):
+    use tooltip
     frame:
         xalign xalign_position
         vbox:
             use stat("Consensus", citizen.consensus, citizen.consensus_max)
             null height 10
             use stat("Energy", citizen.energy, citizen.energy_max)
-    frame:
+    button:
+        action NullAction()
         background Solid((0, 0, 0, 200))
         padding (180, 10)
         text "[citizen.name]"
+        tooltip citizen.actions[0]["say"]
         xalign xalign_position yalign 0.65
 
 screen citizen_stats1(citizen, xalign_position=0.5):
@@ -51,10 +65,12 @@ screen citizen_stats1(citizen, xalign_position=0.5):
             use stat("Consensus", citizen.consensus, citizen.consensus_max)
             null height 10
             use stat("Energy", citizen.energy, citizen.energy_max)
-    frame:
+    button:
+        action NullAction()
         background Solid((0, 0, 0, 200))
         padding (180, 10)
         text "[citizen.name]"
+        tooltip citizen.actions[0]["say"]
         xalign xalign_position yalign 0.65
 
 screen citizen_stats2(citizen, xalign_position=0.5):
@@ -64,10 +80,12 @@ screen citizen_stats2(citizen, xalign_position=0.5):
             use stat("Consensus", citizen.consensus, citizen.consensus_max)
             null height 10
             use stat("Energy", citizen.energy, citizen.energy_max)
-    frame:
+    button:
+        action NullAction()
         background Solid((0, 0, 0, 200))
         padding (180, 10)
         text "[citizen.name]"
+        tooltip citizen.actions[0]["say"]
         xalign xalign_position yalign 0.65
 
 screen draw_pile:

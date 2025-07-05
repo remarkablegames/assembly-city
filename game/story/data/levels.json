@@ -14,11 +14,11 @@
                         "say": "Lawyer is thinking..."
                     },
                     {
-                        "say": "Lawyer is tired. Lawyer loses 1 energy.",
+                        "say": "Lawyer is tired.\nLawyer loses 1 energy.",
                         "energy": -1
                     },
                     {
-                        "say": "Lawyer disagrees. Lawyer loses 1 consensus.",
+                        "say": "Lawyer disagrees.\nLawyer loses 1 consensus.",
                         "consensus": -1
                     }
                 ]
