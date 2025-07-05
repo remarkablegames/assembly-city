@@ -42,6 +42,9 @@ screen tooltip:
                 text tooltip color "#000"
                 xalign 0.5
 
+init python:
+    citizen_name_ypos = 588
+
 screen citizen_stats0(citizen, xalign_position=0.5):
     use tooltip
     frame:
@@ -56,7 +59,7 @@ screen citizen_stats0(citizen, xalign_position=0.5):
         padding (180, 10)
         text "[citizen.name]"
         tooltip citizen.actions[0]["say"]
-        xalign xalign_position yalign 0.65
+        xalign xalign_position ypos citizen_name_ypos
 
 screen citizen_stats1(citizen, xalign_position=0.5):
     frame:
@@ -71,7 +74,7 @@ screen citizen_stats1(citizen, xalign_position=0.5):
         padding (180, 10)
         text "[citizen.name]"
         tooltip citizen.actions[0]["say"]
-        xalign xalign_position yalign 0.65
+        xalign xalign_position ypos citizen_name_ypos
 
 screen citizen_stats2(citizen, xalign_position=0.5):
     frame:
@@ -86,7 +89,7 @@ screen citizen_stats2(citizen, xalign_position=0.5):
         padding (180, 10)
         text "[citizen.name]"
         tooltip citizen.actions[0]["say"]
-        xalign xalign_position yalign 0.65
+        xalign xalign_position ypos citizen_name_ypos
 
 screen draw_pile:
 

@@ -22,6 +22,12 @@ init python:
 
             self.stunned = False
 
+        def image(self) -> str:
+            """
+            Get image.
+            """
+            return f"battle {self.id}"
+
         def consense(self, value: int) -> None:
             """
             Update consensus.

@@ -47,7 +47,7 @@ screen player_hand:
                 droppable True
                 focus_mask True
                 idle_child Solid((0, 0, 0, 0), xsize=citizen.width, ysize=citizen.height)
-                selected_idle_child f"battle {citizen.id} hover"
+                selected_idle_child f"{citizen.image()} hover"
                 xalign citizens.xalign_position(citizen) yalign Citizens.YALIGN
 
         for card in deck.hand:
