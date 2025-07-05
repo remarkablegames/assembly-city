@@ -9,8 +9,8 @@ init python:
             self.name = kwargs.get("name", "")
             self.id = kwargs.get("id", self.name.lower())
 
-            self.width = ceil(825 / oversample)
-            self.height = ceil(975 / oversample)
+            self.width = ceil(830 / oversample)
+            self.height = ceil(916 / oversample)
 
             self.energy = kwargs.get("energy", 0)
             self.energy_max = kwargs.get("energy_max", 0)

@@ -3,7 +3,7 @@ init python:
         # Names that are mapped to their respective ids.
         # E.g., name "Lawyer" -> id "lawyer".
         NAMES = ["Lawyer"]
-        YALIGN = 0.2
+        YALIGN = 0.25
 
         def __init__(self) -> None:
             self.citizens = []
