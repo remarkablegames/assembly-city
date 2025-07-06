@@ -26,7 +26,7 @@ init python:
             """
             Get image.
             """
-            return f"battle {self.id}"
+            return self.id
 
         def say(self) -> str:
             """

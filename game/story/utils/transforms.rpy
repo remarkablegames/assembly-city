@@ -1,6 +1,6 @@
 transform position(xalign_position=0.5):
     xalign xalign_position
-    yalign Citizens.YALIGN
+    ypos Citizens.YPOS
 
 transform shake:
     ease .06 yoffset 24

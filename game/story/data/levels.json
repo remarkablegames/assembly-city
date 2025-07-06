@@ -22,6 +22,26 @@
                         "consensus": -1
                     }
                 ]
+            },
+            {
+                "name": "Secretary",
+                "consensus": 0,
+                "consensus_max": 10,
+                "energy": 0,
+                "energy_max": 5,
+                "actions": [
+                    {
+                        "say": "Secretary is thinking..."
+                    },
+                    {
+                        "say": "Secretary is sleepy.\nSecretary loses 1 energy.",
+                        "energy": -1
+                    },
+                    {
+                        "say": "Secretary agrees.\nSecretary gains 1 consensus.",
+                        "consensus": 1
+                    }
+                ]
             }
         ]
     }

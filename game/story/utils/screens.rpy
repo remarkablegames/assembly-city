@@ -1,7 +1,6 @@
 screen stat(name, current, max):
     text "[name]: [current]/[max]"
     bar value AnimatedValue(current, max):
-        xalign 0.5
         xsize 300
 
 screen player_money:
@@ -43,7 +42,7 @@ screen tooltip:
                 xalign 0.5
 
 init python:
-    citizen_name_ypos = 613
+    citizen_name_ypos = 628
 
 screen citizen_stats0(citizen, xalign_position=0.5):
     frame:
