@@ -79,6 +79,7 @@ init python:
             for citizen in self.citizens:
                 if citizen.stunned:
                     narrator(f"{citizen.name} is stunned!")
+                    citizen.actions.append(citizen.actions.pop(0))
                     continue
 
                 action = citizen.actions.pop(0)

@@ -28,6 +28,14 @@ init python:
             """
             return f"battle {self.id}"
 
+        def say(self) -> str:
+            """
+            Get say.
+            """
+            if self.stunned:
+                return f"{self.name} is stunned!"
+            return self.actions[0]["say"]
+
         def consense(self, value: int) -> None:
             """
             Update consensus.
