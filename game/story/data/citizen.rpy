@@ -22,11 +22,14 @@ init python:
 
             self.stunned = False
 
-        def image(self) -> str:
+        def image(self, state="idle") -> str:
             """
-            Get image.
+            Get image name.
             """
-            return self.id
+            if state == "idle":
+                return self.id
+            if state == "hover":
+                return f"{self.id} hover"
 
         def say(self) -> str:
             """
