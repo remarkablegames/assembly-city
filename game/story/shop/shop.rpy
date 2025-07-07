@@ -7,13 +7,13 @@ label shop:
         "What do you want to do?"
 
         "Buy a card (-$[reward_cost])
-        {tooltip}Add 1 card to your deck" if money >= reward_cost:
+        {tooltip}Add 1 card out of [Player.shop_card_choices] to your deck" if money >= reward_cost:
             $ money -= reward_cost
             $ config.menu_include_disabled = False
             call screen add_card
 
         "Upgrade a card (-$[reward_cost * 2])
-        {tooltip}Upgrade 1 card in your deck" if money >= reward_cost * 2:
+        {tooltip}Upgrade 1 card out of [Player.shop_card_choices] in your deck" if money >= reward_cost * 2:
             python:
                 money -= reward_cost * 2
                 config.menu_include_disabled = False
@@ -36,13 +36,6 @@ label shop:
             $ config.menu_include_disabled = False
             call screen remove_card
 
-        "Get reward (-$[reward_cost])
-        {tooltip}Upgrade a stat" if money >= reward_cost:
-            $ money -= reward_cost
-            $ rewards += 1
-            $ config.menu_include_disabled = False
-            jump reward
-
         "Battle":
             $ config.menu_include_disabled = False
             $ Level.next()
@@ -63,7 +56,7 @@ screen add_card:
         hbox:
             spacing 25
 
-            for card in Card.generate(3):
+            for card in Card.generate(Player.shop_card_choices):
                 button:
                     action [Function(deck.cards.append, card), Jump("shop")]
 
@@ -95,7 +88,7 @@ screen upgrade_card:
         hbox:
             spacing 25
 
-            for card in deck.get_cards(3, upgrade_card_type):
+            for card in deck.get_cards(Player.shop_card_choices, upgrade_card_type):
                 button:
                     action [Function(card.upgrade, upgrade_card_type, upgrade_card_value), Jump("shop")]
 
