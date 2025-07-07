@@ -2,7 +2,7 @@ init python:
     from math import ceil
 
 default money = 0
-default loot = 0
+default bonus = 0
 default interest = 0
 default rewards = 0
 default wins = 0
@@ -27,12 +27,12 @@ label win:
 
     $ wins += 1
     $ interest = ceil(money * 0.4)
-    $ loot = renpy.random.randint(wins, round(wins * 1.5) + 1)
-    $ money += loot + interest
+    $ bonus = renpy.random.randint(wins, round(wins * 1.5) + 1)
+    $ money += bonus + interest
 
-    "You earned $[loot] + $[interest] (interest)."
+    "You earned $[bonus] + $[interest] (interest)."
 
-    if wins % 3 == 1:
+    if wins % 5 == 0:
         $ rewards += 1
         jump reward
 

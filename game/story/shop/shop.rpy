@@ -7,13 +7,13 @@ label shop:
         "What do you want to do?"
 
         "Buy a card (-$[reward_cost])
-        {tooltip}Add 1 card out of [Player.shop_card_choices] to your deck" if money >= reward_cost:
+        {tooltip}Add 1 card to your deck ([Player.shop_card_choices] choices)" if money >= reward_cost:
             $ money -= reward_cost
             $ config.menu_include_disabled = False
             call screen add_card
 
         "Upgrade a card (-$[reward_cost * 2])
-        {tooltip}Upgrade 1 card out of [Player.shop_card_choices] in your deck" if money >= reward_cost * 2:
+        {tooltip}Upgrade 1 card in your deck ([Player.shop_card_choices] choices)" if money >= reward_cost * 2:
             python:
                 money -= reward_cost * 2
                 config.menu_include_disabled = False

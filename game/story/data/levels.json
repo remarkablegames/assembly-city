@@ -34,13 +34,40 @@
     },
 
     "1": {
-        "player_turns": 3,
-        "consensus_goal": 8,
+        "player_turns": 5,
+        "consensus_goal": 15,
+        "citizens": [
+            {
+                "name": "Secretary",
+                "consensus": 0,
+                "consensus_max": 15,
+                "energy": 2,
+                "energy_max": 5,
+                "actions": [
+                    {
+                        "say": "{name} is thinking..."
+                    },
+                    {
+                        "say": "{name} agrees.\n{name} gains 1 consensus.",
+                        "consensus": 1
+                    },
+                    {
+                        "say": "{name} is sleepy.\n{name} loses 1 energy.",
+                        "energy": -1
+                    }
+                ]
+            }
+        ]
+    },
+
+    "2": {
+        "player_turns": 5,
+        "consensus_goal": 20,
         "citizens": [
             {
                 "name": "Lawyer",
                 "consensus": 0,
-                "consensus_max": 10,
+                "consensus_max": 15,
                 "energy": 0,
                 "energy_max": 5,
                 "actions": [
@@ -60,12 +87,59 @@
             {
                 "name": "Secretary",
                 "consensus": 0,
-                "consensus_max": 10,
+                "consensus_max": 15,
                 "energy": 0,
                 "energy_max": 5,
                 "actions": [
                     {
-                        "say": "{name} is considering..."
+                        "say": "{name} is sleepy.\n{name} loses 1 energy.",
+                        "energy": -1
+                    },
+                    {
+                        "say": "{name} agrees.\n{name} gains 1 consensus.",
+                        "consensus": 1
+                    },
+                    {
+                        "say": "{name} is thinking..."
+                    }
+                ]
+            }
+        ]
+    },
+
+    "3": {
+        "player_turns": 5,
+        "consensus_goal": 30,
+        "citizens": [
+            {
+                "name": "Lawyer",
+                "consensus": 0,
+                "consensus_max": 15,
+                "energy": 0,
+                "energy_max": 7,
+                "actions": [
+                    {
+                        "say": "{name} is thinking..."
+                    },
+                    {
+                        "say": "{name} is tired.\n{name} loses 1 energy.",
+                        "energy": -1
+                    },
+                    {
+                        "say": "{name} disagrees.\n{name} loses 1 consensus.",
+                        "consensus": -1
+                    }
+                ]
+            },
+            {
+                "name": "Secretary",
+                "consensus": 0,
+                "consensus_max": 15,
+                "energy": 0,
+                "energy_max": 7,
+                "actions": [
+                    {
+                        "say": "{name} is thinking..."
                     },
                     {
                         "say": "{name} is sleepy.\n{name} loses 1 energy.",
@@ -80,20 +154,20 @@
             {
                 "name": "Scientist",
                 "consensus": 0,
-                "consensus_max": 10,
+                "consensus_max": 15,
                 "energy": 0,
-                "energy_max": 5,
+                "energy_max": 7,
                 "actions": [
                     {
-                        "say": "{name} is pondering..."
+                        "say": "{name} is thinking..."
                     },
                     {
-                        "say": "{name} agrees.\n{name} gains 1 consensus.",
-                        "consensus": 1
+                        "say": "{name} disagrees.\n{name} loses 2 consensus.",
+                        "consensus": 2
                     },
                     {
-                        "say": "{name} has low energy.\n{name} loses 1 energy.",
-                        "energy": -1
+                        "say": "{name} has low energy.\n{name} loses 2 energy.",
+                        "energy": -2
                     }
                 ]
             }
