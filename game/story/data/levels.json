@@ -11,18 +11,22 @@
                 "energy_max": 5,
                 "actions": [
                     {
-                        "say": "Drag the card to the citizen.\nWhen you’re out of moves, press “End Turn”."
+                        "say": "Drag the card to the citizen.\nWhen you’re done, press “End Turn”."
                     },
                     {
-                        "say": "The citizen can gain or lose energy per turn.",
-                        "energy": 1
-                    },
-                    {
-                        "say": "The citizen can gain or lose consensus per turn.",
+                        "say": "Hover/press the citizens’ names to see what they will do next.",
                         "consensus": 1
                     },
                     {
-                        "say": "Play your cards right and look for good combos!"
+                        "say": "A citizen can gain/lose energy per turn.",
+                        "energy": 1
+                    },
+                    {
+                        "say": "A citizen can gain/lose consensus per turn.",
+                        "consensus": 1
+                    },
+                    {
+                        "say": "Play your cards right and look for combos!"
                     }
                 ]
             }

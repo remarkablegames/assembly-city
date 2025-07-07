@@ -10,6 +10,11 @@ label lose:
 
     "You weren’t able to reach a consensus."
 
+    if Level.level == 0:
+        hide commissioner idle
+        show commissioner smile 1 with dissolve
+        jump tutorial_questions
+
     scene black with fade
 
     jump end

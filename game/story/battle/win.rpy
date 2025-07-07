@@ -20,8 +20,7 @@ label win:
 
     if Level.level == 0:
         hide commissioner idle
-        show commissioner smile 1
-        with dissolve
+        show commissioner smile 1 with dissolve
         jump tutorial_questions
 
     show screen player_money
