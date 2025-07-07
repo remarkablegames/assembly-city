@@ -1,6 +1,9 @@
 init python:
     oversample = 2
 
+image commissioner idle = Image("characters/commissioner/commissioner smile 3.png", oversample=oversample)
+image commissioner hover = Image("characters/commissioner/commissioner smile 3.webp", oversample=oversample)
+
 image lawyer idle = Image("characters/lawyer/lawyer what.webp", oversample=oversample)
 image lawyer hover = Image("characters/lawyer/lawyer shock.webp", oversample=oversample)
 

@@ -1,4 +1,4 @@
-define player = Character("[player_name]", color="#fff")
+define player = Character("Facilitator", color="#fff")
 define commissioner = Character("Commissioner", image="commissioner")
 
 define accountant = Character("Accountant")
@@ -6,7 +6,6 @@ define baker = Character("Baker")
 define banker = Character("Banker")
 define caregiver = Character("Caregiver")
 define expert = Character("Expert", expert="expert")
-define facilitator = Character("Facilitator ", image="facilitator")
 define guide = Character("Guide")
 define janitor = Character("Janitor")
 define journalist = Character("Journalist")

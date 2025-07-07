@@ -9,23 +9,12 @@ transform right(value=0.8):
 transform opacity(value=1):
     alpha value
 
-transform flip:
-    xzoom -1.0
+transform card_size:
+    zoom 0.65
+    xalign 0.5
+    yalign 0.5
 
-transform unflip:
-    xzoom 1.0
-
-transform resize(x=1, y=1):
-    size (x, y)
-
-transform rotate(degrees):
-    rotate degrees
-
-transform scale(ratio):
-    zoom ratio
-
-transform tint(color):
-    matrixcolor TintMatrix(color)
-
-transform ypos(position):
-    ypos position
+transform badge_size:
+    zoom 0.50
+    xalign 0.5
+    yalign 0.5
