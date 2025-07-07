@@ -48,7 +48,8 @@ screen player_hand:
                 focus_mask True
                 idle_child Solid((0, 0, 0, 0), xsize=citizen.width, ysize=citizen.height)
                 selected_idle_child citizen.image("hover")
-                xalign citizens.xalign_position(citizen) ypos Citizens.YPOS
+                xalign citizens.xalign_position(citizen)
+                ypos citizen.ypos
 
         for card in deck.hand:
             drag:
@@ -62,7 +63,9 @@ screen player_hand:
                 frame:
                     background Frame(card.image)
                     label card.label_cost()
-                    label card.label_description() xalign 0.5 ypos 250
+                    label card.label_description():
+                        xalign 0.5
+                        ypos 250
                     xysize card.width, card.height
 
                     mousearea:

@@ -11,14 +11,14 @@
                 "energy_max": 5,
                 "actions": [
                     {
-                        "say": "Lawyer is thinking..."
+                        "say": "{name} is thinking..."
                     },
                     {
-                        "say": "Lawyer is tired.\nLawyer loses 1 energy.",
+                        "say": "{name} is tired.\n{name} loses 1 energy.",
                         "energy": -1
                     },
                     {
-                        "say": "Lawyer disagrees.\nLawyer loses 1 consensus.",
+                        "say": "{name} disagrees.\n{name} loses 1 consensus.",
                         "consensus": -1
                     }
                 ]
@@ -31,15 +31,35 @@
                 "energy_max": 5,
                 "actions": [
                     {
-                        "say": "Secretary is thinking..."
+                        "say": "{name} is considering..."
                     },
                     {
-                        "say": "Secretary is sleepy.\nSecretary loses 1 energy.",
+                        "say": "{name} is sleepy.\n{name} loses 1 energy.",
                         "energy": -1
                     },
                     {
-                        "say": "Secretary agrees.\nSecretary gains 1 consensus.",
+                        "say": "{name} agrees.\n{name} gains 1 consensus.",
                         "consensus": 1
+                    }
+                ]
+            },
+            {
+                "name": "Scientist",
+                "consensus": 0,
+                "consensus_max": 10,
+                "energy": 0,
+                "energy_max": 5,
+                "actions": [
+                    {
+                        "say": "{name} is pondering..."
+                    },
+                    {
+                        "say": "{name} agrees.\n{name} gains 1 consensus.",
+                        "consensus": 1
+                    },
+                    {
+                        "say": "{name} has low energy.\n{name} loses 1 energy.",
+                        "energy": -1
                     }
                 ]
             }

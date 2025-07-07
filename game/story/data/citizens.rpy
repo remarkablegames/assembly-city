@@ -1,10 +1,5 @@
 init python:
     class Citizens:
-        # Names that are mapped to their respective ids.
-        # E.g., name "Lawyer" -> id "lawyer".
-        NAMES = ["Lawyer"]
-        YPOS = 170
-
         def __init__(self) -> None:
             self.citizens = []
             self.count = 0
@@ -82,8 +77,8 @@ init python:
                     citizen.actions.append(citizen.actions.pop(0))
                     continue
 
+                narrator(citizen.say())
                 action = citizen.actions.pop(0)
-                narrator(action["say"])
 
                 energy = action.get("energy")
                 if energy:

@@ -3,6 +3,8 @@ init python:
     from uuid import uuid4
 
     class Citizen():
+        ypos = 170
+
         def __init__(self, **kwargs) -> None:
             self.id = str(uuid4())
 
@@ -37,7 +39,7 @@ init python:
             """
             if self.stunned:
                 return f"{self.name} is stunned!"
-            return self.actions[0]["say"]
+            return self.actions[0]["say"].format(name=self.name)
 
         def consense(self, value: int) -> None:
             """
