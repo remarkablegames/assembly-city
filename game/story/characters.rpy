@@ -1,5 +1,5 @@
 define player = Character("[player_name]", color="#fff")
-define commissioner = Character("Commissioner")
+define commissioner = Character("Commissioner", image="commissioner")
 
 define accountant = Character("Accountant")
 define baker = Character("Baker")
