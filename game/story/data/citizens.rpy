@@ -21,7 +21,7 @@ init python:
             for index, citizen in enumerate(self.citizens):
                 xalign_position = self.xalign_position(citizen)
                 renpy.show_screen(f"citizen_stats{index}", citizen, xalign_position)
-                renpy.show(citizen.image(), at_list=[position(xalign_position)])
+                renpy.show(citizen.image("idle"), at_list=[position(xalign_position)])
 
             renpy.with_statement(dissolve)
 
@@ -29,7 +29,7 @@ init python:
             """
             Hide citizen.
             """
-            renpy.hide(citizen.image())
+            renpy.hide(citizen.image("idle"))
             renpy.with_statement(dissolve)
             renpy.hide_screen(f"citizen_stats{citizens.index(citizen)}")
 
