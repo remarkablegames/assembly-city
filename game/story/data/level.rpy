@@ -3,14 +3,14 @@ init python:
 
     class Level:
         _data = load(renpy.file("story/data/levels.json"))
-        _level = 0
+        level = 0
 
         @staticmethod
         def data() -> dict:
             """
             Get level data.
             """
-            return Level._data.get(str(Level._level), {})
+            return Level._data.get(str(Level.level), {})
 
         @staticmethod
         def consensus(value: str) -> dict:
@@ -55,11 +55,11 @@ init python:
             """
             Increment level.
             """
-            Level._level += 1
+            Level.level += 1
 
         @staticmethod
         def restart() -> None:
             """
             Restart level.
             """
-            Level._level = 0
+            Level.level = 0

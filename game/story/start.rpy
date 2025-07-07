@@ -1,10 +1,20 @@
+# Should the user be allowed to rollback the game? If set to False, the user cannot interactively rollback.
+define config.rollback_enabled = False
+
 label start:
 
-    scene bg dining room day
+    scene bg gate day
     with fade
 
-    show screen player_money
+    player "It’s my first day as a facilitator for the Citizens’ Assembly."
+    player "I’m excited and nervous at the same time."
 
-    "You receive a letter from the “Citizens’ Assembly”..."
+    menu:
+        "What should I do?"
 
-    jump assembly1
+        "Start with a tutorial":
+            jump tutorial
+
+        "Run the assembly":
+            $ Level.next()
+            jump battle

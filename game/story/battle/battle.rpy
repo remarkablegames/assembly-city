@@ -4,7 +4,9 @@ label battle:
 
     $ battle = True
 
-    scene bg teachers room day with dissolve
+    if Level.level > 0:
+        scene bg teachers room day
+        with dissolve
 
     show screen player_stats
 
