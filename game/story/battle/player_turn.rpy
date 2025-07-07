@@ -65,7 +65,7 @@ screen player_hand:
                     label card.label_cost()
                     label card.label_description():
                         xalign 0.5
-                        ypos 250
+                        ypos card.label_description_ypos
                     xysize card.width, card.height
 
                     mousearea:

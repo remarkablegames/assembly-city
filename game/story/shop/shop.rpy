@@ -63,7 +63,9 @@ screen add_card:
                     frame:
                         background Frame(card.image)
                         label card.label_cost()
-                        label card.label_description() xalign 0.5 yalign 0.5
+                        label card.label_description():
+                            xalign 0.5
+                            ypos card.label_description_ypos
                         xysize card.width, card.height
 
         null height 25
@@ -95,7 +97,9 @@ screen upgrade_card:
                     frame:
                         background Frame(card.image)
                         label card.label_cost()
-                        label card.label_description() xalign 0.5 yalign 0.5
+                        label card.label_description():
+                            xalign 0.5
+                            ypos card.label_description_ypos
                         xysize card.width, card.height
 
         null height 25
@@ -127,7 +131,9 @@ screen remove_card:
                         frame:
                             background Frame(card.image)
                             label card.label_cost()
-                            label card.label_description() xalign 0.5 yalign 0.5
+                            label card.label_description():
+                                xalign 0.5
+                                ypos card.label_description_ypos
                             xysize card.width, card.height
 
         null height 50

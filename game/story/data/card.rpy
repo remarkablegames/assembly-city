@@ -2,6 +2,7 @@ init python:
     from uuid import uuid4
 
     class Card:
+        label_description_ypos = 250
         width = 250
         height = 350
         offset = 80
@@ -142,14 +143,23 @@ init python:
             cards = []
 
             for _ in range(count):
+                action = renpy.random.choice(["consensus", "draw", "energy"])
+
+                if action == "draw" or action == "energy":
+                    image = renpy.random.choice(["coffee", "pizza", "soda"])
+                else:
+                    image = "discuss"
+
                 card = Card(
+                    image=image,
                     cost=renpy.random.randint(1, 3),
                     action={
-                        renpy.random.choice(["consensus", "draw", "energy"]): {
+                        action: {
                             "value": renpy.random.randint(1, 6)
                         },
                     },
                 )
+
                 cards.append(card)
 
             return cards
