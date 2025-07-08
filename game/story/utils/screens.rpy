@@ -37,7 +37,7 @@ screen tooltip:
             focus "tooltip"
             prefer_top True
             frame:
-                background "#fff"
+                background Solid((255, 255, 255, 225))
                 text tooltip color "#000"
                 xalign 0.5
 

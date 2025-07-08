@@ -1,12 +1,12 @@
 {
     "0": {
-        "player_turns": 5,
-        "consensus_goal": 5,
+        "player_turns": 3,
+        "consensus_goal": 9,
         "citizens": [
             {
                 "name": "Commissioner",
                 "consensus": 0,
-                "consensus_max": 5,
+                "consensus_max": 9,
                 "energy": 5,
                 "energy_max": 5,
                 "actions": [
@@ -14,19 +14,10 @@
                         "say": "Drag the card to the citizen.\nWhen you’re done, press “End Turn”."
                     },
                     {
-                        "say": "Hover/press the citizens’ names to see what they will do next.",
-                        "consensus": 1
+                        "say": "Hover/press the citizen’s name to see what they will do next."
                     },
                     {
-                        "say": "A citizen can gain/lose energy per turn.",
-                        "energy": 1
-                    },
-                    {
-                        "say": "A citizen can gain/lose consensus per turn.",
-                        "consensus": 1
-                    },
-                    {
-                        "say": "Play your cards right and look for combos!"
+                        "say": "A citizen can gain/lose energy/consensus per turn."
                     }
                 ]
             }
