@@ -51,11 +51,14 @@ init python:
                 renpy.jump("win")
 
         @staticmethod
-        def next() -> None:
+        def next(level=0) -> None:
             """
             Increment level.
             """
-            Level.level += 1
+            if level:
+                Level.level = level
+            else:
+                Level.level += 1
 
         @staticmethod
         def restart() -> None:

@@ -74,4 +74,4 @@ screen player_hand:
 
                     mousearea:
                         area (0, 0, card.offset, card.height)
-                        hovered [Play("sound", "ui/mouserelease1.ogg"), Function(onhovered, draggable)]
+                        hovered [Queue("sound", "ui/mouserelease1.ogg"), Function(onhovered, draggable)]

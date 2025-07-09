@@ -44,7 +44,7 @@ screen tooltip:
 init python:
     citizen_name_ypos = 628
 
-screen citizen_stats0(citizen, xalign_position=0.5):
+screen citizen_stats(citizen, xalign_position=0.5):
     frame:
         xalign xalign_position
         vbox:
@@ -60,37 +60,17 @@ screen citizen_stats0(citizen, xalign_position=0.5):
         xsize 400
     use tooltip
 
-screen citizen_stats1(citizen, xalign_position=0.5):
-    frame:
-        xalign xalign_position
-        vbox:
-            use stat("Consensus", citizen.consensus, citizen.consensus_max)
-            null height 10
-            use stat("Energy", citizen.energy, citizen.energy_max)
-    button:
-        action NullAction()
-        background Solid((0, 0, 0, 200))
-        text "[citizen.name]" xalign 0.5
-        tooltip citizen.say()
-        xalign xalign_position ypos citizen_name_ypos
-        xsize 400
-    use tooltip
+screen citizen_stats0(citizen, xalign_position):
+    use citizen_stats(citizen, xalign_position)
 
-screen citizen_stats2(citizen, xalign_position=0.5):
-    frame:
-        xalign xalign_position
-        vbox:
-            use stat("Consensus", citizen.consensus, citizen.consensus_max)
-            null height 10
-            use stat("Energy", citizen.energy, citizen.energy_max)
-    button:
-        action NullAction()
-        background Solid((0, 0, 0, 200))
-        text "[citizen.name]" xalign 0.5
-        tooltip citizen.say()
-        xalign xalign_position ypos citizen_name_ypos
-        xsize 400
-    use tooltip
+screen citizen_stats1(citizen, xalign_position):
+    use citizen_stats(citizen, xalign_position)
+
+screen citizen_stats2(citizen, xalign_position):
+    use citizen_stats(citizen, xalign_position)
+
+screen citizen_stats3(citizen, xalign_position):
+    use citizen_stats(citizen, xalign_position)
 
 screen draw_pile:
 

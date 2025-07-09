@@ -15,6 +15,7 @@ label win:
     hide screen citizen_stats0
     hide screen citizen_stats1
     hide screen citizen_stats2
+    hide screen citizen_stats3
 
     "You were able to reach a consensus!"
 
