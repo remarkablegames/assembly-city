@@ -3,7 +3,9 @@ init python:
         def __init__(self) -> None:
             self.cards = [
                 Card(image="talk", cost=1, action={"consensus": {"value": 3}, "energy": {"value": -2}}),
+                Card(image="talk", cost=1, action={"consensus": {"value": 3}, "energy": {"value": -2}}),
                 Card(image="tea", cost=1, action={"draw": {"value": 2}}),
+                Card(image="soda", cost=1, action={"energy": {"value": 2}}),
                 Card(image="soda", cost=1, action={"energy": {"value": 2}}),
                 Card(image="pizza", cost=2, action={"energy": {"value": 2, "all": True}}),
                 Card(image="expert", cost=2, action={"consensus": {"value": 3, "all": True}, "energy": {"value": -2, "all": True}}),
@@ -31,8 +33,6 @@ init python:
                 copy = list(filter(lambda card: card.action.get("consensus") and not card.action["consensus"].get(upgrade_card_type), copy))
             elif upgrade_card_type == "cost":
                 copy = list(filter(lambda card: card.cost > 0, copy))
-            elif upgrade_card_type == "times":
-                copy = list(filter(lambda card: card.action.get("consensus") or card.action.get("energy"), copy))
             else:
                 copy = list(filter(lambda card: card.action.get(upgrade_card_type), copy))
 

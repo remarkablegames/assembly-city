@@ -43,8 +43,6 @@ init python:
                     label += f" +{value}"
                 else:
                     label += f" {value}"
-                if data.get("times", 1) > 1:
-                    label += f" ×{data.get('times')}"
                 if data.get("stun"):
                     label += " Stun"
                 if data.get("all"):
@@ -73,8 +71,6 @@ init python:
                 return f"Select a card to decrease {{b}}cost{{/b}} by {emojis.get(1)}:"
             elif action == "stun":
                 return f"Select a card to {{b}}stun{{/b}} an citizen:"
-            elif action == "times":
-                return f"Select a card to increase action by 1 {{b}}time{{/b}}:"
             else:
                 return f"Select a card to increase {{b}}{action}{{/b}} by {{b}}{value}{{/b}}:"
 
@@ -86,10 +82,6 @@ init python:
                 self.action["consensus"][action] = 1
             elif action == "cost" and self.cost > 0:
                 self.cost -= 1
-            elif action == "times":
-                action = self.action.get("consensus") if self.action.get("consensus") else self.action.get("energy")
-                action["times"] = action.get("times", 1)
-                action["times"] += 1
             else:
                 if self.action.get(action):
                     self.action[action]["value"] += value
@@ -134,27 +126,23 @@ init python:
 
             draw = self.action.get("draw")
             if draw:
-                for _ in range(draw.get("times", 1)):
-                    deck.draw_cards(draw["value"])
+                deck.draw_cards(draw["value"])
 
             if energy:
-                for _ in range(energy.get("times", 1)):
-                    citizen.energize(energy["value"])
+                citizen.energize(energy["value"])
 
             moves = self.action.get("moves")
             if moves:
-                for _ in range(moves.get("times", 1)):
-                    renpy.sound.queue("sound/powerup.ogg")
-                    Player.moves += moves["value"]
+                renpy.sound.queue("sound/powerup.ogg")
+                Player.moves += moves["value"]
 
             consensus = self.action.get("consensus")
             if consensus:
-                for _ in range(consensus.get("times", 1)):
-                    for citizen in citizens.citizens if consensus.get("all") else [citizen]:
-                        citizen.consense(consensus["value"])
-                        if consensus.get("stun"):
-                            citizen.stunned = True
-                        renpy.show(citizen.image("idle"), at_list=[shake])
+                for citizen in citizens.citizens if consensus.get("all") else [citizen]:
+                    citizen.consense(consensus["value"])
+                    if consensus.get("stun"):
+                        citizen.stunned = True
+                    renpy.show(citizen.image("idle"), at_list=[shake])
 
         @staticmethod
         def generate(count=1) -> list:
@@ -166,8 +154,10 @@ init python:
             for _ in range(count):
                 action = renpy.random.choice(["consensus", "draw", "energy"])
 
-                if action == "draw" or action == "energy":
-                    image = renpy.random.choice(["tea", "pizza", "soda"])
+                if action == "draw":
+                    image = "tea"
+                elif action == "energy":
+                    image = renpy.random.choice(["pizza", "soda"])
                 else:
                     image = "talk"
 

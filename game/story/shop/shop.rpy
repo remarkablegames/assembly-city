@@ -24,7 +24,6 @@ label shop:
                     ["draw"] * 3 +
                     ["energy"] * 3 +
                     ["stun"] * 1 +
-                    ["times"] * 1 +
                     []
                 )
                 upgrade_card_value = renpy.random.randint(1, 3)
