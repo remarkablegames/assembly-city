@@ -65,10 +65,10 @@ label assembly1_signup:
             hide discuss
             with dissolve
 
-            show coffee at card_size
+            show tea at card_size
             with dissolve
-            commissioner "Coffee: +1 Energy, +1 Agreement"
-            hide coffee
+            commissioner "Tea: +1 Energy, +1 Agreement"
+            hide tea
             with dissolve
 
             show fatigue at card_size
@@ -83,10 +83,10 @@ label assembly1_signup:
             hide soda
             with dissolve
 
-            show overconfidence at card_size
+            show vote at card_size
             with dissolve
-            commissioner "Overconfidence: +3 Energy, -1 Agreement for everyone"
-            hide overconfidence
+            commissioner "Vote: +3 Energy, -1 Agreement for everyone"
+            hide vote
             with dissolve
 
             show doubt at card_size

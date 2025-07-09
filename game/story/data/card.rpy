@@ -2,7 +2,8 @@ init python:
     from uuid import uuid4
 
     class Card:
-        label_description_ypos = 250
+        label_description_ypos = 235
+        label_name_ypos = 5
         width = 250
         height = 350
         offset = 80
@@ -12,7 +13,15 @@ init python:
             self.cost = kwargs.get("cost", 0)
             self.action = kwargs.get("action", {})
             self.value = kwargs.get("value", 0)
-            self.image = f"cards/{kwargs.get('image')}.png"
+            image = kwargs.get('image')
+            self.image = f"cards/{image}.png"
+            self.name = image.capitalize()
+
+        def label_name(self) -> str:
+            """
+            Name label.
+            """
+            return "{color=[colors.white]}{b}{k=-2}" + self.name.upper()
 
         def label_cost(self) -> str:
             """
@@ -24,7 +33,9 @@ init python:
             """
             Description label.
             """
-            label = "{color=[colors.white]}{size=*0.85}"
+            label = ""
+            color = "{color=[colors.white]}"
+
             for action, data in self.action.items():
                 label += action.capitalize()
                 value = data["value"]
@@ -39,7 +50,17 @@ init python:
                 if data.get("all"):
                     label += " All"
                 label += "\n"
-            return label.rstrip()
+
+            label = label.rstrip('\n')
+
+            if len(label) < 15:
+                size = "{size=*0.9}"
+            elif len(label) < 25:
+                size = "{size=*0.85}"
+            else:
+                size = "{size=*0.8}"
+
+            return size + color + label
 
         @staticmethod
         def label_upgrade(action: str, value=1) -> str:
@@ -146,9 +167,9 @@ init python:
                 action = renpy.random.choice(["consensus", "draw", "energy"])
 
                 if action == "draw" or action == "energy":
-                    image = renpy.random.choice(["coffee", "pizza", "soda"])
+                    image = renpy.random.choice(["tea", "pizza", "soda"])
                 else:
-                    image = "discuss"
+                    image = "talk"
 
                 card = Card(
                     image=image,

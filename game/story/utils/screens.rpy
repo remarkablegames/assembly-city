@@ -108,15 +108,8 @@ screen draw_pile:
 
             hbox:
                 spacing 25
-
                 for card in deck.draw_pile if battle else deck.cards:
-                    frame:
-                        background Frame(card.image)
-                        label card.label_cost()
-                        label card.label_description():
-                            xalign 0.5
-                            ypos card.label_description_ypos
-                        xysize card.width, card.height
+                    use card_frame(card)
 
         null height 50
 
@@ -124,3 +117,16 @@ screen draw_pile:
             xalign 0.5
             textbutton "Close":
                 action Hide("draw_pile")
+
+screen card_frame(card):
+    frame:
+        background Frame(card.image)
+        label card.label_name():
+            xalign 0.5
+            ypos card.label_name_ypos
+        label card.label_cost()
+        label card.label_description():
+            xalign 0.5
+            ypos card.label_description_ypos
+            padding (5, 0)
+        xysize card.width, card.height

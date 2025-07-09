@@ -55,18 +55,10 @@ screen add_card:
 
         hbox:
             spacing 25
-
             for card in Card.generate(Player.shop_card_choices):
                 button:
                     action [Function(deck.cards.append, card), Jump("shop")]
-
-                    frame:
-                        background Frame(card.image)
-                        label card.label_cost()
-                        label card.label_description():
-                            xalign 0.5
-                            ypos card.label_description_ypos
-                        xysize card.width, card.height
+                    use card_frame(card)
 
         null height 25
 
@@ -93,14 +85,7 @@ screen upgrade_card:
             for card in deck.get_cards(Player.shop_card_choices, upgrade_card_type):
                 button:
                     action [Function(card.upgrade, upgrade_card_type, upgrade_card_value), Jump("shop")]
-
-                    frame:
-                        background Frame(card.image)
-                        label card.label_cost()
-                        label card.label_description():
-                            xalign 0.5
-                            ypos card.label_description_ypos
-                        xysize card.width, card.height
+                    use card_frame(card)
 
         null height 25
 
@@ -127,14 +112,7 @@ screen remove_card:
                 for card in deck.cards:
                     button:
                         action [Function(deck.cards.remove, card), Jump("shop")]
-
-                        frame:
-                            background Frame(card.image)
-                            label card.label_cost()
-                            label card.label_description():
-                                xalign 0.5
-                                ypos card.label_description_ypos
-                            xysize card.width, card.height
+                        use card_frame(card)
 
         null height 50
 

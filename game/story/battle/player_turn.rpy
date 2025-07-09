@@ -62,12 +62,16 @@ screen player_hand:
 
                 frame:
                     background Frame(card.image)
+                    label card.label_name():
+                        xalign 0.5
+                        ypos card.label_name_ypos
                     label card.label_cost()
                     label card.label_description():
                         xalign 0.5
                         ypos card.label_description_ypos
+                        padding (5, 0)
                     xysize card.width, card.height
 
                     mousearea:
                         area (0, 0, card.offset, card.height)
-                        hovered Function(onhovered, draggable)
+                        hovered [Play("sound", "ui/mouserelease1.ogg"), Function(onhovered, draggable)]
