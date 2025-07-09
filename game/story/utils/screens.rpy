@@ -44,7 +44,7 @@ screen tooltip:
 init python:
     citizen_name_ypos = 628
 
-screen citizen_stats(citizen, xalign_position=0.5):
+screen citizen_stats(citizen, xalign_pos):
     frame:
         xalign xalign_position
         vbox:
@@ -60,17 +60,17 @@ screen citizen_stats(citizen, xalign_position=0.5):
         xsize 400
     use tooltip
 
-screen citizen_stats0(citizen, xalign_position):
-    use citizen_stats(citizen, xalign_position)
+screen citizen_stats0(citizen, xalign_pos):
+    use citizen_stats(citizen, xalign_pos)
 
-screen citizen_stats1(citizen, xalign_position):
-    use citizen_stats(citizen, xalign_position)
+screen citizen_stats1(citizen, xalign_pos):
+    use citizen_stats(citizen, xalign_pos)
 
-screen citizen_stats2(citizen, xalign_position):
-    use citizen_stats(citizen, xalign_position)
+screen citizen_stats2(citizen, xalign_pos):
+    use citizen_stats(citizen, xalign_pos)
 
-screen citizen_stats3(citizen, xalign_position):
-    use citizen_stats(citizen, xalign_position)
+screen citizen_stats3(citizen, xalign_pos):
+    use citizen_stats(citizen, xalign_pos)
 
 screen draw_pile:
 
