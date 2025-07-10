@@ -25,7 +25,7 @@ label win:
         jump tutorial_questions
 
     scene bg hall day
-    with dissolve
+    with fade
 
     show screen player_money
 
@@ -39,6 +39,5 @@ label win:
     if wins % 5 == 0:
         $ rewards += 1
         jump reward
-
     else:
         jump shop
