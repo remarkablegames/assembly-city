@@ -1,5 +1,5 @@
-transform position(xalign_position=0.5):
-    xalign xalign_position
+transform position(xalign_pos=0.5):
+    xalign xalign_pos
     ypos Citizen.ypos
 
 transform shake:

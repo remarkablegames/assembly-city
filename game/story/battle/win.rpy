@@ -24,6 +24,9 @@ label win:
         show commissioner smile 1 with dissolve
         jump tutorial_questions
 
+    scene bg hall day
+    with dissolve
+
     show screen player_money
 
     $ wins += 1

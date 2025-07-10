@@ -46,7 +46,7 @@ init python:
 
 screen citizen_stats(citizen, xalign_pos):
     frame:
-        xalign xalign_position
+        xalign xalign_pos
         vbox:
             use stat("Consensus", citizen.consensus, citizen.consensus_max)
             null height 10
@@ -56,7 +56,7 @@ screen citizen_stats(citizen, xalign_pos):
         background Solid((0, 0, 0, 200))
         text "[citizen.name]" xalign 0.5
         tooltip citizen.say()
-        xalign xalign_position ypos citizen_name_ypos
+        xalign xalign_pos ypos citizen_name_ypos
         xsize 400
     use tooltip
 
