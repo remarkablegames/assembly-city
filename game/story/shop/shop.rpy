@@ -35,7 +35,7 @@ label shop:
             $ config.menu_include_disabled = False
             call screen remove_card
 
-        "Battle":
+        "Run assembly":
             $ config.menu_include_disabled = False
             $ Level.next()
             jump battle

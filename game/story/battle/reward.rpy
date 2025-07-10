@@ -4,18 +4,18 @@ label reward:
         jump shop
 
     menu:
-        "Claim a reward:"
+        "Select a reward:"
 
         "Moves {color=[colors.moves]}+1
-        {tooltip}Increase moves from [Player.moves_max] to [Player.moves_max + 1]":
+        {tooltip}Increase your moves from [Player.moves_max] to [Player.moves_max + 1]":
             $ Player.moves_max += 1
 
         "Turns {color=[colors.moves]}+1
-        {tooltip}Increase turns from [Player.turns_max] to [Player.turns_max + 1]":
+        {tooltip}Increase your turns from [Player.turns_max] to [Player.turns_max + 1]":
             $ Player.turns_max += 1
 
         "Draw cards {color=[colors.moves]}+1
-        {tooltip}Increase draw cards from [Player.draw_cards] to [Player.draw_cards + 1]":
+        {tooltip}Increase drawn cards per hand from [Player.draw_cards] to [Player.draw_cards + 1]":
             $ Player.draw_cards += 1
 
         "Buy/upgrade cards {color=[colors.moves]}+1

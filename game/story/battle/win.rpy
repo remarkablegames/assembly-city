@@ -29,15 +29,20 @@ label win:
 
     show screen player_money
 
+    show commissioner smile 1
+    with dissolve
+
+    $ commissioner(renpy.random.choice(["Nice work!", "Great job!", "Good stuff!", "Amazing run!", "Excellent effort!"]))
+
     $ wins += 1
     $ interest = ceil(money * 0.4)
     $ bonus = renpy.random.randint(wins, round(wins * 1.5) + 1)
     $ money += bonus + interest
 
-    "You earned $[bonus] + $[interest] (interest)."
+    commissioner "You earned $[bonus] + $[interest] (interest)."
 
     if wins % 5 == 0:
         $ rewards += 1
         jump reward
-    else:
-        jump shop
+
+    jump shop
