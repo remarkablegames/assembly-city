@@ -15,3 +15,6 @@ image researcher hover = Image("characters/researcher/researcher oh.png", oversa
 
 image secretary idle = Image("characters/secretary/secretary smile.png", oversample=oversample)
 image secretary hover = Image("characters/secretary/secretary shocked.png", oversample=oversample)
+
+image trainer idle = Image("characters/trainer/trainer smile.png", oversample=oversample)
+image trainer hover = Image("characters/trainer/trainer shocked.png", oversample=oversample)
