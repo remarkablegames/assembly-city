@@ -25,14 +25,14 @@
     },
 
     "1": {
-        "player_turns": 5,
-        "consensus_goal": 15,
+        "player_turns": 3,
+        "consensus_goal": 10,
         "citizens": [
             {
                 "name": "Secretary",
                 "consensus": 0,
                 "consensus_max": 15,
-                "energy": 5,
+                "energy": 3,
                 "energy_max": 5,
                 "actions": [
                     {
@@ -53,14 +53,14 @@
 
     "2": {
         "player_turns": 5,
-        "consensus_goal": 20,
+        "consensus_goal": 15,
         "citizens": [
             {
                 "name": "Lawyer",
                 "consensus": 0,
-                "consensus_max": 15,
-                "energy": 0,
-                "energy_max": 5,
+                "consensus_max": 13,
+                "energy": 1,
+                "energy_max": 6,
                 "actions": [
                     {
                         "say": "{name} is thinking..."
@@ -79,8 +79,8 @@
                 "name": "Secretary",
                 "consensus": 0,
                 "consensus_max": 15,
-                "energy": 0,
-                "energy_max": 5,
+                "energy": 2,
+                "energy_max": 7,
                 "actions": [
                     {
                         "say": "{name} is sleepy.\n{name} loses 1 energy.",

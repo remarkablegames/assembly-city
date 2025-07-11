@@ -3,7 +3,6 @@ init python:
 
 default money = 0
 default bonus = 0
-default interest = 0
 
 label win:
 
@@ -30,12 +29,11 @@ label win:
     show commissioner smile 1
     with dissolve
 
-    $ interest = ceil(money * 0.4)
-    $ bonus = renpy.random.randint(level.current, round(level.current * 1.5) + 1)
-    $ money += bonus + interest
+    $ bonus = level.consensus("current") - level.consensus("goal")
+    $ money += max(level.current, 3) + bonus
     $ dialogue = renpy.random.choice(["Nice work!", "Great job!", "Good stuff!", "Amazing run!", "Excellent effort!"])
 
     commissioner "[dialogue]"
-    commissioner "You earned $[bonus] + $[interest] (interest)."
+    commissioner "You earned $[max(level.current, 3)] + $[bonus] (bonus)."
 
     jump reward
