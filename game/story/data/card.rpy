@@ -129,7 +129,8 @@ init python:
                 deck.draw_cards(draw["value"])
 
             if energy:
-                citizen.energize(energy["value"])
+                for citizen in citizens.citizens if energy.get("all") else [citizen]:
+                    citizen.energize(energy["value"])
 
             moves = self.action.get("moves")
             if moves:
@@ -139,10 +140,7 @@ init python:
             consensus = self.action.get("consensus")
             if consensus:
                 for citizen in citizens.citizens if consensus.get("all") else [citizen]:
-                    citizen.consense(consensus["value"])
-                    if consensus.get("stun"):
-                        citizen.stunned = True
-                    renpy.show(citizen.image("idle"), at_list=[shake])
+                    citizen.consense(consensus["value"], consensus.get("stun", False))
 
         @staticmethod
         def generate(count=1) -> list:
