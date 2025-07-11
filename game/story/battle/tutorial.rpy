@@ -3,7 +3,7 @@ label tutorial:
     scene bg hall day
     with fade
 
-    player "Let me ask the Commissioner some questions."
+    facilitator "Let me ask the Commissioner some questions."
 
     show commissioner smile 1
     with dissolve

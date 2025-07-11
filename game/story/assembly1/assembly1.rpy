@@ -7,7 +7,7 @@ label assembly1_signup:
     scene bg hall day
     with fade
 
-    player "Hmm... where should I go next?"
+    facilitator "Hmm... where should I go next?"
 
     show commissioner
     with dissolve
@@ -19,7 +19,7 @@ label assembly1_signup:
 
         "Yes. Am I in the right place?":
             commissioner @ smile 1 "Yes, this is it. Let me get you signed up."
-            player "Much appreciated."
+            facilitator "Much appreciated."
 
             show commissioner at left
             with moveinleft
@@ -116,9 +116,9 @@ label assembly1_signup:
 
         "No, I’m not here for that.":
             commissioner surprised "What are you here for?"
-            player "Is this the game jam convention?"
+            facilitator "Is this the game jam convention?"
             commissioner "I think you’re in the wrong place..."
-            player "Ah, my bad. Let me check my location."
+            facilitator "Ah, my bad. Let me check my location."
             jump end
 
 label assembly1_hall:
@@ -252,7 +252,7 @@ label assembly1_student:
 
                 "It’s a bad idea":
                     student "Do you have any evidence why it’s a bad idea?"
-                    player "Not really..."
+                    facilitator "Not really..."
                     student "Then I’ll stick with my idea."
 
             jump assembly1_student
@@ -283,7 +283,7 @@ label assembly1_trainer:
 
                 "It’s a bad idea":
                     trainer "Do you have any proof why it’s a bad idea?"
-                    player "Not really..."
+                    facilitator "Not really..."
                     trainer "Then I’ll stick with my idea."
 
             jump assembly1_trainer
@@ -317,7 +317,7 @@ label assembly1_vote:
         "Am I ready to vote on a proposal?"
 
         "Yes":
-            player "Yes I am."
+            facilitator "Yes I am."
             jump end
 
         "No":

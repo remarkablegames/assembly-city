@@ -18,9 +18,9 @@ screen player_stats:
                 action Show("draw_pile")
         frame:
             vbox:
-                use stat("Moves", Player.moves, Player.moves_max)
+                use stat("Moves", player.moves, player.moves_max)
                 null height 15
-                use stat("Turns", Player.turns, Player.turns_max)
+                use stat("Turns", player.turns, player.turns_max)
                 null height 15
                 use stat("Consensus", Level.consensus("current"), Level.consensus("goal"))
 
@@ -28,7 +28,7 @@ screen player_end_turn:
     frame:
         padding (10, 10) xalign 1.0 yalign 1.0
         textbutton "End Turn":
-            action Function(Player.end_turn)
+            action Function(player.end_turn)
 
 screen tooltip:
     $ tooltip = GetTooltip()

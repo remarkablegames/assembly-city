@@ -113,7 +113,7 @@ init python:
             """
             Use card on citizen.
             """
-            if Player.moves < self.cost:
+            if player.moves < self.cost:
                 return
 
             energy = self.action.get("energy")
@@ -122,7 +122,7 @@ init python:
 
             deck.discard_card(self)
 
-            Player.moves -= self.cost
+            player.moves -= self.cost
 
             draw = self.action.get("draw")
             if draw:
@@ -134,7 +134,7 @@ init python:
             moves = self.action.get("moves")
             if moves:
                 renpy.sound.queue("sound/powerup.ogg")
-                Player.moves += moves["value"]
+                player.moves += moves["value"]
 
             consensus = self.action.get("consensus")
             if consensus:

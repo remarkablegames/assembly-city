@@ -1,6 +1,6 @@
 label player_turn:
 
-    if Player.turns <= 0:
+    if player.turns <= 0:
         $ battle = False
         $ Level.end()
 

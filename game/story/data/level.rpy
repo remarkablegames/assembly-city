@@ -32,8 +32,8 @@ init python:
             if not data:
                 renpy.jump("end")
 
-            Player.turns = Player.turns_max = data["player_turns"]
-            Player.moves = Player.moves_max
+            player.turns = player.turns_max = data["player_turns"]
+            player.moves = player.moves_max
 
             citizens.generate(data["citizens"])
             citizens.show()

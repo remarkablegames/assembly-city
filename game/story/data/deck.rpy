@@ -43,7 +43,7 @@ init python:
                 cards.append(copy.pop())
             return cards
 
-        def draw_cards(self, count=Player.draw_cards) -> None:
+        def draw_cards(self, count=player.draw_cards) -> None:
             """
             Add card(s) to hand.
             """

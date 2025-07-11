@@ -6,8 +6,8 @@ label start:
     scene bg gate day
     with fade
 
-    player "It’s my first day as a facilitator for the Citizens’ Assembly."
-    player "I’m excited and nervous at the same time."
+    facilitator "It’s my first day as a facilitator for the Citizens’ Assembly."
+    facilitator "I’m excited and nervous at the same time."
 
     menu:
         "What should I do?"
