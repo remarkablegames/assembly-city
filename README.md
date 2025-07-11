@@ -20,6 +20,7 @@ Play the game on:
 
 - [Sraye](https://sraye.itch.io/mature-male-character-sprites)
 - [Tainara-P](https://tainara-p.itch.io/)
+- [smashingstocks](https://www.flaticon.com/free-icon/justice-scale_6744071)
 - [sutemo](https://sutemo.itch.io/)
 
 ### Audio
@@ -58,10 +59,6 @@ Clone the repository to the `Projects Directory`:
 git clone https://github.com/remarkablegames/assembly-city.git
 cd assembly-city
 ```
-
-Replace the assets:
-
-- [ ] `game/gui/window_icon.png`
 
 ## Run
 
