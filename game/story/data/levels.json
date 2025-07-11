@@ -248,6 +248,93 @@
                         "energy": -2
                     }
                 ]
+            }
+        ]
+    },
+
+    "5": {
+        "player_turns": 5,
+        "consensus_goal": 30,
+        "citizens": [
+            {
+                "name": "Lawyer",
+                "consensus": 0,
+                "consensus_max": 15,
+                "energy": 0,
+                "energy_max": 7,
+                "actions": [
+                    {
+                        "say": "{name} is thinking..."
+                    },
+                    {
+                        "say": "{name} is tired.\n{name} loses 1 energy.",
+                        "energy": -1
+                    },
+                    {
+                        "say": "{name} disagrees.\n{name} loses 1 consensus.",
+                        "consensus": -1
+                    }
+                ]
+            },
+            {
+                "name": "Secretary",
+                "consensus": 0,
+                "consensus_max": 15,
+                "energy": 0,
+                "energy_max": 7,
+                "actions": [
+                    {
+                        "say": "{name} is thinking..."
+                    },
+                    {
+                        "say": "{name} is sleepy.\n{name} loses 1 energy.",
+                        "energy": -1
+                    },
+                    {
+                        "say": "{name} agrees.\n{name} gains 1 consensus.",
+                        "consensus": 1
+                    }
+                ]
+            },
+            {
+                "name": "Researcher",
+                "consensus": 0,
+                "consensus_max": 15,
+                "energy": 0,
+                "energy_max": 7,
+                "actions": [
+                    {
+                        "say": "{name} is thinking..."
+                    },
+                    {
+                        "say": "{name} disagrees.\n{name} loses 2 consensus.",
+                        "consensus": 2
+                    },
+                    {
+                        "say": "{name} has low energy.\n{name} loses 2 energy.",
+                        "energy": -2
+                    }
+                ]
+            },
+            {
+                "name": "Developer",
+                "consensus": 0,
+                "consensus_max": 15,
+                "energy": 0,
+                "energy_max": 7,
+                "actions": [
+                    {
+                        "say": "{name} is thinking..."
+                    },
+                    {
+                        "say": "{name} disagrees.\n{name} loses 2 consensus.",
+                        "consensus": 2
+                    },
+                    {
+                        "say": "{name} has low energy.\n{name} loses 2 energy.",
+                        "energy": -2
+                    }
+                ]
             },
             {
                 "name": "Trainer",
