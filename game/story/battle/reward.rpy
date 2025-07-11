@@ -28,15 +28,15 @@ label reward:
         jump shop
 
     elif level.current == 2:
-        commissioner "Experts play an important role in providing information and context to help citizens make informed decisions."
+        commissioner "Experts provide context to help citizens make informed decisions."
 
         show commissioner at left
         with moveinleft
 
-        $ card = Card(image="expert", cost=2, action={"consensus": {"value": 4, "stun": True}, "energy": {"value": -2}}),
+        $ card = Card(image="expert", cost=2, action={"consensus": {"value": 4, "stun": True}, "energy": {"value": -2}})
         show screen card(card, 0.75)
 
-        commissioner "An expert can stun a citizen with facts and logic."
+        commissioner "An expert can stun a participant with facts and logic."
 
         menu:
             "Would you like to add this card to your deck?"
@@ -58,7 +58,7 @@ label reward:
         show commissioner at left
         with moveinleft
 
-        $ card = Card(image="vote", cost=2, action={"consensus": {"value": 4, "all": True}, "energy": {"value": -2, "all": True}}),
+        $ card = Card(image="vote", cost=2, action={"consensus": {"value": 4, "all": True}, "energy": {"value": -2, "all": True}})
         show screen card(card, 0.75)
 
         commissioner "Voting can help the group come to a decision."
@@ -90,7 +90,7 @@ label reward_player:
             $ player.moves_max += 1
 
         "Turns {color=[colors.moves]}+1
-        {tooltip}Increase your turns from [player.turns_max] to [player.turns_max + 1]":
+        {tooltip}Increase your turns by 1":
             $ player.turns_max += 1
 
         "Draw cards {color=[colors.moves]}+1
