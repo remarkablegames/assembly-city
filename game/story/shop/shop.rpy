@@ -1,7 +1,7 @@
 label shop:
 
     $ config.menu_include_disabled = True
-    $ reward_cost = max(wins, 3)
+    $ reward_cost = max(level.current, 3)
 
     menu:
         "What do you want to do?"

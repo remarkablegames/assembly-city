@@ -4,8 +4,6 @@ init python:
 default money = 0
 default bonus = 0
 default interest = 0
-default rewards = 0
-default wins = 0
 
 label win:
 
@@ -32,17 +30,12 @@ label win:
     show commissioner smile 1
     with dissolve
 
-    $ commissioner(renpy.random.choice(["Nice work!", "Great job!", "Good stuff!", "Amazing run!", "Excellent effort!"]))
-
-    $ wins += 1
     $ interest = ceil(money * 0.4)
-    $ bonus = renpy.random.randint(wins, round(wins * 1.5) + 1)
+    $ bonus = renpy.random.randint(level.current, round(level.current * 1.5) + 1)
     $ money += bonus + interest
+    $ dialogue = renpy.random.choice(["Nice work!", "Great job!", "Good stuff!", "Amazing run!", "Excellent effort!"])
 
+    commissioner "[dialogue]"
     commissioner "You earned $[bonus] + $[interest] (interest)."
 
-    if wins % 5 == 0:
-        $ rewards += 1
-        jump reward
-
-    jump shop
+    jump reward

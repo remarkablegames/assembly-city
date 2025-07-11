@@ -110,3 +110,8 @@ screen card_frame(card):
             ypos card.label_description_ypos
             padding (5, 0)
         xysize card.width, card.height
+
+screen card(card, xalign_pos=0.5, yalign_pos=0.5):
+    vbox:
+        xalign xalign_pos yalign yalign_pos
+        use card_frame(card)

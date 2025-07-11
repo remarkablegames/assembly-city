@@ -4,12 +4,9 @@ init python:
             self.cards = [
                 Card(image="talk", cost=1, action={"consensus": {"value": 3}, "energy": {"value": -2}}),
                 Card(image="talk", cost=1, action={"consensus": {"value": 3}, "energy": {"value": -2}}),
+                Card(image="soda", cost=1, action={"energy": {"value": 2}}),
+                Card(image="soda", cost=1, action={"energy": {"value": 2}}),
                 Card(image="tea", cost=1, action={"draw": {"value": 2}}),
-                Card(image="soda", cost=1, action={"energy": {"value": 2}}),
-                Card(image="soda", cost=1, action={"energy": {"value": 2}}),
-                Card(image="pizza", cost=2, action={"energy": {"value": 2, "all": True}}),
-                Card(image="expert", cost=2, action={"consensus": {"value": 3, "all": True}, "energy": {"value": -2, "all": True}}),
-                Card(image="vote", cost=2, action={"consensus": {"value": 3, "stun": True}, "energy": {"value": -3}}),
             ]
 
             self.draw_pile = []
