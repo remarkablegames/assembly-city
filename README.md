@@ -105,6 +105,12 @@ Lint the game:
 renpy game lint
 ```
 
+## Resources
+
+- [POV: a cynic's guide to Citizens' Assembly](https://oneworldornone.world/the-comic-book-explainer)
+- [Citizens' Assembly Explained](https://assemblyexplainer.com/)
+- [Assembling an Assembly Guide](https://assemblyguide.demnext.org/)
+
 ## License
 
 [MIT](LICENSE)
