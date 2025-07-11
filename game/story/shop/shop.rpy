@@ -37,7 +37,7 @@ label shop:
 
         "Run assembly":
             $ config.menu_include_disabled = False
-            $ Level.next()
+            $ level.next()
             jump battle
 
 screen add_card:

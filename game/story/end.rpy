@@ -9,7 +9,7 @@ label end:
     hide screen citizen_stats2
     hide screen citizen_stats3
 
-    $ Level.restart()
+    $ level.restart()
 
     scene black
 

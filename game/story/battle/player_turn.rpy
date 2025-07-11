@@ -2,7 +2,7 @@ label player_turn:
 
     if player.turns <= 0:
         $ battle = False
-        $ Level.end()
+        $ level.end()
 
     $ deck.draw_cards()
 
@@ -74,4 +74,7 @@ screen player_hand:
 
                     mousearea:
                         area (0, 0, card.offset, card.height)
-                        hovered [Queue("sound", "ui/mouserelease1.ogg"), Function(onhovered, draggable)]
+                        hovered [
+                            Queue("sound", "ui/mouserelease1.ogg"),
+                            Function(onhovered, draggable),
+                        ]

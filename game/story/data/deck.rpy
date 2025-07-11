@@ -43,10 +43,13 @@ init python:
                 cards.append(copy.pop())
             return cards
 
-        def draw_cards(self, count=player.draw_cards) -> None:
+        def draw_cards(self, count=0) -> None:
             """
             Add card(s) to hand.
             """
+            if not count:
+                count = player.draw_cards
+
             for _ in range(count):
                 if not len(self.draw_pile):
                     self.draw_pile = self.discard_pile.copy()

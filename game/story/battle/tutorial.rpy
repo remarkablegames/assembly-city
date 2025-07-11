@@ -43,7 +43,7 @@ label tutorial_questions:
             menu:
                 "Yes":
                     commissioner @ smile 3 "Alright, good luck!"
-                    $ Level.next()
+                    $ level.next()
                     jump battle
                 "No":
                     jump tutorial_questions

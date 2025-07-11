@@ -3,31 +3,28 @@ init python:
 
     class Level:
         _data = load(renpy.file("story/data/levels.json"))
-        level = 0
+        current = 0
 
-        @staticmethod
-        def data() -> dict:
+        def data(self) -> dict:
             """
             Get level data.
             """
-            return Level._data.get(str(Level.level), {})
+            return self._data.get(str(self.current), {})
 
-        @staticmethod
-        def consensus(value: str) -> dict:
+        def consensus(self, value: str) -> dict:
             """
             Get consensus value.
             """
             if value == "current":
                 return sum(list(map(lambda citizen: citizen.consensus, citizens.citizens)))
             if value == "goal":
-                return Level.data().get("consensus_goal", 0)
+                return self.data().get("consensus_goal", 0)
 
-        @staticmethod
-        def start() -> None:
+        def start(self) -> None:
             """
             Start level.
             """
-            data = Level.data()
+            data = self.data()
 
             if not data:
                 renpy.jump("end")
@@ -40,29 +37,28 @@ init python:
 
             deck.shuffle()
 
-        @staticmethod
-        def end() -> None:
+        def end(self) -> None:
             """
             End level.
             """
-            if Level.consensus("current") < Level.consensus("goal"):
+            if self.consensus("current") < self.consensus("goal"):
                 renpy.jump("lose")
             else:
                 renpy.jump("win")
 
-        @staticmethod
-        def next(level=0) -> None:
+        def next(self, level=0) -> None:
             """
             Increment level.
             """
             if level:
-                Level.level = level
+                self.current = level
             else:
-                Level.level += 1
+                self.current += 1
 
-        @staticmethod
-        def restart() -> None:
+        def restart(self) -> None:
             """
             Restart level.
             """
-            Level.level = 0
+            self.current = 0
+
+default level = Level()

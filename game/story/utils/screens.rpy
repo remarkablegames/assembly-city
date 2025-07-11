@@ -22,7 +22,7 @@ screen player_stats:
                 null height 15
                 use stat("Turns", player.turns, player.turns_max)
                 null height 15
-                use stat("Consensus", Level.consensus("current"), Level.consensus("goal"))
+                use stat("Consensus", level.consensus("current"), level.consensus("goal"))
 
 screen player_end_turn:
     frame:

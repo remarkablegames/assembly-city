@@ -16,5 +16,5 @@ label start:
             jump tutorial
 
         "Run the assembly":
-            $ Level.next()
+            $ level.next()
             jump battle
