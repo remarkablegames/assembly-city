@@ -61,8 +61,6 @@ cd assembly-city
 
 Replace the assets:
 
-- [ ] `web-presplash.jpg`
-- [ ] `game/gui/main_menu.png`
 - [ ] `game/gui/window_icon.png`
 
 ## Run
