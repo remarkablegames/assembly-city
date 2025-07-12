@@ -27,11 +27,13 @@ Play the game on:
 
 ### Audio
 
-- [Heal Up](https://pixabay.com/sound-effects/heal-up-39285/)
-- [Health Pickup](https://pixabay.com/sound-effects/health-pickup-6860/)
 - [Kenney Interface Sounds](https://kenney.nl/assets/interface-sounds)
-- [Punch Sound Effects](https://pixabay.com/sound-effects/punch-sound-effects-28649/)
-- [card mixing](https://pixabay.com/sound-effects/card-mixing-48088/)
+- Pixabay
+  - [Cash Register Purchase](https://pixabay.com/sound-effects/cash-register-purchase-87313/)
+  - [Heal Up](https://pixabay.com/sound-effects/heal-up-39285/)
+  - [Health Pickup](https://pixabay.com/sound-effects/health-pickup-6860/)
+  - [Punch Sound Effects](https://pixabay.com/sound-effects/punch-sound-effects-28649/)
+  - [card mixing](https://pixabay.com/sound-effects/card-mixing-48088/)
 
 ### Development
 

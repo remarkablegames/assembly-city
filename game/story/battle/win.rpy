@@ -17,8 +17,6 @@ label win:
 
     "You were able to reach a consensus!"
 
-    play music "music/BGM8 Harukaze.ogg" volume 0.5 fadein 1
-
     if level.current == 0:
         hide commissioner idle
         show commissioner smile 1 with dissolve
@@ -26,10 +24,14 @@ label win:
         commissioner "I included a bonus if you go above the consensus goal."
         jump tutorial_questions
 
+    stop music fadeout 4
+
     scene bg hall day
     with fade
 
     show screen player_money
+
+    play music "music/BGM8 Harukaze.ogg" volume 0.5 fadein 1
 
     show commissioner smile 1
     with dissolve
@@ -40,5 +42,7 @@ label win:
 
     commissioner "[dialogue]"
     commissioner "You earned $[max(level.current, 3)] + $[bonus] (bonus)."
+
+    play sound "sound/cash.ogg" volume 0.5
 
     jump reward
