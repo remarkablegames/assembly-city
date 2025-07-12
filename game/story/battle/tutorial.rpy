@@ -14,10 +14,12 @@ label tutorial:
 label tutorial_questions:
 
     menu:
-        "I’d like to ask you..."
+        "I’d like to ask..."
 
-        "What’s a Citizens’ Assembly?":
-            jump tutorial_what_is_assembly
+        "What is a Citizens’ Assembly?":
+            commissioner "It’s a form of deliberative democracy."
+            commissioner "We invite a group of citizens to discuss policy issues."
+            jump tutorial_assembly_questions
 
         "How do I run an assembly?":
             jump tutorial_how_to_run_assembly
@@ -35,11 +37,28 @@ label tutorial_questions:
                     jump tutorial_questions
 
 
-label tutorial_what_is_assembly:
+label tutorial_assembly_questions:
 
-    commissioner @ smile 2 "It’s a form of deliberative democracy, where a diverse group of citizens engage in informed discussion and deliberation to address complex policy questions."
+    menu:
+        "I’d like to know..."
 
-    jump tutorial_questions
+        "How are the citizens selected?":
+            commissioner @ smile 2 "We invite a broad group of people by lottery from an address database."
+            commissioner "Then we select a representative sample in a fair and diverse manner."
+            jump tutorial_assembly_questions
+
+        "What kind of policy issues are discussed?":
+            commissioner @ smile 2 "Policy issues that are complex, controversial, or lacks a clear consensus among decision-makers."
+            commissioner "For example, climate change, social care, and constitutional matters."
+            jump tutorial_assembly_questions
+
+        "Where can I learn more about citizens assemblies?":
+            commissioner @ smile 2 "You can learn more about citizens assemblies in this {a=https://oneworldornone.world/the-comic-book-explainer}comic book{/a}."
+            commissioner "Alternatively, you can check out this helpful {a=https://assemblyexplainer.com/}explainer{/a}."
+            jump tutorial_assembly_questions
+
+        "Nevermind":
+            jump tutorial_questions
 
 
 label tutorial_how_to_run_assembly:

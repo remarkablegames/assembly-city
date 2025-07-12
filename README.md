@@ -10,6 +10,8 @@
 
 ⚖️ Welcome to Assembly City!
 
+This game was made for [Citizens, Assemble!](https://itch.io/jam/citizens-assemble).
+
 Play the game on:
 
 - [remarkablegames](https://remarkablegames.org/assembly-city)
@@ -26,6 +28,11 @@ Play the game on:
 ### Audio
 
 - [Kenney](https://kenney.nl/assets/interface-sounds)
+
+### Development
+
+- [Rob Cohen](https://github.com/rmacohen)
+- [remarkablemark](https://github.com/remarkablemark)
 
 ### Music
 
