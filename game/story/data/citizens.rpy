@@ -108,11 +108,13 @@ init python:
 
                 energy = action.get("energy")
                 if energy:
-                    citizen.energize(energy)
+                    for citizen in citizens.citizens if action.get("all", False) else [citizen]:
+                        citizen.energize(energy)
 
                 consensus = action.get("consensus")
                 if consensus:
-                    citizen.consense(consensus)
+                    for citizen in citizens.citizens if action.get("all", False) else [citizen]:
+                        citizen.consense(consensus)
 
                 citizen.actions.append(action)
 

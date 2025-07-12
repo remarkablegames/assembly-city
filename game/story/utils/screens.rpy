@@ -3,19 +3,18 @@ screen stat(name, current, max):
     bar value AnimatedValue(current, max):
         xsize 300
 
+
 screen player_money:
     frame:
         background Solid((0, 0, 0, 100))
         text "Money: $[money]"
         xpos (40 if renpy.variant("web") else 0)
 
+
 screen player_stats:
     vbox:
         yalign 1.0
-        frame:
-            padding (10, 10)
-            textbutton ("View Draw Pile" if level.battle else "View Deck"):
-                action Show("draw_pile")
+        use player_deck
         frame:
             vbox:
                 use stat("Moves", player.moves, player.moves_max)
@@ -24,11 +23,21 @@ screen player_stats:
                 null height 15
                 use stat("Consensus", level.consensus("current"), level.consensus("goal"))
 
+
 screen player_end_turn:
     frame:
         padding (10, 10) xalign 1.0 yalign 1.0
         textbutton "End Turn":
             action Function(player.end_turn)
+
+
+screen player_deck(xalign_pos=0, yalign_pos=0):
+    frame:
+        padding (10, 10)
+        textbutton ("View Draw Pile" if level.battle else "View Deck"):
+            action Show("draw_pile")
+        xalign xalign_pos yalign yalign_pos
+
 
 screen tooltip:
     $ tooltip = GetTooltip()
@@ -41,8 +50,10 @@ screen tooltip:
                 text tooltip color "#000"
                 xalign 0.5
 
+
 init python:
     citizen_name_ypos = 628
+
 
 screen citizen_stats(citizen, xalign_pos):
     frame:
@@ -60,20 +71,26 @@ screen citizen_stats(citizen, xalign_pos):
         xsize 400
     use tooltip
 
+
 screen citizen_stats0(citizen, xalign_pos):
     use citizen_stats(citizen, xalign_pos)
+
 
 screen citizen_stats1(citizen, xalign_pos):
     use citizen_stats(citizen, xalign_pos)
 
+
 screen citizen_stats2(citizen, xalign_pos):
     use citizen_stats(citizen, xalign_pos)
+
 
 screen citizen_stats3(citizen, xalign_pos):
     use citizen_stats(citizen, xalign_pos)
 
+
 screen citizen_stats4(citizen, xalign_pos):
     use citizen_stats(citizen, xalign_pos)
+
 
 screen draw_pile:
 
@@ -101,6 +118,7 @@ screen draw_pile:
             textbutton "Close":
                 action Hide("draw_pile")
 
+
 screen card_frame(card):
     frame:
         background Frame(card.image)
@@ -113,6 +131,7 @@ screen card_frame(card):
             ypos card.label_description_ypos
             padding (5, 0)
         xysize card.width, card.height
+
 
 screen card(card, xalign_pos=0.5, yalign_pos=0.5):
     vbox:

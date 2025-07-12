@@ -1,5 +1,7 @@
 label shop:
 
+    show screen player_deck(0, 1.0)
+
     $ config.menu_include_disabled = True
     $ cost_base = max(level.current, 3)
     $ cost_card_buy = cost_base + player.cards_bought
@@ -18,7 +20,7 @@ label shop:
             call screen add_card
 
         "Upgrade a card (-$[cost_card_upgrade])
-        {tooltip}Upgrade 1 card in your deck ([player.draw_cards] choices)" if money >= cost_card_upgrade:
+        {tooltip}Upgrade 1 card in your deck (max [player.draw_cards] choices)" if money >= cost_card_upgrade:
             python:
                 money -= cost_card_upgrade
                 player.cards_upgraded += 1
@@ -46,6 +48,7 @@ label shop:
         "Run the assembly":
             $ config.menu_include_disabled = False
             $ level.next()
+            hide screen player_deck
             jump battle
 
 screen add_card:

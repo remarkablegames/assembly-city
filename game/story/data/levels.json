@@ -44,7 +44,7 @@
                         "consensus": 1
                     },
                     {
-                        "say": "{name} is sleepy.\n{name} loses 1 energy.",
+                        "say": "{name} is tired.\n{name} loses 1 energy.",
                         "energy": -1
                     }
                 ]
@@ -72,8 +72,9 @@
                         "energy": -1
                     },
                     {
-                        "say": "{name} disagrees.\n{name} loses 1 consensus.",
-                        "consensus": -1
+                        "say": "{name} disagrees.\n{name} lowers 1 consensus for all.",
+                        "consensus": -1,
+                        "all": true
                     }
                 ]
             },
@@ -85,7 +86,7 @@
                 "energy_max": 7,
                 "actions": [
                     {
-                        "say": "{name} is sleepy.\n{name} loses 1 energy.",
+                        "say": "{name} is tired.\n{name} loses 1 energy.",
                         "energy": -1
                     },
                     {
@@ -136,7 +137,7 @@
                         "say": "{name} is thinking..."
                     },
                     {
-                        "say": "{name} is sleepy.\n{name} loses 1 energy.",
+                        "say": "{name} is tired.\n{name} loses 1 energy.",
                         "energy": -1
                     },
                     {
@@ -204,7 +205,7 @@
                         "say": "{name} is thinking..."
                     },
                     {
-                        "say": "{name} is sleepy.\n{name} loses 1 energy.",
+                        "say": "{name} is tired.\n{name} loses 1 energy.",
                         "energy": -1
                     },
                     {
@@ -292,7 +293,7 @@
                         "say": "{name} is thinking..."
                     },
                     {
-                        "say": "{name} is sleepy.\n{name} loses 1 energy.",
+                        "say": "{name} is tired.\n{name} loses 1 energy.",
                         "energy": -1
                     },
                     {
