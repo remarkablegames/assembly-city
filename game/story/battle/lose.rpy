@@ -12,6 +12,8 @@ label lose:
 
     "You weren’t able to reach a consensus."
 
+    play music "music/BGM8 Harukaze.ogg" volume 0.5 fadein 1
+
     if level.current == 0:
         hide commissioner idle
         show commissioner smile 1 with dissolve
