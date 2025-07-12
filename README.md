@@ -27,7 +27,7 @@ Play the game on:
 
 - [Kenney](https://kenney.nl/assets/interface-sounds)
 
-### Ideation
+## Ideation
 
 - [Excalidraw](https://excalidraw.com/#json=6czVMRbr8qxWM-nVA6Zlt,Zd68FBkx9bQ8ZplCWGlyBg)
 
