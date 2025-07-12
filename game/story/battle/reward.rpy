@@ -1,9 +1,13 @@
 label reward:
 
-    if level.current == 1:
-        commissioner "Managing the citizens’ energy levels can be hard."
+    show commissioner smile 1
 
-        show commissioner at left
+    if level.current == 1:
+        commissioner "Assembly participants are fairly compensated for their time."
+        commissioner "We included a bonus if you go over in consensus."
+        commissioner "Managing the citizens’ energy levels can be tricky."
+
+        show commissioner smile 1 at left
         with moveinleft
 
         $ card = Card(image="pizza", cost=2, action={"energy": {"value": 3, "all": True}, "draw": {"value": 1}})
@@ -18,7 +22,7 @@ label reward:
                 $ deck.cards.append(card)
                 queue sound "sound/draw.ogg"
                 hide screen card
-                show commissioner at center
+                show commissioner smile 1 at center
                 with moveinright
                 commissioner @ smile 3 "I hope it comes handy!"
 
@@ -30,7 +34,7 @@ label reward:
     elif level.current == 2:
         commissioner "Experts provide context to help citizens make informed decisions."
 
-        show commissioner at left
+        show commissioner smile 1 at left
         with moveinleft
 
         $ card = Card(image="expert", cost=2, action={"consensus": {"value": 4, "stun": True}, "energy": {"value": -2}})
@@ -45,7 +49,7 @@ label reward:
                 $ deck.cards.append(card)
                 queue sound "sound/draw.ogg"
                 hide screen card
-                show commissioner at center
+                show commissioner smile 1 at center
                 with moveinright
                 commissioner @ smile 3 "Make good use of it!"
 
@@ -55,7 +59,7 @@ label reward:
     elif level.current == 3:
         commissioner "Citizens vote on recommendations to decide if they should be included in the final report."
 
-        show commissioner at left
+        show commissioner smile 1 at left
         with moveinleft
 
         $ card = Card(image="vote", cost=2, action={"consensus": {"value": 4, "all": True}, "energy": {"value": -2, "all": True}})
@@ -70,7 +74,7 @@ label reward:
                 $ deck.cards.append(card)
                 queue sound "sound/draw.ogg"
                 hide screen card
-                show commissioner at center
+                show commissioner smile 1 at center
                 with moveinright
                 commissioner @ smile 3 "Good luck!"
 

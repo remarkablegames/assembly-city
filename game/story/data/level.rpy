@@ -32,6 +32,11 @@ init python:
             player.turns = player.turns_max = data["player_turns"]
             player.moves = player.moves_max
 
+            if self.current > 0:
+                renpy.scene()
+                renpy.show(data["scene"])
+                renpy.with_statement(dissolve)
+
             citizens.generate(data["citizens"])
             citizens.show()
 

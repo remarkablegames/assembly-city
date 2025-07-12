@@ -25,6 +25,7 @@
     },
 
     "1": {
+        "scene": "bg teachers room day",
         "player_turns": 3,
         "consensus_goal": 10,
         "citizens": [
@@ -52,6 +53,7 @@
     },
 
     "2": {
+        "scene": "bg refectory day",
         "player_turns": 5,
         "consensus_goal": 15,
         "citizens": [
@@ -99,6 +101,7 @@
     },
 
     "3": {
+        "scene": "bg student council room day",
         "player_turns": 5,
         "consensus_goal": 30,
         "citizens": [
@@ -166,6 +169,7 @@
     },
 
     "4": {
+        "scene": "bg library day",
         "player_turns": 5,
         "consensus_goal": 30,
         "citizens": [
@@ -253,6 +257,7 @@
     },
 
     "5": {
+        "scene": "bg teachers room day",
         "player_turns": 5,
         "consensus_goal": 30,
         "citizens": [
