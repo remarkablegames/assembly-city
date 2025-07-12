@@ -42,6 +42,8 @@ init python:
             """
             Update consensus.
             """
+            if not value:
+                return
             renpy.sound.queue("sound/punch.ogg", relative_volume=0.5)
             self.consensus += value
             if self.consensus > self.consensus_max:
@@ -56,6 +58,8 @@ init python:
             """
             Update energy.
             """
+            if not value:
+                return
             renpy.sound.queue("sound/potion.ogg", relative_volume=0.5)
             self.energy += value
             if self.energy > self.energy_max:

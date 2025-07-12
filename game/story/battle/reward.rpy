@@ -3,8 +3,8 @@ label reward:
     show commissioner smile 1
 
     if level.current == 1:
-        commissioner "Assembly participants are fairly compensated for their time."
-        commissioner "We included a bonus if you go over in consensus."
+        commissioner "We make sure assembly participants are fairly compensated for their time."
+        commissioner "I also included a bonus if you went beyond the consensus goal."
         commissioner "Managing the citizens’ energy levels can be tricky."
 
         show commissioner smile 1 at left
@@ -87,23 +87,19 @@ label reward:
 label reward_player:
 
     menu:
-        "Select a reward:"
+        "Select an upgrade:"
 
         "Moves +1
         {tooltip}Increase your moves from [player.moves_max] to [player.moves_max + 1]":
             $ player.moves_max += 1
 
         "Turns +1
-        {tooltip}Increase your turns by 1":
+        {tooltip}Increase the number of turns by 1":
             $ player.turns_max += 1
 
         "Draw cards +1
-        {tooltip}Increase drawn cards per hand from [player.draw_cards] to [player.draw_cards + 1]":
+        {tooltip}Increase cards per hand and card choices in shop from [player.draw_cards] to [player.draw_cards + 1]":
             $ player.draw_cards += 1
-
-        "Buy/upgrade cards +1
-        {tooltip}Increase buy/upgrade card choices from [player.shop_card_choices] to [player.shop_card_choices + 1]":
-            $ player.shop_card_choices += 1
 
         "Pass":
             pass

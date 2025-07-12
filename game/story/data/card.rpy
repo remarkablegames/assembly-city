@@ -37,16 +37,18 @@ init python:
             color = "{color=[colors.label]}"
 
             for action, data in self.action.items():
-                label += action.capitalize()
                 value = data["value"]
-                if value > 0:
-                    label += f" +{value}"
-                else:
-                    label += f" {value}"
+
+                if value:
+                    label += action.capitalize()
+                    label += f" +{value}" if value > 0 else f" {value}"
+
                 if data.get("stun"):
                     label += " Stun"
+
                 if data.get("all"):
                     label += " All"
+
                 label += "\n"
 
             label = label.rstrip('\n')

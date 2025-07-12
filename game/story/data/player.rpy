@@ -3,7 +3,6 @@ init python:
         draw_cards = 3
         moves = 3
         moves_max = 3
-        shop_card_choices = 3
         turns = 0
         turns_max = 0
 
