@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/remarkablegames/assembly-city/master/game/gui/window_icon.png" alt="Assembly City">
+  <img src="https://raw.githubusercontent.com/remarkablegames/assembly-city/master/game/gui/window_icon.png" alt="Assembly City" width="250">
 </p>
 
 # Assembly City
@@ -8,7 +8,7 @@
 [![build](https://github.com/remarkablegames/assembly-city/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablegames/assembly-city/actions/workflows/build.yml)
 [![lint](https://github.com/remarkablegames/assembly-city/actions/workflows/lint.yml/badge.svg)](https://github.com/remarkablegames/assembly-city/actions/workflows/lint.yml)
 
-🏛️ Welcome to Assembly City!
+⚖️ Welcome to Assembly City!
 
 Play the game on:
 
