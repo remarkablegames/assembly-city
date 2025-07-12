@@ -21,7 +21,7 @@ init python:
             """
             Name label.
             """
-            return "{color=[colors.white]}{b}{k=-2}" + self.name.upper()
+            return "{color=[colors.label]}{b}{k=-2}" + self.name.upper()
 
         def label_cost(self) -> str:
             """
@@ -34,7 +34,7 @@ init python:
             Description label.
             """
             label = ""
-            color = "{color=[colors.white]}"
+            color = "{color=[colors.label]}"
 
             for action, data in self.action.items():
                 label += action.capitalize()
