@@ -20,6 +20,8 @@ label win:
     if level.current == 0:
         hide commissioner idle
         show commissioner smile 1 with dissolve
+        commissioner "We make sure assembly participants are fairly compensated for their time."
+        commissioner "I included a bonus if you go beyond the consensus goal."
         jump tutorial_questions
 
     scene bg hall day

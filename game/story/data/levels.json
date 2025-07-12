@@ -6,7 +6,7 @@
             {
                 "name": "Commissioner",
                 "consensus": 0,
-                "consensus_max": 10,
+                "consensus_max": 12,
                 "energy": 5,
                 "energy_max": 5,
                 "actions": [

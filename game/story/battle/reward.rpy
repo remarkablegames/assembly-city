@@ -3,8 +3,6 @@ label reward:
     show commissioner smile 1
 
     if level.current == 1:
-        commissioner "We make sure assembly participants are fairly compensated for their time."
-        commissioner "I also included a bonus if you went beyond the consensus goal."
         commissioner "Managing the citizens’ energy levels can be tricky."
 
         show commissioner smile 1 at left
