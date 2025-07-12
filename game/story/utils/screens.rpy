@@ -14,7 +14,7 @@ screen player_stats:
         yalign 1.0
         frame:
             padding (10, 10)
-            textbutton f"{'View Draw Pile' if battle else 'View Deck'}":
+            textbutton ("View Draw Pile" if level.battle else "View Deck"):
                 action Show("draw_pile")
         frame:
             vbox:
@@ -91,7 +91,7 @@ screen draw_pile:
 
             hbox:
                 spacing 25
-                for card in deck.draw_pile if battle else deck.cards:
+                for card in deck.draw_pile if level.battle else deck.cards:
                     use card_frame(card)
 
         null height 50

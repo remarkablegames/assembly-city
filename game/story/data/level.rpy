@@ -3,6 +3,7 @@ init python:
 
     class Level:
         _data = load(renpy.file("story/data/levels.json"))
+        battle = False
         current = 0
 
         def data(self) -> dict:
@@ -24,6 +25,7 @@ init python:
             """
             Start level.
             """
+            self.battle = True
             data = self.data()
 
             if not data:
@@ -46,6 +48,7 @@ init python:
             """
             End level.
             """
+            self.battle = False
             if self.consensus("current") < self.consensus("goal"):
                 renpy.jump("lose")
             else:
