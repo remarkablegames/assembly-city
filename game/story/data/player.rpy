@@ -1,10 +1,16 @@
 init python:
     class Player:
+        # battle
         draw_cards = 3
         moves = 3
         moves_max = 3
         turns = 0
         turns_max = 0
+
+        # shop
+        cards_bought = 0
+        cards_upgraded =0
+        cards_removed = 0
 
         def end_turn(self) -> None:
             """

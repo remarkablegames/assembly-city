@@ -8,6 +8,7 @@ label lose:
     hide screen citizen_stats1
     hide screen citizen_stats2
     hide screen citizen_stats3
+    hide screen citizen_stats4
 
     "You weren’t able to reach a consensus."
 

@@ -72,6 +72,9 @@ screen citizen_stats2(citizen, xalign_pos):
 screen citizen_stats3(citizen, xalign_pos):
     use citizen_stats(citizen, xalign_pos)
 
+screen citizen_stats4(citizen, xalign_pos):
+    use citizen_stats(citizen, xalign_pos)
+
 screen draw_pile:
 
     dismiss action Hide("draw_pile")

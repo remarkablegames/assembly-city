@@ -1,21 +1,27 @@
 label shop:
 
     $ config.menu_include_disabled = True
-    $ reward_cost = max(level.current, 3)
+    $ cost_base = max(level.current, 3)
+    $ cost_card_buy = cost_base + player.cards_bought
+    $ cost_card_upgrade = cost_base * 2 + player.cards_upgraded
+    $ cost_card_remove = cost_base * 3 + player.cards_removed
 
     menu:
         "What do you want to do?"
 
-        "Buy a card (-$[reward_cost])
-        {tooltip}Add 1 card to your deck ([player.draw_cards] choices)" if money >= reward_cost:
-            $ money -= reward_cost
-            $ config.menu_include_disabled = False
+        "Buy a card (-$[cost_card_buy])
+        {tooltip}Add 1 card to your deck ([player.draw_cards] choices)" if money >= cost_card_buy:
+            python:
+                money -= cost_card_buy
+                player.cards_bought += 1
+                config.menu_include_disabled = False
             call screen add_card
 
-        "Upgrade a card (-$[reward_cost * 2])
-        {tooltip}Upgrade 1 card in your deck ([player.draw_cards] choices)" if money >= reward_cost * 2:
+        "Upgrade a card (-$[cost_card_upgrade])
+        {tooltip}Upgrade 1 card in your deck ([player.draw_cards] choices)" if money >= cost_card_upgrade:
             python:
-                money -= reward_cost * 2
+                money -= cost_card_upgrade
+                player.cards_upgraded += 1
                 config.menu_include_disabled = False
                 upgrade_card_type = renpy.random.choice(
                     ["all"] * 1 +
@@ -29,13 +35,15 @@ label shop:
                 upgrade_card_value = renpy.random.randint(1, 3)
             call screen upgrade_card
 
-        "Remove a card (-$[reward_cost * 3])
-        {tooltip}Remove 1 card from your deck" if money >= reward_cost * 3:
-            $ money -= reward_cost * 3
-            $ config.menu_include_disabled = False
+        "Remove a card (-$[cost_card_remove])
+        {tooltip}Remove 1 card from your deck" if money >= cost_card_remove:
+            python:
+                money -= cost_card_remove
+                player.cards_removed += 1
+                config.menu_include_disabled = False
             call screen remove_card
 
-        "Run assembly":
+        "Run the assembly":
             $ config.menu_include_disabled = False
             $ level.next()
             jump battle

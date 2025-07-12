@@ -8,6 +8,7 @@ label end:
     hide screen citizen_stats1
     hide screen citizen_stats2
     hide screen citizen_stats3
+    hide screen citizen_stats4
 
     $ level.restart()
 
