@@ -12,10 +12,25 @@ label end:
     hide screen citizen_stats3
     hide screen citizen_stats4
 
+    if level.data():
+        call end_bad
+    else:
+        call end_good
+
     $ level.restart()
 
     scene black
 
     "{b}End{/b}."
+
+    return
+
+
+label end_good:
+
+    return
+
+
+label end_bad:
 
     return

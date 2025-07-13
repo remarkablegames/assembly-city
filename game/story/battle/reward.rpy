@@ -27,8 +27,6 @@ label reward:
             "No":
                 commissioner "Alright."
 
-        jump shop
-
     elif level.current == 2:
         commissioner "Experts provide context to help citizens make informed decisions."
 
@@ -79,10 +77,13 @@ label reward:
             "No":
                 commissioner "All good."
 
-    else:
-        jump shop
+    jump reward_player
+
 
 label reward_player:
+
+    if level.current % 3 != 0:
+        jump shop
 
     menu:
         "Select an upgrade:"

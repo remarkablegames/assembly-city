@@ -105,13 +105,13 @@
     "3": {
         "scene": "bg student council room day",
         "player_turns": 5,
-        "consensus_goal": 30,
+        "consensus_goal": 25,
         "citizens": [
             {
                 "name": "Lawyer",
                 "consensus": 0,
                 "consensus_max": 16,
-                "energy": 0,
+                "energy": 2,
                 "energy_max": 7,
                 "actions": [
                     {
@@ -131,7 +131,7 @@
                 "name": "Secretary",
                 "consensus": 0,
                 "consensus_max": 14,
-                "energy": 0,
+                "energy": 2,
                 "energy_max": 7,
                 "actions": [
                     {
@@ -152,7 +152,7 @@
                 "name": "Researcher",
                 "consensus": 0,
                 "consensus_max": 12,
-                "energy": 0,
+                "energy": 2,
                 "energy_max": 7,
                 "actions": [
                     {
@@ -175,7 +175,7 @@
     "4": {
         "scene": "bg library day",
         "player_turns": 4,
-        "consensus_goal": 50,
+        "consensus_goal": 30,
         "citizens": [
             {
                 "name": "Lawyer",
@@ -263,7 +263,7 @@
     "5": {
         "scene": "bg teachers room day",
         "player_turns": 5,
-        "consensus_goal": 70,
+        "consensus_goal": 60,
         "citizens": [
             {
                 "name": "Lawyer",

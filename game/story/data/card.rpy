@@ -80,8 +80,11 @@ init python:
             """
             Upgrade card.
             """
-            if action in ["all", "stun"]:
-                self.action["consensus"][action] = 1
+            if action == "all":
+                self.action["consensus"]["all"] = True
+                self.action["energy"]["all"] = True
+            elif action == "stun":
+                self.action["consensus"]["stun"] = True
             elif action == "cost" and self.cost > 0:
                 self.cost -= 1
             else:
@@ -118,7 +121,7 @@ init python:
             if player.moves < self.cost:
                 return
 
-            energy = self.action.get("energy")
+            energy = self.action.get("energy", {})
             if energy and citizen.energy + energy["value"] < 0:
                 return
 
@@ -130,20 +133,29 @@ init python:
             if draw:
                 deck.draw_cards(draw["value"])
 
-            if energy:
-                for citizen in citizens.citizens if energy.get("all") else [citizen]:
-                    citizen.energize(energy["value"])
-
             moves = self.action.get("moves")
             if moves:
                 renpy.sound.queue("sound/powerup.ogg")
                 player.moves += moves["value"]
 
-            consensus = self.action.get("consensus")
+            consensus = self.action.get("consensus", {})
+
+            if consensus.get("all") and energy.get("all"):
+                for citizen in citizens.citizens:
+                    if citizen.energy + energy["value"] >= 0:
+                        citizen.consense(consensus["value"])
+                        citizen.energize(energy["value"])
+                        citizen.stun(consensus.get("stun", False))
+                return
+
             if consensus:
                 for citizen in citizens.citizens if consensus.get("all") else [citizen]:
                     citizen.consense(consensus["value"])
                     citizen.stun(consensus.get("stun", False))
+
+            if energy:
+                for citizen in citizens.citizens if energy.get("all") else [citizen]:
+                    citizen.energize(energy["value"])
 
         @staticmethod
         def generate(count=1) -> list:
@@ -153,25 +165,22 @@ init python:
             cards = []
 
             for _ in range(count):
-                action = renpy.random.choice(["consensus", "draw", "energy"])
-
-                if action == "draw":
-                    image = "tea"
-                elif action == "energy":
-                    image = renpy.random.choice(["pizza", "soda"])
-                else:
-                    image = "talk"
-
-                card = Card(
-                    image=image,
-                    cost=renpy.random.randint(1, 3),
-                    action={
-                        action: {
-                            "value": renpy.random.randint(1, 6)
-                        },
+                action = {
+                    renpy.random.choice(["consensus", "draw", "energy"]): {
+                        "value": renpy.random.randint(1, 6),
                     },
-                )
+                }
 
+                if action.get("consensus"):
+                    image = "talk"
+                    action["energy"] = {"value": -renpy.random.randint(1, 3)}
+                elif action.get("draw"):
+                    image = "tea"
+                elif action.get("energy"):
+                    image = "soda"
+
+                cost = renpy.random.randint(1, 3)
+                card = Card(image=image, cost=cost, action=action)
                 cards.append(card)
 
             return cards
