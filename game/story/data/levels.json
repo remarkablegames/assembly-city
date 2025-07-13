@@ -105,7 +105,7 @@
     "3": {
         "scene": "bg student council room day",
         "player_turns": 5,
-        "consensus_goal": 25,
+        "consensus_goal": 20,
         "citizens": [
             {
                 "name": "Lawyer",
@@ -263,13 +263,13 @@
     "5": {
         "scene": "bg teachers room day",
         "player_turns": 5,
-        "consensus_goal": 60,
+        "consensus_goal": 50,
         "citizens": [
             {
                 "name": "Lawyer",
-                "consensus": 0,
-                "consensus_max": 20,
-                "energy": 0,
+                "consensus": 2,
+                "consensus_max": 13,
+                "energy": 1,
                 "energy_max": 7,
                 "actions": [
                     {
@@ -288,7 +288,7 @@
             {
                 "name": "Secretary",
                 "consensus": 0,
-                "consensus_max": 20,
+                "consensus_max": 17,
                 "energy": 0,
                 "energy_max": 7,
                 "actions": [
@@ -307,9 +307,9 @@
             },
             {
                 "name": "Researcher",
-                "consensus": 0,
-                "consensus_max": 20,
-                "energy": 0,
+                "consensus": 1,
+                "consensus_max": 12,
+                "energy": 3,
                 "energy_max": 7,
                 "actions": [
                     {
@@ -327,9 +327,9 @@
             },
             {
                 "name": "Developer",
-                "consensus": 0,
-                "consensus_max": 20,
-                "energy": 0,
+                "consensus": 3,
+                "consensus_max": 15,
+                "energy": 2,
                 "energy_max": 7,
                 "actions": [
                     {
@@ -347,9 +347,9 @@
             },
             {
                 "name": "Trainer",
-                "consensus": 0,
+                "consensus": 1,
                 "consensus_max": 20,
-                "energy": 0,
+                "energy": 1,
                 "energy_max": 7,
                 "actions": [
                     {
