@@ -10,7 +10,7 @@
 
 ⚖️ Welcome to Assembly City!
 
-This game was made for [Citizens, Assemble!](https://itch.io/jam/citizens-assemble).
+This game was made for [Citizens, Assemble!](https://itch.io/jam/citizens-assemble)
 
 Play the game on:
 
