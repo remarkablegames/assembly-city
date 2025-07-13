@@ -142,7 +142,8 @@ init python:
             consensus = self.action.get("consensus")
             if consensus:
                 for citizen in citizens.citizens if consensus.get("all") else [citizen]:
-                    citizen.consense(consensus["value"], consensus.get("stun", False))
+                    citizen.consense(consensus["value"])
+                    citizen.stun(consensus.get("stun", False))
 
         @staticmethod
         def generate(count=1) -> list:

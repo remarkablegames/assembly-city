@@ -38,7 +38,7 @@ init python:
                 return f"{self.name} is stunned!"
             return self.actions[0]["say"].format(name=self.name)
 
-        def consense(self, value: int, stun=False) -> None:
+        def consense(self, value: int) -> None:
             """
             Update consensus.
             """
@@ -50,8 +50,6 @@ init python:
                 self.consensus = self.consensus_max
             elif self.consensus < 0:
                 self.consensus = 0
-            if stun:
-                self.stunned = True
             renpy.show(self.image("idle"), at_list=[shake])
 
         def energize(self, value: int) -> None:
@@ -66,3 +64,9 @@ init python:
                 self.energy = self.energy_max
             elif self.energy < 0:
                 self.energy = 0
+
+        def stun(self, stunned=False) -> None:
+            """
+            Update stun.
+            """
+            self.stunned = stunned

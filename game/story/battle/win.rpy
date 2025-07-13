@@ -20,7 +20,7 @@ label win:
     if level.current == 0:
         hide commissioner idle
         show commissioner smile 1 with dissolve
-        commissioner "We make sure assembly participants are fairly compensated for their time."
+        commissioner "All assembly participants are fairly compensated for their time."
         commissioner "I included a bonus if you go above the consensus goal."
         jump tutorial_questions
 

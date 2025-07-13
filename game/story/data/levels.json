@@ -40,12 +40,12 @@
                         "say": "{name} is thinking..."
                     },
                     {
-                        "say": "{name} agrees.\n{name} gains 1 consensus.",
-                        "consensus": 1
+                        "say": "{name} loses 1 energy.",
+                        "energy": -1
                     },
                     {
-                        "say": "{name} is tired.\n{name} loses 1 energy.",
-                        "energy": -1
+                        "say": "{name} gains 1 consensus.",
+                        "consensus": 1
                     }
                 ]
             }
@@ -68,11 +68,11 @@
                         "say": "{name} is thinking..."
                     },
                     {
-                        "say": "{name} is tired.\n{name} loses 1 energy.",
+                        "say": "{name} loses 1 energy.",
                         "energy": -1
                     },
                     {
-                        "say": "{name} disagrees.\n{name} lowers 1 consensus for all.",
+                        "say": "All citizens lose 1 consensus.",
                         "consensus": -1,
                         "all": true
                     }
@@ -86,12 +86,13 @@
                 "energy_max": 7,
                 "actions": [
                     {
-                        "say": "{name} is tired.\n{name} loses 1 energy.",
+                        "say": "{name} loses 1 energy.",
                         "energy": -1
                     },
                     {
-                        "say": "{name} agrees.\n{name} gains 1 consensus.",
-                        "consensus": 1
+                        "say": "All citizens lose 1 energy.",
+                        "energy": -1,
+                        "all": true
                     },
                     {
                         "say": "{name} is thinking..."
@@ -109,7 +110,7 @@
             {
                 "name": "Lawyer",
                 "consensus": 0,
-                "consensus_max": 15,
+                "consensus_max": 16,
                 "energy": 0,
                 "energy_max": 7,
                 "actions": [
@@ -117,19 +118,19 @@
                         "say": "{name} is thinking..."
                     },
                     {
-                        "say": "{name} is tired.\n{name} loses 1 energy.",
-                        "energy": -1
+                        "say": "{name} loses 2 energy.",
+                        "energy": -2
                     },
                     {
-                        "say": "{name} disagrees.\n{name} loses 1 consensus.",
-                        "consensus": -1
+                        "say": "{name} loses 2 consensus.",
+                        "consensus": -2
                     }
                 ]
             },
             {
                 "name": "Secretary",
                 "consensus": 0,
-                "consensus_max": 15,
+                "consensus_max": 14,
                 "energy": 0,
                 "energy_max": 7,
                 "actions": [
@@ -137,19 +138,20 @@
                         "say": "{name} is thinking..."
                     },
                     {
-                        "say": "{name} is tired.\n{name} loses 1 energy.",
-                        "energy": -1
+                        "say": "{name} loses 2 energy.",
+                        "energy": -2
                     },
                     {
-                        "say": "{name} agrees.\n{name} gains 1 consensus.",
-                        "consensus": 1
+                        "say": "All citizens gain 1 consensus.",
+                        "consensus": 1,
+                        "all": true
                     }
                 ]
             },
             {
                 "name": "Researcher",
                 "consensus": 0,
-                "consensus_max": 15,
+                "consensus_max": 12,
                 "energy": 0,
                 "energy_max": 7,
                 "actions": [
@@ -157,12 +159,13 @@
                         "say": "{name} is thinking..."
                     },
                     {
-                        "say": "{name} disagrees.\n{name} loses 2 consensus.",
-                        "consensus": 2
+                        "say": "{name} loses 3 consensus.",
+                        "consensus": -3
                     },
                     {
-                        "say": "{name} has low energy.\n{name} loses 2 energy.",
-                        "energy": -2
+                        "say": "All citizens lose 2 energy.",
+                        "energy": -2,
+                        "all": true
                     }
                 ]
             }
@@ -171,8 +174,8 @@
 
     "4": {
         "scene": "bg library day",
-        "player_turns": 5,
-        "consensus_goal": 30,
+        "player_turns": 4,
+        "consensus_goal": 50,
         "citizens": [
             {
                 "name": "Lawyer",
@@ -185,11 +188,11 @@
                         "say": "{name} is thinking..."
                     },
                     {
-                        "say": "{name} is tired.\n{name} loses 1 energy.",
+                        "say": "{name} loses 1 energy.",
                         "energy": -1
                     },
                     {
-                        "say": "{name} disagrees.\n{name} loses 1 consensus.",
+                        "say": "{name} loses 1 consensus.",
                         "consensus": -1
                     }
                 ]
@@ -205,11 +208,11 @@
                         "say": "{name} is thinking..."
                     },
                     {
-                        "say": "{name} is tired.\n{name} loses 1 energy.",
+                        "say": "{name} loses 1 energy.",
                         "energy": -1
                     },
                     {
-                        "say": "{name} agrees.\n{name} gains 1 consensus.",
+                        "say": "{name} gains 1 consensus.",
                         "consensus": 1
                     }
                 ]
@@ -225,11 +228,11 @@
                         "say": "{name} is thinking..."
                     },
                     {
-                        "say": "{name} disagrees.\n{name} loses 2 consensus.",
-                        "consensus": 2
+                        "say": "{name} loses 2 consensus.",
+                        "consensus": -2
                     },
                     {
-                        "say": "{name} has low energy.\n{name} loses 2 energy.",
+                        "say": "{name} loses 2 energy.",
                         "energy": -2
                     }
                 ]
@@ -245,11 +248,11 @@
                         "say": "{name} is thinking..."
                     },
                     {
-                        "say": "{name} disagrees.\n{name} loses 2 consensus.",
-                        "consensus": 2
+                        "say": "{name} loses 2 consensus.",
+                        "consensus": -2
                     },
                     {
-                        "say": "{name} has low energy.\n{name} loses 2 energy.",
+                        "say": "{name} loses 2 energy.",
                         "energy": -2
                     }
                 ]
@@ -260,12 +263,12 @@
     "5": {
         "scene": "bg teachers room day",
         "player_turns": 5,
-        "consensus_goal": 30,
+        "consensus_goal": 70,
         "citizens": [
             {
                 "name": "Lawyer",
                 "consensus": 0,
-                "consensus_max": 15,
+                "consensus_max": 20,
                 "energy": 0,
                 "energy_max": 7,
                 "actions": [
@@ -273,11 +276,11 @@
                         "say": "{name} is thinking..."
                     },
                     {
-                        "say": "{name} is tired.\n{name} loses 1 energy.",
+                        "say": "{name} loses 1 energy.",
                         "energy": -1
                     },
                     {
-                        "say": "{name} disagrees.\n{name} loses 1 consensus.",
+                        "say": "{name} loses 1 consensus.",
                         "consensus": -1
                     }
                 ]
@@ -285,7 +288,7 @@
             {
                 "name": "Secretary",
                 "consensus": 0,
-                "consensus_max": 15,
+                "consensus_max": 20,
                 "energy": 0,
                 "energy_max": 7,
                 "actions": [
@@ -293,11 +296,11 @@
                         "say": "{name} is thinking..."
                     },
                     {
-                        "say": "{name} is tired.\n{name} loses 1 energy.",
+                        "say": "{name} loses 1 energy.",
                         "energy": -1
                     },
                     {
-                        "say": "{name} agrees.\n{name} gains 1 consensus.",
+                        "say": "{name} gains 1 consensus.",
                         "consensus": 1
                     }
                 ]
@@ -305,7 +308,7 @@
             {
                 "name": "Researcher",
                 "consensus": 0,
-                "consensus_max": 15,
+                "consensus_max": 20,
                 "energy": 0,
                 "energy_max": 7,
                 "actions": [
@@ -313,11 +316,11 @@
                         "say": "{name} is thinking..."
                     },
                     {
-                        "say": "{name} disagrees.\n{name} loses 2 consensus.",
-                        "consensus": 2
+                        "say": "{name} loses 2 consensus.",
+                        "consensus": -2
                     },
                     {
-                        "say": "{name} has low energy.\n{name} loses 2 energy.",
+                        "say": "{name} loses 2 energy.",
                         "energy": -2
                     }
                 ]
@@ -325,7 +328,7 @@
             {
                 "name": "Developer",
                 "consensus": 0,
-                "consensus_max": 15,
+                "consensus_max": 20,
                 "energy": 0,
                 "energy_max": 7,
                 "actions": [
@@ -333,11 +336,11 @@
                         "say": "{name} is thinking..."
                     },
                     {
-                        "say": "{name} disagrees.\n{name} loses 2 consensus.",
-                        "consensus": 2
+                        "say": "{name} loses 2 consensus.",
+                        "consensus": -2
                     },
                     {
-                        "say": "{name} has low energy.\n{name} loses 2 energy.",
+                        "say": "{name} loses 2 energy.",
                         "energy": -2
                     }
                 ]
@@ -345,7 +348,7 @@
             {
                 "name": "Trainer",
                 "consensus": 0,
-                "consensus_max": 15,
+                "consensus_max": 20,
                 "energy": 0,
                 "energy_max": 7,
                 "actions": [
@@ -353,11 +356,11 @@
                         "say": "{name} is thinking..."
                     },
                     {
-                        "say": "{name} disagrees.\n{name} loses 2 consensus.",
-                        "consensus": 2
+                        "say": "{name} loses 2 consensus.",
+                        "consensus": -2
                     },
                     {
-                        "say": "{name} has low energy.\n{name} loses 2 energy.",
+                        "say": "{name} loses 2 energy.",
                         "energy": -2
                     }
                 ]

@@ -98,13 +98,12 @@ init python:
             Citizen turn.
             """
             for citizen in self.citizens:
-                if citizen.stunned:
-                    narrator(f"{citizen.name} is stunned!")
-                    citizen.actions.append(citizen.actions.pop(0))
-                    continue
-
                 narrator(citizen.say())
                 action = citizen.actions.pop(0)
+
+                if citizen.stunned:
+                    citizen.actions.append(action)
+                    continue
 
                 energy = action.get("energy")
                 if energy:
