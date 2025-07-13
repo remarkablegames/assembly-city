@@ -24,6 +24,6 @@ label start:
         "Start with a tutorial":
             jump tutorial
 
-        "Run the assembly":
+        "Run assembly":
             $ level.next()
             jump battle

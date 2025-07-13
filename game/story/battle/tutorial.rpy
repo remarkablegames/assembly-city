@@ -28,6 +28,8 @@ label tutorial_questions:
             commissioner @ smile 2 "Are you ready to run your first assembly?"
 
             menu:
+                "Run assembly?"
+
                 "Yes":
                     commissioner @ smile 3 "Alright, good luck!"
                     $ level.next()

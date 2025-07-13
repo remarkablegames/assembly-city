@@ -56,7 +56,7 @@ label shop:
 
             call screen remove_card
 
-        "Run the assembly":
+        "Run assembly":
             python:
                 config.menu_include_disabled = False
                 level.next()
