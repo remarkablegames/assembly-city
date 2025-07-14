@@ -32,6 +32,7 @@ Play the game on:
   - [Cash Register Purchase](https://pixabay.com/sound-effects/cash-register-purchase-87313/)
   - [Heal Up](https://pixabay.com/sound-effects/heal-up-39285/)
   - [Heartbeat 01 - BRVHRTZ](https://pixabay.com/sound-effects/heartbeat-01-brvhrtz-225058/)
+  - [Level Up 03](https://pixabay.com/sound-effects/level-up-03-199576/)
   - [Punch Sound Effects](https://pixabay.com/sound-effects/punch-sound-effects-28649/)
   - [Soda can open](https://pixabay.com/sound-effects/soda-can-open-183214/)
   - [card mixing](https://pixabay.com/sound-effects/card-mixing-48088/)
