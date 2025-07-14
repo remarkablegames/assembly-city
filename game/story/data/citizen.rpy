@@ -63,10 +63,10 @@ init python:
             if not value:
                 return
 
-            if sound in ["soda", "powerup"]:
+            if sound == "soda":
                 renpy.sound.queue(f"sound/{sound}.ogg", relative_volume=0.5)
             else:
-                renpy.sound.queue("sound/powerup.ogg", relative_volume=0.5)
+                renpy.sound.queue("sound/powerup.ogg", relative_volume=0.3)
 
             self.energy += value
 

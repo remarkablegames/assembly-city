@@ -135,7 +135,7 @@ init python:
 
             moves = self.action.get("moves")
             if moves:
-                renpy.sound.queue("sound/powerup.ogg")
+                renpy.sound.queue("sound/heartbeat.ogg")
                 player.moves += moves["value"]
 
             consensus = self.action.get("consensus", {})

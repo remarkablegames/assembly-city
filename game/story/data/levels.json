@@ -174,14 +174,85 @@
 
     "4": {
         "scene": "bg library day",
-        "player_turns": 4,
+        "player_turns": 5,
         "consensus_goal": 30,
+        "citizens": [
+            {
+                "name": "Developer",
+                "consensus": 0,
+                "consensus_max": 17,
+                "energy": 1,
+                "energy_max": 7,
+                "actions": [
+                    {
+                        "say": "{name} is thinking..."
+                    },
+                    {
+                        "say": "{name} loses 2 consensus.",
+                        "consensus": -2
+                    },
+                    {
+                        "say": "All citizens lose 2 energy.",
+                        "energy": -2,
+                        "all": true
+                    }
+                ]
+            },
+            {
+                "name": "Secretary",
+                "consensus": 0,
+                "consensus_max": 13,
+                "energy": 2,
+                "energy_max": 9,
+                "actions": [
+                    {
+                        "say": "{name} is thinking..."
+                    },
+                    {
+                        "say": "All citizens gain 2 energy.",
+                        "energy": 2,
+                        "all": true
+                    },
+                    {
+                        "say": "{name} loses 1 energy.",
+                        "energy": -1
+                    }
+                ]
+            },
+            {
+                "name": "Researcher",
+                "consensus": 0,
+                "consensus_max": 15,
+                "energy": 0,
+                "energy_max": 7,
+                "actions": [
+                    {
+                        "say": "All citizens lose 2 consensus.",
+                        "consensus": -2,
+                        "all": true
+                    },
+                    {
+                        "say": "{name} is thinking..."
+                    },
+                    {
+                        "say": "{name} loses 2 energy.",
+                        "energy": -2
+                    }
+                ]
+            }
+        ]
+    },
+
+    "5": {
+        "scene": "bg teachers room day",
+        "player_turns": 5,
+        "consensus_goal": 40,
         "citizens": [
             {
                 "name": "Lawyer",
                 "consensus": 0,
-                "consensus_max": 15,
-                "energy": 0,
+                "consensus_max": 11,
+                "energy": 1,
                 "energy_max": 7,
                 "actions": [
                     {
@@ -200,9 +271,9 @@
             {
                 "name": "Secretary",
                 "consensus": 0,
-                "consensus_max": 15,
-                "energy": 0,
-                "energy_max": 7,
+                "consensus_max": 13,
+                "energy": 2,
+                "energy_max": 9,
                 "actions": [
                     {
                         "say": "{name} is thinking..."
@@ -240,8 +311,8 @@
             {
                 "name": "Developer",
                 "consensus": 0,
-                "consensus_max": 15,
-                "energy": 0,
+                "consensus_max": 17,
+                "energy": 1,
                 "energy_max": 7,
                 "actions": [
                     {
@@ -260,8 +331,8 @@
         ]
     },
 
-    "5": {
-        "scene": "bg teachers room day",
+    "6": {
+        "scene": "bg refectory day",
         "player_turns": 5,
         "consensus_goal": 50,
         "citizens": [
