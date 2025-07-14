@@ -65,7 +65,7 @@ init python:
 
             if sound == "soda":
                 renpy.sound.queue(f"sound/{sound}.ogg", relative_volume=0.5)
-            else:
+            elif value > 0:
                 renpy.sound.queue("sound/powerup.ogg", relative_volume=0.3)
 
             self.energy += value
