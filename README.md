@@ -31,7 +31,6 @@ Play the game on:
 - Pixabay
   - [Cash Register Purchase](https://pixabay.com/sound-effects/cash-register-purchase-87313/)
   - [Heal Up](https://pixabay.com/sound-effects/heal-up-39285/)
-  - [Health Pickup](https://pixabay.com/sound-effects/health-pickup-6860/)
   - [Punch Sound Effects](https://pixabay.com/sound-effects/punch-sound-effects-28649/)
   - [Soda can open](https://pixabay.com/sound-effects/soda-can-open-183214/)
   - [card mixing](https://pixabay.com/sound-effects/card-mixing-48088/)

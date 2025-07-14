@@ -56,17 +56,17 @@ init python:
 
             renpy.show(self.image("idle"), at_list=[shake])
 
-        def energize(self, value: int, sound="potion") -> None:
+        def energize(self, value: int, sound="powerup") -> None:
             """
             Update energy.
             """
             if not value:
                 return
 
-            if sound in ["soda", "potion"]:
+            if sound in ["soda", "powerup"]:
                 renpy.sound.queue(f"sound/{sound}.ogg", relative_volume=0.5)
             else:
-                renpy.sound.queue("sound/potion.ogg", relative_volume=0.5)
+                renpy.sound.queue("sound/powerup.ogg", relative_volume=0.5)
 
             self.energy += value
 
