@@ -44,22 +44,32 @@ init python:
             """
             if not value:
                 return
+
             renpy.sound.queue("sound/punch.ogg", relative_volume=0.5)
+
             self.consensus += value
+
             if self.consensus > self.consensus_max:
                 self.consensus = self.consensus_max
             elif self.consensus < 0:
                 self.consensus = 0
+
             renpy.show(self.image("idle"), at_list=[shake])
 
-        def energize(self, value: int) -> None:
+        def energize(self, value: int, sound="potion") -> None:
             """
             Update energy.
             """
             if not value:
                 return
-            renpy.sound.queue("sound/potion.ogg", relative_volume=0.5)
+
+            if sound in ["soda", "potion"]:
+                renpy.sound.queue(f"sound/{sound}.ogg", relative_volume=0.5)
+            else:
+                renpy.sound.queue("sound/potion.ogg", relative_volume=0.5)
+
             self.energy += value
+
             if self.energy > self.energy_max:
                 self.energy = self.energy_max
             elif self.energy < 0:

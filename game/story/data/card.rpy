@@ -144,7 +144,7 @@ init python:
                 for citizen in citizens.citizens:
                     if citizen.energy + energy["value"] >= 0:
                         citizen.consense(consensus["value"])
-                        citizen.energize(energy["value"])
+                        citizen.energize(energy["value"], self.name.lower())
                         citizen.stun(consensus.get("stun", False))
                 return
 
@@ -155,7 +155,7 @@ init python:
 
             if energy:
                 for citizen in citizens.citizens if energy.get("all") else [citizen]:
-                    citizen.energize(energy["value"])
+                    citizen.energize(energy["value"], self.name.lower())
 
         @staticmethod
         def generate(count=1) -> list:
