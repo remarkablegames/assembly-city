@@ -19,26 +19,28 @@ init python:
             """
             return find_by_id(self.cards, card_id)
 
-        def get_cards(self, count: int, upgrade_card_type="") -> Card:
+        def get_cards(self, count: int, upgrade="") -> Card:
             """
             Get cards.
             """
-            copy = self.cards.copy()
-            renpy.random.shuffle(copy)
+            cards = self.cards.copy()
+            renpy.random.shuffle(cards)
 
-            if upgrade_card_type in ["all", "stun"]:
-                copy = list(filter(lambda card: card.action.get("consensus") and not card.action["consensus"].get(upgrade_card_type), copy))
-            elif upgrade_card_type == "cost":
-                copy = list(filter(lambda card: card.cost > 0, copy))
+            if upgrade in ["all", "stun"]:
+                cards = list(filter(lambda card: card.action.get("consensus") and not card.action["consensus"].get(upgrade), cards))
+            elif upgrade == "cost":
+                cards = list(filter(lambda card: card.cost > 0, cards))
             else:
-                copy = list(filter(lambda card: card.action.get(upgrade_card_type), copy))
+                cards = list(filter(lambda card: card.action.get(upgrade), cards))
 
-            cards = []
+            choices = []
+
             for _ in range(count):
-                if not len(copy):
-                    return cards
-                cards.append(copy.pop())
-            return cards
+                if not len(cards):
+                    return choices
+                choices.append(cards.pop())
+
+            return choices
 
         def draw_cards(self, count=0) -> None:
             """

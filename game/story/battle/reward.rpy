@@ -107,7 +107,7 @@ label reward_vote:
     show commissioner smile 1 at left
     with moveinleft
 
-    $ card = Card(image="vote", cost=2, action={"consensus": {"value": 4, "all": True}, "energy": {"value": -2, "all": True}})
+    $ card = Card(image="vote", cost=2, action={"consensus": {"value": 3, "all": True}, "energy": {"value": -2, "all": True}})
     show screen card(card, 0.75)
 
     commissioner "Voting can help the group come to a decision."
