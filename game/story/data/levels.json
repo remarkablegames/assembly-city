@@ -72,7 +72,7 @@
                         "energy": -1
                     },
                     {
-                        "say": "All citizens lose 1 consensus.",
+                        "say": "Everyone loses 1 consensus.",
                         "consensus": -1,
                         "all": true
                     }
@@ -90,7 +90,7 @@
                         "energy": -1
                     },
                     {
-                        "say": "All citizens lose 1 energy.",
+                        "say": "Everyone loses 1 energy.",
                         "energy": -1,
                         "all": true
                     },
@@ -142,7 +142,7 @@
                         "energy": -2
                     },
                     {
-                        "say": "All citizens gain 1 consensus.",
+                        "say": "Everyone gains 1 consensus.",
                         "consensus": 1,
                         "all": true
                     }
@@ -159,13 +159,13 @@
                         "say": "{name} is thinking..."
                     },
                     {
-                        "say": "{name} loses 3 consensus.",
-                        "consensus": -3
-                    },
-                    {
-                        "say": "All citizens lose 2 energy.",
+                        "say": "Everyone loses 2 energy.",
                         "energy": -2,
                         "all": true
+                    },
+                    {
+                        "say": "{name} loses 3 consensus.",
+                        "consensus": -3
                     }
                 ]
             }
@@ -179,7 +179,7 @@
         "citizens": [
             {
                 "name": "Developer",
-                "consensus": 0,
+                "consensus": 2,
                 "consensus_max": 17,
                 "energy": 1,
                 "energy_max": 7,
@@ -192,7 +192,7 @@
                         "consensus": -2
                     },
                     {
-                        "say": "All citizens lose 2 energy.",
+                        "say": "Everyone loses 2 energy.",
                         "energy": -2,
                         "all": true
                     }
@@ -200,7 +200,7 @@
             },
             {
                 "name": "Secretary",
-                "consensus": 0,
+                "consensus": 1,
                 "consensus_max": 13,
                 "energy": 2,
                 "energy_max": 9,
@@ -209,7 +209,7 @@
                         "say": "{name} is thinking..."
                     },
                     {
-                        "say": "All citizens gain 2 energy.",
+                        "say": "Everyone gains 2 energy.",
                         "energy": 2,
                         "all": true
                     },
@@ -221,13 +221,13 @@
             },
             {
                 "name": "Researcher",
-                "consensus": 0,
+                "consensus": 2,
                 "consensus_max": 15,
                 "energy": 0,
                 "energy_max": 7,
                 "actions": [
                     {
-                        "say": "All citizens lose 2 consensus.",
+                        "say": "Everyone loses 2 consensus.",
                         "consensus": -2,
                         "all": true
                     },
@@ -250,9 +250,9 @@
         "citizens": [
             {
                 "name": "Lawyer",
-                "consensus": 0,
+                "consensus": 1,
                 "consensus_max": 11,
-                "energy": 1,
+                "energy": 2,
                 "energy_max": 7,
                 "actions": [
                     {
@@ -270,9 +270,9 @@
             },
             {
                 "name": "Secretary",
-                "consensus": 0,
+                "consensus": 2,
                 "consensus_max": 13,
-                "energy": 2,
+                "energy": 3,
                 "energy_max": 9,
                 "actions": [
                     {
@@ -292,7 +292,7 @@
                 "name": "Researcher",
                 "consensus": 0,
                 "consensus_max": 15,
-                "energy": 0,
+                "energy": 1,
                 "energy_max": 7,
                 "actions": [
                     {
@@ -303,14 +303,15 @@
                         "consensus": -2
                     },
                     {
-                        "say": "{name} loses 2 energy.",
-                        "energy": -2
+                        "say": "Everyone loses 3 energy.",
+                        "energy": -2,
+                        "all": true
                     }
                 ]
             },
             {
                 "name": "Developer",
-                "consensus": 0,
+                "consensus": 3,
                 "consensus_max": 17,
                 "energy": 1,
                 "energy_max": 7,
@@ -347,12 +348,12 @@
                         "say": "{name} is thinking..."
                     },
                     {
-                        "say": "{name} loses 1 energy.",
-                        "energy": -1
+                        "say": "{name} loses 2 energy.",
+                        "energy": -2
                     },
                     {
-                        "say": "{name} loses 1 consensus.",
-                        "consensus": -1
+                        "say": "{name} loses 3 consensus.",
+                        "consensus": -3
                     }
                 ]
             },
@@ -367,8 +368,9 @@
                         "say": "{name} is thinking..."
                     },
                     {
-                        "say": "{name} loses 1 energy.",
-                        "energy": -1
+                        "say": "Everyone loses 2 energy.",
+                        "energy": -2,
+                        "all": true
                     },
                     {
                         "say": "{name} gains 1 consensus.",
@@ -407,12 +409,12 @@
                         "say": "{name} is thinking..."
                     },
                     {
-                        "say": "{name} loses 2 consensus.",
-                        "consensus": -2
-                    },
-                    {
                         "say": "{name} loses 2 energy.",
                         "energy": -2
+                    },
+                    {
+                        "say": "Everyone loses 3 consensus.",
+                        "consensus": -3
                     }
                 ]
             },
@@ -427,12 +429,13 @@
                         "say": "{name} is thinking..."
                     },
                     {
-                        "say": "{name} loses 2 consensus.",
-                        "consensus": -2
+                        "say": "{name} loses 3 consensus.",
+                        "consensus": -3
                     },
                     {
-                        "say": "{name} loses 2 energy.",
-                        "energy": -2
+                        "say": "Everyone loses 2 energy.",
+                        "energy": -2,
+                        "all": true
                     }
                 ]
             }
