@@ -244,7 +244,7 @@
     },
 
     "5": {
-        "scene": "bg teachers room day",
+        "scene": "bg teachers room afternoon",
         "player_turns": 5,
         "consensus_goal": 30,
         "citizens": [
@@ -333,7 +333,7 @@
     },
 
     "6": {
-        "scene": "bg refectory day",
+        "scene": "bg refectory afternoon",
         "player_turns": 5,
         "consensus_goal": 40,
         "citizens": [
@@ -424,7 +424,7 @@
     },
 
     "7": {
-        "scene": "bg student council room day",
+        "scene": "bg student council room afternoon",
         "player_turns": 5,
         "consensus_goal": 50,
         "citizens": [
