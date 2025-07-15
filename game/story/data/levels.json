@@ -292,7 +292,7 @@
                 "name": "Researcher",
                 "consensus": 0,
                 "consensus_max": 15,
-                "energy": 1,
+                "energy": 2,
                 "energy_max": 7,
                 "actions": [
                     {
@@ -313,8 +313,8 @@
                 "name": "Developer",
                 "consensus": 3,
                 "consensus_max": 17,
-                "energy": 1,
-                "energy_max": 7,
+                "energy": 2,
+                "energy_max": 5,
                 "actions": [
                     {
                         "say": "{name} loses 2 consensus.",
