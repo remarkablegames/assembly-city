@@ -37,11 +37,12 @@ label win:
     with dissolve
 
     $ bonus = level.consensus("current") - level.consensus("goal")
-    $ money += max(level.current, 3) + bonus
+    $ base_reward = max(level.current, 3)
+    $ money += base_reward + bonus
     $ dialogue = renpy.random.choice(["Nice work!", "Great job!", "Good stuff!", "Amazing run!", "Excellent effort!"])
 
     commissioner "[dialogue]"
-    commissioner "You earned $[max(level.current, 3)] + $[bonus] (bonus)."
+    commissioner "You earned $[base_reward] + $[bonus] (bonus)."
 
     play sound "sound/cash.ogg" volume 0.5
 

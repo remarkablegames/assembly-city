@@ -71,8 +71,8 @@ label tutorial_how_to_run_assembly:
 
     show screen player_stats
 
-    commissioner "You have a set number of turns to reach the consensus goal."
-    commissioner "Each turn, you draw [player.draw_cards] cards into your hand and spend [player.moves] moves to play them."
+    commissioner "You have a set number of turns to reach the {b}Consensus{/b} goal."
+    commissioner "Each {b}Turn{/b}, you draw [player.draw_cards] cards into your hand and spend [player.moves] {b}Moves{/b} to play them."
     commissioner "Play your cards right and you can raise the citizens’ consensus."
     commissioner "Don’t forget to manage the citizens’ energy levels."
     commissioner "If it falls too low, it becomes hard to achieve consensus."
