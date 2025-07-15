@@ -56,7 +56,7 @@ init python:
                     renpy.random.shuffle(self.draw_pile)
 
                     if not len(self.draw_pile):
-                        return narrator("No more cards to draw.")
+                        return
 
                 renpy.sound.queue("sound/draw.ogg")
                 self.hand.append(self.draw_pile.pop(0))
