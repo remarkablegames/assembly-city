@@ -49,6 +49,9 @@ init python:
                 if data.get("all"):
                     label += " All"
 
+                if action == "turns":
+                    label += " once per assembly"
+
                 label += "\n"
 
             label = label.rstrip('\n')
@@ -135,6 +138,11 @@ init python:
             if moves:
                 renpy.sound.queue("sound/level.ogg")
                 player.moves += moves["value"]
+
+            turns = self.action.get("turns")
+            if turns:
+                renpy.sound.queue("sound/heartbeat.ogg")
+                player.turns += turns["value"]
 
             consensus = self.action.get("consensus", {})
 

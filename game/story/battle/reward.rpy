@@ -18,6 +18,9 @@ label reward:
     elif level.current == 6:
         jump reward_upgrade
 
+    elif level.current == 7:
+        jump reward_delay
+
     jump shop
 
 
@@ -160,5 +163,34 @@ label reward_focus:
 
         "No":
             commissioner "Makes sense."
+
+    jump shop
+
+
+label reward_delay:
+
+    commissioner "When deliberating, there are moments where you need more time."
+
+    show commissioner smile 1 at left
+    with moveinleft
+
+    $ card = Card(image="delay", cost=3, action={"turns": {"value": 2}})
+    show screen card(card, 0.75)
+
+    commissioner "Delay buys you extra turns, but you can only play it once per assembly."
+
+    menu:
+        "Add this card to your deck?"
+
+        "Yes":
+            $ deck.cards.append(card)
+            queue sound "sound/draw.ogg"
+            hide screen card
+            show commissioner smile 1 at center
+            with moveinright
+            commissioner @ smile 3 "Use it wisely!"
+
+        "No":
+            commissioner "Understood."
 
     jump shop

@@ -11,6 +11,7 @@ init python:
 
             self.draw_pile = []
             self.discard_pile = []
+            self.disabled_pile = []
             self.hand = []
 
         def get_card(self, card_id: str) -> Card:
@@ -66,7 +67,10 @@ init python:
             Discard card.
             """
             self.hand.remove(card)
-            self.discard_pile.append(card)
+            if card.name.lower() == "delay":
+                self.disabled_pile.append(card)
+            else:
+                self.discard_pile.append(card)
 
         def discard_hand(self) -> None:
             """
@@ -82,6 +86,7 @@ init python:
             self.draw_pile = self.cards.copy()
             renpy.random.shuffle(self.draw_pile)
             self.discard_pile = []
+            self.disabled_pile = []
             self.hand = []
 
 default deck = Deck()
