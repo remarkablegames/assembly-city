@@ -125,8 +125,6 @@ init python:
             if energy and citizen.energy + energy["value"] < 0:
                 return
 
-            deck.discard_card(self)
-
             player.moves -= self.cost
 
             draw = self.action.get("draw")
@@ -146,16 +144,17 @@ init python:
                         citizen.consense(consensus["value"])
                         citizen.energize(energy["value"], self.name.lower())
                         citizen.stun(consensus.get("stun", False))
-                return
+            else:
+                if consensus:
+                    for citizen in citizens.citizens if consensus.get("all") else [citizen]:
+                        citizen.consense(consensus["value"])
+                        citizen.stun(consensus.get("stun", False))
 
-            if consensus:
-                for citizen in citizens.citizens if consensus.get("all") else [citizen]:
-                    citizen.consense(consensus["value"])
-                    citizen.stun(consensus.get("stun", False))
+                if energy:
+                    for citizen in citizens.citizens if energy.get("all") else [citizen]:
+                        citizen.energize(energy["value"], self.name.lower())
 
-            if energy:
-                for citizen in citizens.citizens if energy.get("all") else [citizen]:
-                    citizen.energize(energy["value"], self.name.lower())
+            deck.discard_card(self)
 
         @staticmethod
         def generate(count=1) -> list:
