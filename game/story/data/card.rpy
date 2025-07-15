@@ -133,7 +133,7 @@ init python:
 
             moves = self.action.get("moves")
             if moves:
-                renpy.sound.queue("sound/heartbeat.ogg")
+                renpy.sound.queue("sound/level.ogg")
                 player.moves += moves["value"]
 
             consensus = self.action.get("consensus", {})
@@ -164,8 +164,10 @@ init python:
             cards = []
 
             for _ in range(count):
+                cost = renpy.random.randint(1, 3)
+
                 action = {
-                    renpy.random.choice(["consensus", "draw", "energy"]): {
+                    renpy.random.choice(["consensus", "draw", "energy", "moves"]): {
                         "value": renpy.random.randint(1, 6),
                     },
                 }
@@ -177,8 +179,11 @@ init python:
                     image = "tea"
                 elif action.get("energy"):
                     image = "soda"
+                elif action.get("moves"):
+                    image = "focus"
+                    action["moves"] = {"value": renpy.random.randint(1, 3)}
+                    cost = renpy.random.randint(0, 2)
 
-                cost = renpy.random.randint(1, 3)
                 card = Card(image=image, cost=cost, action=action)
                 cards.append(card)
 

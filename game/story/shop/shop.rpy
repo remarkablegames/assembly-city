@@ -34,6 +34,7 @@ label shop:
                     ["cost"] * (1 if level.current > 2 else 0) +
                     ["draw"] * 3 +
                     ["energy"] * 3 +
+                    ["moves"] * (1 if level.current > 3 else 0) +
                     ["stun"] * (1 if level.current > 1 else 0) +
                     []
                 )

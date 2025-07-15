@@ -12,6 +12,12 @@ label reward:
     elif level.current == 4:
         jump reward_vote
 
+    elif level.current == 5:
+        jump reward_focus
+
+    elif level.current == 6:
+        jump reward_upgrade
+
     jump shop
 
 
@@ -125,5 +131,34 @@ label reward_vote:
 
         "No":
             commissioner "All good."
+
+    jump shop
+
+
+label reward_focus:
+
+    commissioner "Sometimes you need to take a deep breath before moving forward."
+
+    show commissioner smile 1 at left
+    with moveinleft
+
+    $ card = Card(image="focus", cost=1, action={"moves": {"value": 2}})
+    show screen card(card, 0.75)
+
+    commissioner "Focus gives you an extra move."
+
+    menu:
+        "Add this card to your deck?"
+
+        "Yes":
+            $ deck.cards.append(card)
+            queue sound "sound/draw.ogg"
+            hide screen card
+            show commissioner smile 1 at center
+            with moveinright
+            commissioner @ smile 3 "Take care!"
+
+        "No":
+            commissioner "Makes sense."
 
     jump shop
