@@ -8,9 +8,9 @@
 [![build](https://github.com/remarkablegames/assembly-city/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablegames/assembly-city/actions/workflows/build.yml)
 [![lint](https://github.com/remarkablegames/assembly-city/actions/workflows/lint.yml/badge.svg)](https://github.com/remarkablegames/assembly-city/actions/workflows/lint.yml)
 
-⚖️ Welcome to Assembly City!
+⚖️ Roguelike deck-building game about facilitating a Citizens' Assembly.
 
-This game was made for [Citizens, Assemble!](https://itch.io/jam/citizens-assemble)
+This game was made for [Citizens, Assemble!](https://itch.io/jam/citizens-assemble) See [Game Design Document](https://docs.google.com/document/d/1tNkg1cakJURtkjUJ_ue8vxGi_G9KHcsWZR6PlKdsdZE/edit).
 
 Play the game on:
 
