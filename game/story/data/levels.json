@@ -426,6 +426,101 @@
     "7": {
         "scene": "bg student council room afternoon",
         "player_turns": 5,
+        "consensus_goal": 60,
+        "citizens": [
+            {
+                "name": "Trainer",
+                "consensus": 1,
+                "consensus_max": 15,
+                "energy": 2,
+                "energy_max": 9,
+                "actions": [
+                    {
+                        "say": "{name} is thinking..."
+                    },
+                    {
+                        "say": "{name} loses 3 energy.",
+                        "energy": -3
+                    },
+                    {
+                        "say": "Everyone loses 5 consensus.",
+                        "consensus": -5,
+                        "all": true
+                    }
+                ]
+            },
+            {
+                "name": "Secretary",
+                "consensus": 2,
+                "consensus_max": 15,
+                "energy": 3,
+                "energy_max": 12,
+                "actions": [
+                    {
+                        "say": "{name} is thinking..."
+                    },
+                    {
+                        "say": "Everyone loses 5 energy.",
+                        "energy": -5,
+                        "all": true
+                    },
+                    {
+                        "say": "{name} gains 1 consensus.",
+                        "consensus": 1
+                    }
+                ]
+            },
+            {
+                "name": "Researcher",
+                "consensus": 1,
+                "consensus_max": 13,
+                "energy": 1,
+                "energy_max": 9,
+                "actions": [
+                    {
+                        "say": "{name} is thinking..."
+                    },
+                    {
+                        "say": "{name} loses 3 consensus.",
+                        "consensus": -3
+                    },
+                    {
+                        "say": "{name} loses 3 energy.",
+                        "energy": -3
+                    }
+                ]
+            },
+            {
+                "name": "Developer",
+                "consensus": 1,
+                "consensus_max": 15,
+                "energy": 2,
+                "energy_max": 9,
+                "actions": [
+                    {
+                        "say": "{name} is thinking..."
+                    },
+                    {
+                        "say": "{name} loses 2 energy.",
+                        "energy": -2
+                    },
+                    {
+                        "say": "{name} loses 2 consensus.",
+                        "consensus": -2
+                    },
+                    {
+                        "say": "Everyone loses 3 consensus.",
+                        "consensus": -3,
+                        "all": true
+                    }
+                ]
+            }
+        ]
+    },
+
+    "8": {
+        "scene": "bg library afternoon",
+        "player_turns": 5,
         "consensus_goal": 50,
         "citizens": [
             {

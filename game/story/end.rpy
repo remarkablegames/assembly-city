@@ -40,8 +40,10 @@ label bad_ending:
 
     play music "music/BGM8 Harukaze.ogg" volume 0.5 fadein 1
 
-    scene bg courtyard1 day
-    with fade
+    if level.current > 4:
+        scene bg courtyard1 afternoon with fade
+    else:
+        scene bg courtyard1 day with fade
 
     show commissioner
     with dissolve

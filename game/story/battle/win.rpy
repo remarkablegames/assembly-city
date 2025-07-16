@@ -26,8 +26,10 @@ label win:
 
     stop music fadeout 4
 
-    scene bg hall day
-    with fade
+    if level.current > 4:
+        scene bg hall afternoon with fade
+    else:
+        scene bg hall day with fade
 
     show screen player_money
 
