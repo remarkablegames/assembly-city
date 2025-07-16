@@ -32,7 +32,7 @@
             {
                 "name": "Secretary",
                 "consensus": 0,
-                "consensus_max": 15,
+                "consensus_max": 13,
                 "energy": 3,
                 "energy_max": 5,
                 "actions": [
@@ -55,12 +55,12 @@
     "2": {
         "scene": "bg refectory day",
         "player_turns": 5,
-        "consensus_goal": 15,
+        "consensus_goal": 13,
         "citizens": [
             {
                 "name": "Lawyer",
                 "consensus": 0,
-                "consensus_max": 13,
+                "consensus_max": 10,
                 "energy": 1,
                 "energy_max": 6,
                 "actions": [
@@ -72,27 +72,25 @@
                         "energy": -1
                     },
                     {
-                        "say": "Everyone loses 1 consensus.",
-                        "consensus": -1,
-                        "all": true
+                        "say": "{name} loses 1 consensus.",
+                        "consensus": -1
                     }
                 ]
             },
             {
                 "name": "Secretary",
                 "consensus": 0,
-                "consensus_max": 15,
+                "consensus_max": 8,
                 "energy": 2,
                 "energy_max": 7,
                 "actions": [
                     {
-                        "say": "{name} loses 1 energy.",
+                        "say": "{name} loses 1 consensus.",
                         "energy": -1
                     },
                     {
-                        "say": "Everyone loses 1 energy.",
-                        "energy": -1,
-                        "all": true
+                        "say": "{name} loses 1 energy.",
+                        "energy": -1
                     },
                     {
                         "say": "{name} is thinking..."
@@ -105,12 +103,12 @@
     "3": {
         "scene": "bg student council room day",
         "player_turns": 5,
-        "consensus_goal": 20,
+        "consensus_goal": 15,
         "citizens": [
             {
-                "name": "Lawyer",
+                "name": "Researcher",
                 "consensus": 0,
-                "consensus_max": 16,
+                "consensus_max": 10,
                 "energy": 2,
                 "energy_max": 7,
                 "actions": [
@@ -118,19 +116,19 @@
                         "say": "{name} is thinking..."
                     },
                     {
-                        "say": "{name} loses 2 energy.",
-                        "energy": -2
+                        "say": "{name} loses 1 energy.",
+                        "energy": -1
                     },
                     {
-                        "say": "{name} loses 2 consensus.",
-                        "consensus": -2
+                        "say": "{name} loses 1 consensus.",
+                        "consensus": -1
                     }
                 ]
             },
             {
                 "name": "Secretary",
                 "consensus": 0,
-                "consensus_max": 14,
+                "consensus_max": 10,
                 "energy": 2,
                 "energy_max": 7,
                 "actions": [
@@ -147,27 +145,6 @@
                         "all": true
                     }
                 ]
-            },
-            {
-                "name": "Researcher",
-                "consensus": 0,
-                "consensus_max": 12,
-                "energy": 2,
-                "energy_max": 7,
-                "actions": [
-                    {
-                        "say": "{name} is thinking..."
-                    },
-                    {
-                        "say": "Everyone loses 2 energy.",
-                        "energy": -2,
-                        "all": true
-                    },
-                    {
-                        "say": "{name} loses 2 consensus.",
-                        "consensus": -2
-                    }
-                ]
             }
         ]
     },
@@ -175,14 +152,14 @@
     "4": {
         "scene": "bg library day",
         "player_turns": 5,
-        "consensus_goal": 25,
+        "consensus_goal": 20,
         "citizens": [
             {
                 "name": "Developer",
                 "consensus": 2,
-                "consensus_max": 17,
+                "consensus_max": 10,
                 "energy": 1,
-                "energy_max": 7,
+                "energy_max": 5,
                 "actions": [
                     {
                         "say": "{name} is thinking..."
@@ -201,7 +178,7 @@
             {
                 "name": "Researcher",
                 "consensus": 2,
-                "consensus_max": 15,
+                "consensus_max": 5,
                 "energy": 2,
                 "energy_max": 7,
                 "actions": [
@@ -222,9 +199,9 @@
             {
                 "name": "Secretary",
                 "consensus": 1,
-                "consensus_max": 13,
+                "consensus_max": 10,
                 "energy": 2,
-                "energy_max": 9,
+                "energy_max": 5,
                 "actions": [
                     {
                         "say": "{name} is thinking..."
@@ -251,9 +228,9 @@
             {
                 "name": "Lawyer",
                 "consensus": 1,
-                "consensus_max": 11,
+                "consensus_max": 10,
                 "energy": 2,
-                "energy_max": 7,
+                "energy_max": 5,
                 "actions": [
                     {
                         "say": "{name} is thinking..."
@@ -271,9 +248,9 @@
             {
                 "name": "Secretary",
                 "consensus": 2,
-                "consensus_max": 13,
+                "consensus_max": 15,
                 "energy": 3,
-                "energy_max": 9,
+                "energy_max": 7,
                 "actions": [
                     {
                         "say": "{name} is thinking..."
@@ -291,9 +268,9 @@
             {
                 "name": "Researcher",
                 "consensus": 0,
-                "consensus_max": 15,
+                "consensus_max": 10,
                 "energy": 2,
-                "energy_max": 7,
+                "energy_max": 5,
                 "actions": [
                     {
                         "say": "{name} loses 2 consensus.",
@@ -306,26 +283,6 @@
                         "say": "Everyone loses 3 energy.",
                         "energy": -2,
                         "all": true
-                    }
-                ]
-            },
-            {
-                "name": "Developer",
-                "consensus": 3,
-                "consensus_max": 17,
-                "energy": 2,
-                "energy_max": 5,
-                "actions": [
-                    {
-                        "say": "{name} loses 2 consensus.",
-                        "consensus": -2
-                    },
-                    {
-                        "say": "{name} is thinking..."
-                    },
-                    {
-                        "say": "{name} loses 2 energy.",
-                        "energy": -2
                     }
                 ]
             }

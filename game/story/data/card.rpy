@@ -54,7 +54,7 @@ init python:
 
                 label += "\n"
 
-            label = label.rstrip('\n')
+            label = label.strip()
 
             if len(label) < 15:
                 size = "{size=*0.9}"
@@ -136,12 +136,12 @@ init python:
 
             moves = self.action.get("moves")
             if moves:
-                renpy.sound.queue("sound/level.ogg")
+                renpy.sound.queue("sound/level.ogg", relative_volume=0.5)
                 player.moves += moves["value"]
 
             turns = self.action.get("turns")
             if turns:
-                renpy.sound.queue("sound/heartbeat.ogg")
+                renpy.sound.queue("sound/heartbeat.ogg", relative_volume=0.5)
                 player.turns += turns["value"]
 
             consensus = self.action.get("consensus", {})

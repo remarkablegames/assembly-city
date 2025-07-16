@@ -1,25 +1,31 @@
 label reward:
 
     if level.current == 1:
-        call reward_pizza
+        call reward_settle
 
     elif level.current == 2:
-        call reward_expert
+        call reward_focus
 
     elif level.current == 3:
         call reward_upgrade
 
     elif level.current == 4:
-        call reward_vote
+        call reward_pizza
 
     elif level.current == 5:
-        call reward_focus
+        call reward_expert
 
     elif level.current == 6:
         call reward_upgrade
 
     elif level.current == 7:
         call reward_delay
+
+    elif level.current == 8:
+        call reward_vote
+
+    elif level.current == 9:
+        call reward_upgrade
 
     jump shop
 
@@ -58,7 +64,7 @@ label reward_pizza:
     show commissioner smile 1 at left
     with moveinleft
 
-    $ card = Card(image="pizza", cost=2, action={"energy": {"value": 3, "all": True}, "draw": {"value": 1}})
+    $ card = Card(image="pizza", cost=2, action={"energy": {"value": 2, "all": True}, "draw": {"value": 2}})
     show screen card(card, 0.75)
 
     commissioner "Pizza can raise the energy of all participants."
@@ -145,10 +151,10 @@ label reward_focus:
     show commissioner smile 1 at left
     with moveinleft
 
-    $ card = Card(image="focus", cost=1, action={"moves": {"value": 2}})
+    $ card = Card(image="focus", cost=1, action={"moves": {"value": 2}, "energy": {"value": -1}})
     show screen card(card, 0.75)
 
-    commissioner "Focus gives you an extra move."
+    commissioner "Focus takes a bit of energy, but gives you an extra move."
 
     menu:
         "Add this card to your deck?"
@@ -192,5 +198,34 @@ label reward_delay:
 
         "No":
             commissioner "Understood."
+
+    return
+
+
+label reward_settle:
+
+    commissioner "There are times when compromise is necessary during a Citizens’ Assembly."
+
+    show commissioner smile 1 at left
+    with moveinleft
+
+    $ card = Card(image="settle", cost=1, action={"consensus": {"value": -2}, "draw": {"value": 2}, "energy": {"value": 2}})
+    show screen card(card, 0.75)
+
+    commissioner "Settle lowers consensus, but energizes the participant and allows you to draw cards."
+
+    menu:
+        "Add this card to your deck?"
+
+        "Yes":
+            $ deck.cards.append(card)
+            queue sound "sound/draw.ogg"
+            hide screen card
+            show commissioner smile 1 at center
+            with moveinright
+            commissioner @ smile 3 "You’re all set!"
+
+        "No":
+            commissioner "Noted."
 
     return
