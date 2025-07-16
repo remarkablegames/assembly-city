@@ -1,5 +1,5 @@
-screen stat(name, current, max):
-    text "[name]: [current]/[max]"
+screen stat(name, current, max, color=gui.text_color):
+    text "[name]: {color=[color]}[current]/[max]"
     bar value AnimatedValue(current, max):
         xsize 300
 
@@ -19,7 +19,7 @@ screen player_stats:
             vbox:
                 use stat("Moves", player.moves, player.moves_max)
                 null height 15
-                use stat("Turns", player.turns, player.turns_max)
+                use stat("Turns", player.turns, player.turns_max, colors.caution if player.turns < 2 else gui.text_color)
                 null height 15
                 use stat("Consensus", level.consensus("current"), level.consensus("goal"))
 

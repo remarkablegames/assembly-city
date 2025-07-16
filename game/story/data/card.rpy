@@ -151,12 +151,12 @@ init python:
                     if citizen.energy + energy["value"] >= 0:
                         citizen.consense(consensus["value"])
                         citizen.energize(energy["value"], self.name.lower())
-                        citizen.stun(consensus.get("stun", False))
+                        citizen.stun(consensus.get("stun"))
             else:
                 if consensus:
                     for citizen in citizens.citizens if consensus.get("all") else [citizen]:
                         citizen.consense(consensus["value"])
-                        citizen.stun(consensus.get("stun", False))
+                        citizen.stun(consensus.get("stun"))
 
                 if energy:
                     for citizen in citizens.citizens if energy.get("all") else [citizen]:

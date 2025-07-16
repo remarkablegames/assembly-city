@@ -223,7 +223,7 @@
     "5": {
         "scene": "bg teachers room afternoon",
         "player_turns": 5,
-        "consensus_goal": 30,
+        "consensus_goal": 20,
         "citizens": [
             {
                 "name": "Lawyer",
@@ -248,7 +248,7 @@
             {
                 "name": "Secretary",
                 "consensus": 2,
-                "consensus_max": 15,
+                "consensus_max": 5,
                 "energy": 3,
                 "energy_max": 7,
                 "actions": [
@@ -267,7 +267,7 @@
             },
             {
                 "name": "Researcher",
-                "consensus": 0,
+                "consensus": 1,
                 "consensus_max": 10,
                 "energy": 2,
                 "energy_max": 5,
@@ -292,14 +292,14 @@
     "6": {
         "scene": "bg refectory afternoon",
         "player_turns": 5,
-        "consensus_goal": 40,
+        "consensus_goal": 30,
         "citizens": [
             {
                 "name": "Developer",
                 "consensus": 1,
-                "consensus_max": 13,
+                "consensus_max": 10,
                 "energy": 1,
-                "energy_max": 8,
+                "energy_max": 5,
                 "actions": [
                     {
                         "say": "{name} is thinking..."
@@ -310,28 +310,28 @@
                         "all": true
                     },
                     {
-                        "say": "{name} loses 3 consensus.",
-                        "consensus": -3
+                        "say": "{name} loses 2 consensus.",
+                        "consensus": -2
                     }
                 ]
             },
             {
                 "name": "Trainer",
                 "consensus": 0,
-                "consensus_max": 9,
-                "energy": 3,
-                "energy_max": 11,
+                "consensus_max": 15,
+                "energy": 2,
+                "energy_max": 7,
                 "actions": [
                     {
                         "say": "{name} is thinking..."
                     },
                     {
-                        "say": "{name} loses 3 energy.",
-                        "energy": -1
+                        "say": "{name} loses 2 energy.",
+                        "energy": -2
                     },
                     {
-                        "say": "Everyone loses 3 consensus.",
-                        "consensus": -3,
+                        "say": "Everyone loses 2 consensus.",
+                        "consensus": -2,
                         "all": true
                     }
                 ]
@@ -339,9 +339,9 @@
             {
                 "name": "Secretary",
                 "consensus": 2,
-                "consensus_max": 14,
+                "consensus_max": 10,
                 "energy": 3,
-                "energy_max": 9,
+                "energy_max": 7,
                 "actions": [
                     {
                         "say": "{name} loses 2 energy.",
@@ -351,29 +351,8 @@
                         "say": "{name} is thinking..."
                     },
                     {
-                        "say": "{name} gains 1 consensus.",
-                        "consensus": 1
-                    }
-                ]
-            },
-            {
-                "name": "Researcher",
-                "consensus": 2,
-                "consensus_max": 15,
-                "energy": 2,
-                "energy_max": 9,
-                "actions": [
-                    {
-                        "say": "{name} loses 2 consensus.",
-                        "consensus": -2
-                    },
-                    {
-                        "say": "{name} is thinking..."
-                    },
-                    {
-                        "say": "Everyone loses 3 energy.",
-                        "energy": -2,
-                        "all": true
+                        "say": "{name} gains 2 energy.",
+                        "energy": 2
                     }
                 ]
             }

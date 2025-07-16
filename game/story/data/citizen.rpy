@@ -75,8 +75,8 @@ init python:
             elif self.energy < 0:
                 self.energy = 0
 
-        def stun(self, stunned=False) -> None:
+        def stun(self, stunned: bool) -> None:
             """
             Update stun.
             """
-            self.stunned = stunned
+            self.stunned = bool(self.stunned or stunned)
