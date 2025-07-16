@@ -1,25 +1,25 @@
 label reward:
 
     if level.current == 1:
-        jump reward_pizza
+        call reward_pizza
 
     elif level.current == 2:
-        jump reward_expert
+        call reward_expert
 
     elif level.current == 3:
-        jump reward_upgrade
+        call reward_upgrade
 
     elif level.current == 4:
-        jump reward_vote
+        call reward_vote
 
     elif level.current == 5:
-        jump reward_focus
+        call reward_focus
 
     elif level.current == 6:
-        jump reward_upgrade
+        call reward_upgrade
 
     elif level.current == 7:
-        jump reward_delay
+        call reward_delay
 
     jump shop
 
@@ -48,7 +48,7 @@ label reward_upgrade:
 
     commissioner @ smile 3 "Great choice!"
 
-    jump shop
+    return
 
 
 label reward_pizza:
@@ -77,7 +77,7 @@ label reward_pizza:
         "No":
             commissioner "Alright."
 
-    jump shop
+    return
 
 
 label reward_expert:
@@ -106,7 +106,7 @@ label reward_expert:
         "No":
             commissioner "Sounds good."
 
-    jump shop
+    return
 
 
 label reward_vote:
@@ -135,7 +135,7 @@ label reward_vote:
         "No":
             commissioner "All good."
 
-    jump shop
+    return
 
 
 label reward_focus:
@@ -164,7 +164,7 @@ label reward_focus:
         "No":
             commissioner "Makes sense."
 
-    jump shop
+    return
 
 
 label reward_delay:
@@ -193,4 +193,4 @@ label reward_delay:
         "No":
             commissioner "Understood."
 
-    jump shop
+    return
