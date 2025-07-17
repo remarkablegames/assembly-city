@@ -78,7 +78,7 @@
                 ]
             },
             {
-                "name": "Secretary",
+                "name": "Teacher",
                 "consensus": 0,
                 "consensus_max": 8,
                 "energy": 2,
@@ -126,7 +126,7 @@
                 ]
             },
             {
-                "name": "Secretary",
+                "name": "Detective",
                 "consensus": 0,
                 "consensus_max": 10,
                 "energy": 2,
@@ -176,7 +176,7 @@
                 ]
             },
             {
-                "name": "Researcher",
+                "name": "Trainer",
                 "consensus": 2,
                 "consensus_max": 5,
                 "energy": 2,
@@ -197,7 +197,7 @@
                 ]
             },
             {
-                "name": "Secretary",
+                "name": "Student",
                 "consensus": 1,
                 "consensus_max": 10,
                 "energy": 2,
@@ -295,7 +295,7 @@
         "consensus_goal": 25,
         "citizens": [
             {
-                "name": "Developer",
+                "name": "Student",
                 "consensus": 1,
                 "consensus_max": 10,
                 "energy": 1,
@@ -337,7 +337,7 @@
                 ]
             },
             {
-                "name": "Secretary",
+                "name": "Teacher",
                 "consensus": 2,
                 "consensus_max": 10,
                 "energy": 3,
@@ -365,7 +365,7 @@
         "consensus_goal": 35,
         "citizens": [
             {
-                "name": "Trainer",
+                "name": "Detective",
                 "consensus": 1,
                 "consensus_max": 10,
                 "energy": 2,
@@ -506,7 +506,7 @@
                 ]
             },
             {
-                "name": "Researcher",
+                "name": "Teacher",
                 "consensus": 0,
                 "consensus_max": 20,
                 "energy": 3,
@@ -526,7 +526,7 @@
                 ]
             },
             {
-                "name": "Developer",
+                "name": "Student",
                 "consensus": 0,
                 "consensus_max": 10,
                 "energy": 2,
@@ -558,7 +558,7 @@
         "consensus_goal": 60,
         "citizens": [
             {
-                "name": "Lawyer",
+                "name": "Detective",
                 "consensus": 0,
                 "consensus_max": 10,
                 "energy": 1,
@@ -579,7 +579,7 @@
                 ]
             },
             {
-                "name": "Secretary",
+                "name": "Teacher",
                 "consensus": 0,
                 "consensus_max": 20,
                 "energy": 2,
@@ -600,7 +600,7 @@
                 ]
             },
             {
-                "name": "Researcher",
+                "name": "Developer",
                 "consensus": 0,
                 "consensus_max": 10,
                 "energy": 3,
@@ -620,7 +620,7 @@
                 ]
             },
             {
-                "name": "Developer",
+                "name": "Researcher",
                 "consensus": 0,
                 "consensus_max": 10,
                 "energy": 2,

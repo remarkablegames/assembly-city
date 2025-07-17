@@ -177,7 +177,7 @@ label reward_delay:
     show commissioner smile 1 at left
     with moveinleft
 
-    $ card = Card(image="delay", cost=3, action={"turns": {"value": 2}})
+    $ card = Card(image="delay", cost=3, action={"turns": {"value": 1}})
     show screen card(card, 0.75)
 
     commissioner "Delay buys you extra turns, but you can only play it once per assembly."
