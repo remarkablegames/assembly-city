@@ -9,8 +9,9 @@ init python:
 
         # shop
         cards_bought = 0
-        cards_upgraded =0
         cards_removed = 0
+        cards_upgraded = 0
+        shop_cards = 2
 
         def end_turn(self) -> None:
             """

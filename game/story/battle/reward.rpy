@@ -43,8 +43,9 @@ label reward_upgrade:
             $ player.turns_max += 1
 
         "Draw cards +1
-        {tooltip}Increase cards per hand and card choices in shop from [player.draw_cards] to [player.draw_cards + 1]":
+        {tooltip}Increase cards per hand to [player.draw_cards + 1] and shop cards from [player.draw_cards + 1]":
             $ player.draw_cards += 1
+            $ player.shop_cards += 1
 
         "Pass":
             pass
@@ -177,7 +178,7 @@ label reward_delay:
     show commissioner smile 1 at left
     with moveinleft
 
-    $ card = Card(image="delay", cost=3, action={"turns": {"value": 1}})
+    $ card = Card(image="delay", cost=2, action={"turns": {"value": 1}})
     show screen card(card, 0.75)
 
     commissioner "Delay buys you extra turns, but you can only play it once per assembly."

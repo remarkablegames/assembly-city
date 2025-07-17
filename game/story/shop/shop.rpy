@@ -13,7 +13,7 @@ label shop:
         "What do you want to do?"
 
         "Buy a card (-$[cost_card_buy])
-        {tooltip}Add 1 card to your deck ([player.draw_cards] choices)" if money >= cost_card_buy:
+        {tooltip}Add 1 card to your deck ([player.shop_cards] choices)" if money >= cost_card_buy:
             python:
                 config.menu_include_disabled = False
                 money -= cost_card_buy
@@ -22,7 +22,7 @@ label shop:
             call screen add_card
 
         "Upgrade a card (-$[cost_card_upgrade])
-        {tooltip}Upgrade 1 card in your deck (max [player.draw_cards] choices)" if money >= cost_card_upgrade:
+        {tooltip}Upgrade 1 card in your deck (max [player.shop_cards] choices)" if money >= cost_card_upgrade:
             python:
                 config.menu_include_disabled = False
                 money -= cost_card_upgrade
@@ -80,7 +80,7 @@ screen add_card:
 
         hbox:
             spacing 25
-            for card in Card.generate(player.draw_cards):
+            for card in Card.generate(player.shop_cards):
                 button:
                     action [Function(deck.cards.append, card), Jump("shop")]
                     use card_frame(card)
@@ -108,7 +108,7 @@ screen upgrade_card(card_type, card_value):
         hbox:
             spacing 25
 
-            for card in deck.get_cards(player.draw_cards, card_type):
+            for card in deck.get_cards(player.shop_cards, card_type):
                 button:
                     action [Function(card.upgrade, card_type, card_value), Jump("shop")]
                     use card_frame(card)
