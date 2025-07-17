@@ -24,9 +24,6 @@ label reward:
     elif level.current == 8:
         call reward_vote
 
-    elif level.current == 9:
-        call reward_upgrade
-
     jump shop
 
 

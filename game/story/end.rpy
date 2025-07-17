@@ -28,6 +28,7 @@ label good_ending:
     show commissioner smile 1
     with dissolve
 
+    commissioner "Congratulations on reaching a consensus with the citizens!"
     commissioner "With the assembly over, we’ll publish a formal public response to the members’ recommendations."
     commissioner "We encourage everyone to stay in touch and remain engaged."
     commissioner "Helping a group of people contribute meaningfully to public discourse is a once-in-a-lifetime experience."
