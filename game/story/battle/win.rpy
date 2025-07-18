@@ -6,6 +6,8 @@ default bonus = 0
 
 label win:
 
+    hide screen tutorial_battle
+
     hide screen player_end_turn
     hide screen player_stats
 
@@ -18,11 +20,7 @@ label win:
     "You were able to reach a consensus!"
 
     if level.current == 0:
-        hide commissioner idle
-        show commissioner smile 1 with dissolve
-        commissioner "All assembly participants are fairly compensated for their time."
-        commissioner "I included a bonus if you go above the consensus goal."
-        jump tutorial_questions
+        jump tutorial_battle_end
 
     stop music fadeout 4
 

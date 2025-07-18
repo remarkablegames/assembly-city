@@ -66,27 +66,54 @@ label tutorial_assembly_questions:
 label tutorial_how_to_run_assembly:
 
     commissioner "The goal of an assembly is to learn, deliberate, and decide."
-    commissioner "In the end, we want the participating citizens to reach a consensus."
+    commissioner "In the end, we want the citizens to reach a consensus."
     commissioner "Take a look at the screen to your left."
 
     show screen player_stats
 
-    commissioner "You have a set number of turns to reach the {b}Consensus{/b} goal."
-    commissioner "Each {b}Turn{/b}, you draw [player.draw_cards] cards into your hand and spend [player.moves] {b}Moves{/b} to play them."
+    commissioner "You have a number of {color=[colors.note]}Turns{/color} to reach the {color=[colors.note]}Consensus{/color} goal."
+    commissioner "Each turn, you draw cards into your hand and spend {color=[colors.note]}Moves{/color} to play them."
     commissioner "Play your cards right and you can raise the citizens’ consensus."
     commissioner "Don’t forget to manage the citizens’ energy levels."
     commissioner "If it falls too low, it becomes hard to achieve consensus."
-    commissioner "Press {b}View Deck{/b} to see your cards."
-    commissioner @ smile 2 "Would you like to do a trial run?"
+    commissioner "Press {color=[colors.note]}View Deck{/color} to see your cards."
+    commissioner @ smile 2 "Would you like to perform a trial run?"
 
     menu:
-        "Do a trial run?"
+        "Perform a trial run?"
 
         "Yes":
-            commissioner @ smile 3 "Alright, let’s do it!"
-            hide commissioner
-            jump battle
+            jump tutorial_battle
 
         "No":
             hide screen player_stats
             jump tutorial_questions
+
+
+label tutorial_battle:
+
+    commissioner @ smile 3 "Alright, let’s do it!"
+
+    hide commissioner
+    show screen tutorial_battle
+
+    jump battle
+
+
+label tutorial_battle_end:
+
+    hide commissioner idle
+    show commissioner smile 1 with dissolve
+
+    commissioner "All assembly participants are fairly compensated for their time."
+    commissioner "I included a bonus if you go above the consensus goal."
+
+    jump tutorial_questions
+
+
+screen tutorial_battle:
+    frame:
+        background Solid((0, 0, 0, 130))
+        text "Drag the card to the person and press {color=[colors.note]}End Turn{/color} when out of {color=[colors.note]}Moves{/color}"
+        xalign 0.5
+        ypos 679

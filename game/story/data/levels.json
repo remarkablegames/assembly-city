@@ -11,7 +11,7 @@
                 "energy_max": 5,
                 "actions": [
                     {
-                        "say": "Drag the card to the citizen.\nWhen you’re done, press “End Turn”."
+                        "say": "The top-left number on the card is the {{color=[colors.note]}}Moves{{/color}} cost."
                     },
                     {
                         "say": "Hover/press the citizen’s name to see what they will do next."

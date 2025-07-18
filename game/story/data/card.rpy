@@ -71,13 +71,13 @@ init python:
             Upgrade label.
             """
             if action == "all":
-                return f"Select a card to apply effects to {{b}}all{{/b}} citizens:"
+                return f"Select a card to apply effects to {{b}}{{color=[colors.note]}}all{{/color}}{{/b}} citizens:"
             elif action == "cost":
-                return f"Select a card to decrease {{b}}cost{{/b}} by {emojis.get(1)}:"
+                return f"Select a card to decrease {{b}}{{color=[colors.note]}}cost{{/color}}{{/b}} by {{b}}{emojis.get(1)}{{/b}}:"
             elif action == "stun":
-                return f"Select a card to {{b}}stun{{/b}} an citizen:"
+                return f"Select a card to {{b}}{{color=[colors.note]}}stun{{/color}}{{/b}} an citizen:"
             else:
-                return f"Select a card to increase {{b}}{action}{{/b}} by {{b}}{value}{{/b}}:"
+                return f"Select a card to increase {{b}}{{color=[colors.note]}}{action}{{/color}}{{/b}} by {{b}}{value}{{/b}}:"
 
         def upgrade(self, action: str, value=1) -> None:
             """
