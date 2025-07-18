@@ -478,16 +478,19 @@
                         "energy": -2
                     },
                     {
-                        "say": "Everyone loses 2 consensus.",
-                        "consensus": -2,
-                        "all": true
+                        "say": "{name} loses 3 consensus.",
+                        "consensus": -3
+                    },
+                    {
+                        "say": "{name} loses 2 energy.",
+                        "energy": -2
                     }
                 ]
             },
             {
                 "name": "Secretary",
                 "consensus": 0,
-                "consensus_max": 10,
+                "consensus_max": 15,
                 "energy": 2,
                 "energy_max": 7,
                 "actions": [
@@ -508,7 +511,7 @@
             {
                 "name": "Teacher",
                 "consensus": 0,
-                "consensus_max": 20,
+                "consensus_max": 10,
                 "energy": 3,
                 "energy_max": 5,
                 "actions": [
@@ -516,8 +519,8 @@
                         "say": "{name} is thinking..."
                     },
                     {
-                        "say": "{name} loses 3 consensus.",
-                        "consensus": -3
+                        "say": "{name} loses 2 consensus.",
+                        "consensus": -2
                     },
                     {
                         "say": "{name} loses 3 energy.",
@@ -528,7 +531,7 @@
             {
                 "name": "Student",
                 "consensus": 0,
-                "consensus_max": 10,
+                "consensus_max": 15,
                 "energy": 2,
                 "energy_max": 7,
                 "actions": [
@@ -560,7 +563,7 @@
             {
                 "name": "Detective",
                 "consensus": 0,
-                "consensus_max": 10,
+                "consensus_max": 12,
                 "energy": 1,
                 "energy_max": 7,
                 "actions": [
@@ -581,7 +584,7 @@
             {
                 "name": "Teacher",
                 "consensus": 0,
-                "consensus_max": 20,
+                "consensus_max": 14,
                 "energy": 2,
                 "energy_max": 5,
                 "actions": [
@@ -602,7 +605,7 @@
             {
                 "name": "Developer",
                 "consensus": 0,
-                "consensus_max": 10,
+                "consensus_max": 12,
                 "energy": 3,
                 "energy_max": 7,
                 "actions": [
@@ -646,7 +649,7 @@
             {
                 "name": "Trainer",
                 "consensus": 0,
-                "consensus_max": 10,
+                "consensus_max": 17,
                 "energy": 2,
                 "energy_max": 9,
                 "actions": [
