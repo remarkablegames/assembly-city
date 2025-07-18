@@ -89,7 +89,7 @@ screen add_card:
 
         frame:
             xalign 0.5
-            textbutton "Pass":
+            textbutton "Skip":
                 action Jump("shop")
 
 
@@ -117,7 +117,7 @@ screen upgrade_card(card_type, card_value):
 
         frame:
             xalign 0.5
-            textbutton "Pass":
+            textbutton "Skip":
                 action Jump("shop")
 
 
@@ -145,5 +145,5 @@ screen remove_card:
 
         frame:
             xalign 0.5
-            textbutton "Pass":
+            textbutton "Skip":
                 action Jump("shop")

@@ -47,7 +47,7 @@ label reward_upgrade:
             $ player.draw_cards += 1
             $ player.shop_cards += 1
 
-        "Pass":
+        "Skip":
             pass
 
     commissioner @ smile 3 "Great choice!"
