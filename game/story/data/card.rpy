@@ -17,17 +17,37 @@ init python:
             self.image = f"cards/{image}.png"
             self.name = image.capitalize()
 
+        def label_size(self, length=0) -> str:
+            """
+            Get label size.
+            """
+            size = 1.0
+
+            if renpy.variant("mobile") or renpy.variant("touch"):
+                size = 0.9
+
+            if not length:
+                pass
+            elif length < 15:
+                size *= 0.9
+            elif length < 25:
+                size *= 0.85
+            else:
+                size *= 0.8
+
+            return f"{{size=*{size}}}"
+
         def label_name(self) -> str:
             """
             Name label.
             """
-            return "{color=[colors.label]}{b}{k=-2}" + self.name.upper()
+            return self.label_size() + "{color=[colors.label]}{b}{k=-2}" + self.name.upper()
 
         def label_cost(self) -> str:
             """
             Cost label.
             """
-            return emojis.get(self.cost)
+            return self.label_size() + emojis.get(self.cost)
 
         def label_description(self) -> str:
             """
@@ -56,14 +76,7 @@ init python:
 
             label = label.strip()
 
-            if len(label) < 15:
-                size = "{size=*0.9}"
-            elif len(label) < 25:
-                size = "{size=*0.85}"
-            else:
-                size = "{size=*0.8}"
-
-            return size + color + label
+            return self.label_size(len(label)) + color + label
 
         @staticmethod
         def label_upgrade(action: str, value=1) -> str:
