@@ -83,6 +83,7 @@ screen add_card:
             for card in Card.generate(player.shop_cards):
                 button:
                     action [Function(deck.cards.append, card), Jump("shop")]
+                    hover_background colors.shop_card_hover
                     use card_frame(card)
 
         null height 25
@@ -111,6 +112,7 @@ screen upgrade_card(card_type, card_value):
             for card in deck.get_cards(player.shop_cards, card_type):
                 button:
                     action [Function(card.upgrade, card_type, card_value), Jump("shop")]
+                    hover_background colors.shop_card_hover
                     use card_frame(card)
 
         null height 25
@@ -139,6 +141,7 @@ screen remove_card:
                 for card in deck.cards:
                     button:
                         action [Function(deck.cards.remove, card), Jump("shop")]
+                        hover_background colors.shop_card_hover
                         use card_frame(card)
 
         null height 50
