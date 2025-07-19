@@ -21,7 +21,7 @@ init python:
             for index, citizen in enumerate(self.citizens):
                 xalign_position = self.xalign_position(citizen)
                 renpy.show_screen(f"citizen_stats{index}", citizen, xalign_position)
-                renpy.show(citizen.image("idle"), at_list=[position(xalign_position)])
+                renpy.show(citizen.image(), at_list=[position(xalign_position)])
 
             renpy.with_statement(dissolve)
 
@@ -29,7 +29,7 @@ init python:
             """
             Hide citizen.
             """
-            renpy.hide(citizen.image("idle"))
+            renpy.hide(citizen.image())
             renpy.with_statement(dissolve)
             renpy.hide_screen(f"citizen_stats{citizens.index(citizen)}")
 
@@ -103,6 +103,7 @@ init python:
 
                 if citizen.stunned:
                     citizen.actions.append(action)
+                    renpy.show(citizen.image())
                     continue
 
                 energy = action.get("energy")
@@ -115,6 +116,7 @@ init python:
                     for citizen in citizens.citizens if action.get("all", False) else [citizen]:
                         citizen.consense(consensus)
 
+                renpy.show(citizen.image())
                 citizen.actions.append(action)
 
             self.end_turn()

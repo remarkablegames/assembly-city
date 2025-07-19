@@ -24,10 +24,27 @@ init python:
 
             self.stunned = False
 
-        def image(self, state: str) -> str:
+        def action(self, key=""):
+            """
+            Get first action.
+            """
+            action = self.actions[0]
+            return action.get(key, 0) if key else action
+
+        def image(self, state="") -> str:
             """
             Get image name.
             """
+            if state:
+                pass
+            elif not player.turns:
+                state = "idle"
+            elif self.action("consensus") < 0:
+                state = "consensus down"
+            elif self.action("energy") < 0:
+                state = "energy down"
+            else:
+                state = "idle"
             return f"{self.id} {state}"
 
         def say(self) -> str:
@@ -36,7 +53,7 @@ init python:
             """
             if self.stunned:
                 return f"{self.name} is stunned!"
-            return self.actions[0]["say"].format(name=self.name)
+            return self.action("say").format(name=self.name)
 
         def consense(self, value: int) -> None:
             """
@@ -54,7 +71,7 @@ init python:
             elif self.consensus < 0:
                 self.consensus = 0
 
-            renpy.show(self.image("idle"), at_list=[shake])
+            renpy.show(self.image(), at_list=[shake])
 
         def energize(self, value: int, sound="powerup") -> None:
             """
