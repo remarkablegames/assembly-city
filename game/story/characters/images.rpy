@@ -19,8 +19,8 @@ image lawyer energy down = Image("characters/lawyer/lawyer void.png", oversample
 image lawyer idle = Image("characters/lawyer/lawyer what.webp", oversample=oversample)
 image lawyer hover = Image("characters/lawyer/lawyer shock.webp", oversample=oversample)
 
-image researcher consensus down = Image("characters/researcher/researcher normal.png", oversample=oversample)
-image researcher energy down = Image("characters/researcher/researcher normal.png", oversample=oversample)
+image researcher consensus down = Image("characters/researcher/researcher angry.png", oversample=oversample)
+image researcher energy down = Image("characters/researcher/researcher sleepy.png", oversample=oversample)
 image researcher idle = Image("characters/researcher/researcher normal.png", oversample=oversample)
 image researcher hover = Image("characters/researcher/researcher oh.png", oversample=oversample)
 
