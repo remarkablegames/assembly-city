@@ -2,7 +2,7 @@ init python:
     from uuid import uuid4
 
     class Card:
-        label_description_ypos = 225
+        label_description_ypos = 230
         label_name_ypos = 5
         width = 268
         height = 365
@@ -13,9 +13,13 @@ init python:
             self.cost = kwargs.get("cost", 0)
             self.action = kwargs.get("action", {})
             self.value = kwargs.get("value", 0)
+
             image = kwargs.get('image')
             self.image = f"cards/{image}.png"
             self.name = image.capitalize()
+
+            if renpy.variant("mobile") or renpy.variant("touch"):
+                self.label_description_ypos = 220
 
         def label_size(self, length=0) -> str:
             """

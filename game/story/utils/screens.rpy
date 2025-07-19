@@ -1,12 +1,11 @@
 init python:
     citizen_name_ypos = 628
-    size = "{size=*0.85}" if renpy.variant("mobile") or renpy.variant("touch") else ""
 
 
 screen stat(name, current, max, color=colors.label):
-    text "[size][name]: {color=[color]}[current]/[max]"
+    text "[name]: {color=[color]}[current]/[max]"
     bar value AnimatedValue(current, max):
-        xsize 300
+        xsize (350 if renpy.variant("mobile") or renpy.variant("touch") else 300)
 
 
 screen player_money:
