@@ -22,18 +22,21 @@ init python:
             Get label size.
             """
             size = 1.0
+            small_screen = renpy.variant("mobile") or renpy.variant("touch")
 
-            if renpy.variant("mobile") or renpy.variant("touch"):
+            if small_screen:
                 size = 0.9
 
-            if not length:
-                pass
-            elif length < 15:
-                size *= 0.9
-            elif length < 25:
-                size *= 0.85
-            else:
-                size *= 0.8
+            if length:
+                if length < 15:
+                    size *= 0.9
+                elif length < 25:
+                    size *= 0.85
+                else:
+                    size *= 0.8
+
+                if small_screen:
+                    size -= 0.05
 
             return f"{{size=*{size}}}"
 
