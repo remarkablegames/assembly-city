@@ -2,7 +2,7 @@ init python:
     from uuid import uuid4
 
     class Card:
-        label_description_ypos = 235
+        label_description_ypos = 220
         label_name_ypos = 5
         width = 250
         height = 350
