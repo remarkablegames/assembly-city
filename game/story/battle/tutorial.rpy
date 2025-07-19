@@ -113,7 +113,8 @@ label tutorial_battle_end:
 
 screen tutorial_battle:
     frame:
-        background Solid((0, 0, 0, 130))
-        text "Drag the card to the person and press {color=[colors.note]}End Turn{/color} when out of {color=[colors.note]}Moves{/color}"
-        xalign 0.5
-        ypos 679
+        background Solid((0, 0, 0, 200))
+        padding (10, 10)
+        text "Drag the card to the person.\n\nPress {color=[colors.note]}End Turn{/color} when out of {color=[colors.note]}Moves{/color}."
+        xsize 500
+        xalign 1.0
