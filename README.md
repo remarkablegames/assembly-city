@@ -10,7 +10,7 @@
 
 ⚖️ Roguelike deck-building game about facilitating a Citizens' Assembly.
 
-This game was made for [Citizens, Assemble!](https://itch.io/jam/citizens-assemble) See [Game Design Document](https://docs.google.com/document/d/1tNkg1cakJURtkjUJ_ue8vxGi_G9KHcsWZR6PlKdsdZE/edit).
+This game was made for the [Citizens, Assemble!](https://itch.io/jam/citizens-assemble) game jam. See the [Game Design Document](https://docs.google.com/document/d/1tNkg1cakJURtkjUJ_ue8vxGi_G9KHcsWZR6PlKdsdZE/edit).
 
 Play the game on:
 
