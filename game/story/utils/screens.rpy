@@ -1,5 +1,10 @@
+init python:
+    citizen_name_ypos = 628
+    size = "{size=*0.85}" if renpy.variant("mobile") or renpy.variant("touch") else ""
+
+
 screen stat(name, current, max, color=colors.label):
-    text "[name]: {color=[color]}[current]/[max]"
+    text "[size][name]: {color=[color]}[current]/[max]"
     bar value AnimatedValue(current, max):
         xsize 300
 
@@ -49,10 +54,6 @@ screen tooltip:
                 background Solid((255, 255, 255, 225))
                 text tooltip color "#000"
                 xalign 0.5
-
-
-init python:
-    citizen_name_ypos = 628
 
 
 screen citizen_stats(citizen, xalign_pos):

@@ -2,7 +2,7 @@ init python:
     from uuid import uuid4
 
     class Card:
-        label_description_ypos = 230
+        label_description_ypos = 225
         label_name_ypos = 5
         width = 268
         height = 365
@@ -22,10 +22,9 @@ init python:
             Get label size.
             """
             size = 1.0
-            small_screen = renpy.variant("mobile") or renpy.variant("touch")
 
-            if small_screen:
-                size = 0.9
+            if renpy.variant("mobile") or renpy.variant("touch"):
+                size = 0.85
 
             if length:
                 if length < 15:
@@ -35,10 +34,7 @@ init python:
                 else:
                     size *= 0.8
 
-                if small_screen:
-                    size -= 0.05
-
-            return f"{{size=*{size}}}"
+            return f"{{size=*{size}}}" if not size == 1.0 else ""
 
         def label_name(self) -> str:
             """
