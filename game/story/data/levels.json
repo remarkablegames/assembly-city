@@ -579,8 +579,8 @@
                         "energy": 1
                     },
                     {
-                        "say": "{{color=[colors.caution]}}Everyone{{/color}} loses 2 consensus.",
-                        "consensus": -2,
+                        "say": "{{color=[colors.caution]}}Everyone{{/color}} loses 1 energy.",
+                        "energy": -1,
                         "all": true
                     }
                 ]

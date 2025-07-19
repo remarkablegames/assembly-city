@@ -78,7 +78,11 @@ label reward_pizza:
             with moveinright
             commissioner @ smile 3 "I hope it comes handy!"
 
-        "No":
+        "No (+$5)
+        {tooltip}Sell card and earn money":
+            $ money += 5
+            play sound "sound/cash.ogg" volume 0.5
+            hide screen card
             commissioner "Alright."
 
     return
@@ -107,7 +111,11 @@ label reward_expert:
             with moveinright
             commissioner @ smile 3 "Make good use of it!"
 
-        "No":
+        "No (+$5)
+        {tooltip}Sell card and earn money":
+            $ money += 5
+            play sound "sound/cash.ogg" volume 0.5
+            hide screen card
             commissioner "Sounds good."
 
     return
@@ -136,7 +144,11 @@ label reward_vote:
             with moveinright
             commissioner @ smile 3 "Good luck!"
 
-        "No":
+        "No (+$5)
+        {tooltip}Sell card and earn money":
+            $ money += 5
+            play sound "sound/cash.ogg" volume 0.5
+            hide screen card
             commissioner "All good."
 
     return
@@ -165,7 +177,11 @@ label reward_focus:
             with moveinright
             commissioner @ smile 3 "Take care!"
 
-        "No":
+        "No (+$5)
+        {tooltip}Sell card and earn money":
+            $ money += 5
+            play sound "sound/cash.ogg" volume 0.5
+            hide screen card
             commissioner "Makes sense."
 
     return
@@ -194,7 +210,11 @@ label reward_delay:
             with moveinright
             commissioner @ smile 3 "Use it wisely!"
 
-        "No":
+        "No (+$5)
+        {tooltip}Sell card and earn money":
+            $ money += 5
+            play sound "sound/cash.ogg" volume 0.5
+            hide screen card
             commissioner "Understood."
 
     return
@@ -223,7 +243,11 @@ label reward_settle:
             with moveinright
             commissioner @ smile 3 "You’re all set!"
 
-        "No":
+        "No (+$5)
+        {tooltip}Sell card and earn money":
+            $ money += 5
+            play sound "sound/cash.ogg" volume 0.5
+            hide screen card
             commissioner "Noted."
 
     return
