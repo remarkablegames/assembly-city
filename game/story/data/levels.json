@@ -86,7 +86,7 @@
                 "actions": [
                     {
                         "say": "{name} loses 1 consensus.",
-                        "energy": -1
+                        "consensus": -1
                     },
                     {
                         "say": "{name} loses 1 energy.",
@@ -140,7 +140,7 @@
                         "energy": -2
                     },
                     {
-                        "say": "Everyone gains 1 consensus.",
+                        "say": "{{color=[colors.caution]}}Everyone{{/color}} gains 1 consensus.",
                         "consensus": 1,
                         "all": true
                     }
@@ -169,7 +169,7 @@
                         "consensus": 1
                     },
                     {
-                        "say": "Everyone loses 2 energy.",
+                        "say": "{{color=[colors.caution]}}Everyone{{/color}} loses 2 energy.",
                         "energy": -2,
                         "all": true
                     }
@@ -183,7 +183,7 @@
                 "energy_max": 7,
                 "actions": [
                     {
-                        "say": "Everyone loses 1 consensus.",
+                        "say": "{{color=[colors.caution]}}Everyone{{/color}} loses 1 consensus.",
                         "consensus": -1,
                         "all": true
                     },
@@ -207,7 +207,7 @@
                         "say": "{name} is thinking..."
                     },
                     {
-                        "say": "Everyone gains 2 energy.",
+                        "say": "{{color=[colors.caution]}}Everyone{{/color}} gains 2 energy.",
                         "energy": 2,
                         "all": true
                     },
@@ -280,7 +280,7 @@
                         "say": "{name} is thinking..."
                     },
                     {
-                        "say": "Everyone loses 3 energy.",
+                        "say": "{{color=[colors.caution]}}Everyone{{/color}} loses 2 energy.",
                         "energy": -2,
                         "all": true
                     }
@@ -305,7 +305,7 @@
                         "say": "{name} is thinking..."
                     },
                     {
-                        "say": "Everyone loses 2 energy.",
+                        "say": "{{color=[colors.caution]}}Everyone{{/color}} loses 2 energy.",
                         "energy": -2,
                         "all": true
                     },
@@ -330,7 +330,7 @@
                         "energy": -2
                     },
                     {
-                        "say": "Everyone loses 2 consensus.",
+                        "say": "{{color=[colors.caution]}}Everyone{{/color}} loses 2 consensus.",
                         "consensus": -2,
                         "all": true
                     }
@@ -379,7 +379,7 @@
                         "energy": -3
                     },
                     {
-                        "say": "Everyone loses 3 consensus.",
+                        "say": "{{color=[colors.caution]}}Everyone{{/color}} loses 3 consensus.",
                         "consensus": -3,
                         "all": true
                     }
@@ -396,7 +396,7 @@
                         "say": "{name} is thinking..."
                     },
                     {
-                        "say": "Everyone loses 3 energy.",
+                        "say": "{{color=[colors.caution]}}Everyone{{/color}} loses 3 energy.",
                         "energy": -3,
                         "all": true
                     },
@@ -449,7 +449,7 @@
                         "consensus": -2
                     },
                     {
-                        "say": "Everyone loses 1 consensus.",
+                        "say": "{{color=[colors.caution]}}Everyone{{/color}} loses 1 consensus.",
                         "consensus": -1,
                         "all": true
                     }
@@ -498,7 +498,7 @@
                         "say": "{name} is thinking..."
                     },
                     {
-                        "say": "Everyone loses 3 energy.",
+                        "say": "{{color=[colors.caution]}}Everyone{{/color}} loses 3 energy.",
                         "energy": -3,
                         "all": true
                     },
@@ -546,7 +546,7 @@
                         "say": "{name} is thinking..."
                     },
                     {
-                        "say": "Everyone loses 2 consensus.",
+                        "say": "{{color=[colors.caution]}}Everyone{{/color}} loses 2 consensus.",
                         "consensus": -2,
                         "all": true
                     }
@@ -575,7 +575,11 @@
                         "energy": -2
                     },
                     {
-                        "say": "Everyone loses 2 consensus.",
+                        "say": "{name} gains 1 energy.",
+                        "energy": 1
+                    },
+                    {
+                        "say": "{{color=[colors.caution]}}Everyone{{/color}} loses 2 consensus.",
                         "consensus": -2,
                         "all": true
                     }
@@ -592,7 +596,7 @@
                         "say": "{name} is thinking..."
                     },
                     {
-                        "say": "Everyone loses 3 energy.",
+                        "say": "{{color=[colors.caution]}}Everyone{{/color}} loses 3 energy.",
                         "energy": -3,
                         "all": true
                     },
@@ -640,7 +644,7 @@
                         "say": "{name} is thinking..."
                     },
                     {
-                        "say": "Everyone loses 2 consensus.",
+                        "say": "{{color=[colors.caution]}}Everyone{{/color}} loses 2 consensus.",
                         "consensus": -2,
                         "all": true
                     }
@@ -664,7 +668,7 @@
                         "say": "{name} is thinking..."
                     },
                     {
-                        "say": "Everyone loses 3 energy.",
+                        "say": "{{color=[colors.caution]}}Everyone{{/color}} loses 3 energy.",
                         "energy": -3,
                         "all": true
                     }

@@ -34,15 +34,15 @@ label reward_upgrade:
     menu:
         "Choose an upgrade:"
 
-        "{color=[colors.note]}Moves{/color} +1
+        "Moves +1
         {tooltip}Increase your moves from [player.moves_max] to [player.moves_max + 1]":
             $ player.moves_max += 1
 
-        "{color=[colors.note]}Turns{/color} +1
+        "Turns +1
         {tooltip}Increase the number of turns by 1":
             $ player.turns_max += 1
 
-        "{color=[colors.note]}Draw cards{/color} +1
+        "Draw cards +1
         {tooltip}Increase cards per hand to [player.draw_cards + 1] and shop cards from [player.draw_cards + 1]":
             $ player.draw_cards += 1
             $ player.shop_cards += 1
