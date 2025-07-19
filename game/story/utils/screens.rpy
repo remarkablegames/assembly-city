@@ -5,7 +5,7 @@ init python:
 screen stat(name, current, max, color=colors.label):
     text "[name]: {color=[color]}[current]/[max]"
     bar value AnimatedValue(current, max):
-        xsize (350 if renpy.variant("mobile") or renpy.variant("touch") else 300)
+        xsize (360 if renpy.variant("mobile") or renpy.variant("touch") else 300)
 
 
 screen player_money:
