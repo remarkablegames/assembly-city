@@ -15,7 +15,6 @@ jobs:
       - name: Setup Ren'Py
         uses: remarkablegames/setup-renpy@v1
         with:
-          cli-version: 8.3.7
           web: true
 
       - name: Delete unnecessary files
