@@ -1,7 +1,7 @@
 label reward:
 
     if level.current == 1:
-        call reward_settle
+        call reward_deal
 
     elif level.current == 2:
         call reward_focus
@@ -220,17 +220,17 @@ label reward_delay:
     return
 
 
-label reward_settle:
+label reward_deal:
 
     commissioner "There are times when compromise is necessary during a Citizens’ Assembly."
 
     show commissioner smile 1 at left
     with moveinleft
 
-    $ card = Card(image="settle", cost=1, action={"consensus": {"value": -2}, "draw": {"value": 2}, "energy": {"value": 2}})
+    $ card = Card(image="deal", cost=1, action={"consensus": {"value": -2}, "draw": {"value": 2}, "energy": {"value": 2}})
     show screen card(card, 0.75)
 
-    commissioner "Settle lowers consensus, but energizes the participant and allows you to draw cards."
+    commissioner "Deal lowers consensus, but energizes the participant and allows you to draw cards."
 
     menu:
         "Add this card to your deck?"
