@@ -13,11 +13,13 @@ label tutorial:
 
 label tutorial_questions:
 
+    show commissioner smile 1
+
     menu:
         "I’d like to ask..."
 
         "What is a Citizens’ Assembly?":
-            commissioner "It’s a form of deliberative democracy."
+            commissioner @ smile 2 "It’s a form of deliberative democracy."
             commissioner "We invite a group of citizens to discuss policy issues."
             jump tutorial_assembly_questions
 
@@ -25,13 +27,13 @@ label tutorial_questions:
             jump tutorial_how_to_run_assembly
 
         "Nevermind":
-            commissioner @ smile 2 "Are you ready to run your first assembly?"
+            commissioner smile 2 "Are you ready to run your first assembly?"
 
             menu:
                 "Run assembly?"
 
                 "Yes":
-                    commissioner @ smile 3 "Alright, good luck!"
+                    commissioner smile 3 "Alright, good luck!"
                     $ level.next()
                     jump battle
 
@@ -65,7 +67,7 @@ label tutorial_assembly_questions:
 
 label tutorial_how_to_run_assembly:
 
-    commissioner "The goal of an assembly is to learn, deliberate, and decide."
+    commissioner @ smile 2 "The goal of an assembly is to learn, deliberate, and decide."
     commissioner "In the end, we want the citizens to reach a consensus."
     commissioner "Take a look at the screen to your left."
 
@@ -77,7 +79,7 @@ label tutorial_how_to_run_assembly:
     commissioner "Don’t forget to manage the citizens’ energy levels."
     commissioner "If it falls too low, it becomes hard to achieve consensus."
     commissioner "Press {color=[colors.note]}View Deck{/color} to see your cards."
-    commissioner @ smile 2 "Would you like to perform a trial run?"
+    commissioner smile 2 "Would you like to perform a trial run?"
 
     menu:
         "Perform a trial run?"
@@ -92,7 +94,7 @@ label tutorial_how_to_run_assembly:
 
 label tutorial_battle:
 
-    commissioner @ smile 3 "Alright, let’s do it!"
+    commissioner smile 3 "Alright, let’s do it!"
 
     hide commissioner
     show screen tutorial_battle
