@@ -30,9 +30,14 @@ screen player_stats:
 
 screen player_end_turn:
     frame:
-        padding (10, 10) xalign 1.0 yalign 1.0
+        if renpy.variant("mobile") or renpy.variant("touch"):
+            padding (20, 20)
+        else:
+            padding (10, 10)
         textbutton "End Turn":
             action Function(player.end_turn)
+        xalign 1.0
+        yalign 1.0
 
 
 screen player_deck(xalign_pos=0, yalign_pos=0):
