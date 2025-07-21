@@ -190,11 +190,7 @@ init python:
             cards = []
 
             for _ in range(count):
-                if level.current <= 3:
-                    max_cost = 1
-                elif level.current <= 6:
-                    max_cost = 2
-                cost = renpy.random.randint(1, max_cost)
+                cost = renpy.random.randint(1, 1 if level.current < 5 else 2)
 
                 card_type = renpy.random.choice(
                     ["moves"] * (1 if level.current > 1 else 0) +

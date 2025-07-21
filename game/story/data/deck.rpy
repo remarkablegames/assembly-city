@@ -2,9 +2,9 @@ init python:
     class Deck:
         def __init__(self) -> None:
             self.cards = [
+                Card(image="talk", cost=1, action={"consensus": {"value": 3}, "energy": {"value": -2}, "draw": {"value": 0}}),
                 Card(image="talk", cost=1, action={"consensus": {"value": 3}, "energy": {"value": -2}}),
-                Card(image="talk", cost=1, action={"consensus": {"value": 3}, "energy": {"value": -2}}),
-                Card(image="soda", cost=1, action={"energy": {"value": 2}}),
+                Card(image="soda", cost=1, action={"energy": {"value": 2}, "draw": {"value": 0}}),
                 Card(image="soda", cost=1, action={"energy": {"value": 2}}),
                 Card(image="tea", cost=1, action={"draw": {"value": 2}}),
             ]
@@ -43,12 +43,12 @@ init python:
 
             return choices
 
-        def draw_cards(self, count=0) -> None:
+        def draw_cards(self, count: int) -> None:
             """
             Add card(s) to hand.
             """
             if not count:
-                count = player.draw_cards
+                return
 
             for _ in range(count):
                 if not len(self.draw_pile):

@@ -4,7 +4,7 @@ label player_turn:
         $ battle = False
         $ level.end()
 
-    $ deck.draw_cards()
+    $ deck.draw_cards(player.draw_cards)
 
     show screen player_end_turn
 

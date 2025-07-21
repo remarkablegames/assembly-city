@@ -18,8 +18,9 @@ label shop:
                 config.menu_include_disabled = False
                 money -= cost_card_buy
                 player.cards_bought += 1
+                cards = Card.generate(player.shop_cards)
 
-            call screen add_card
+            call screen add_card(cards)
 
         "Upgrade a card (-$[cost_card_upgrade])
         {tooltip}Upgrade 1 card in your deck (max [player.shop_cards] choices)" if money >= cost_card_upgrade:
@@ -66,7 +67,7 @@ label shop:
             jump battle
 
 
-screen add_card:
+screen add_card(cards):
 
     frame:
         modal True
@@ -80,7 +81,7 @@ screen add_card:
 
         hbox:
             spacing 25
-            for card in Card.generate(player.shop_cards):
+            for card in cards:
                 button:
                     action [Function(deck.cards.append, card), Jump("shop")]
                     hover_background colors.shop_card_hover
