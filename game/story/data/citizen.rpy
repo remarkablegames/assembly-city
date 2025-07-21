@@ -40,9 +40,9 @@ init python:
             elif not player.turns:
                 state = "idle"
             elif self.action("consensus") < 0:
-                state = "consensus down"
+                state = "lose consensus"
             elif self.action("energy") < 0:
-                state = "energy down"
+                state = "lose energy"
             else:
                 state = "idle"
             return f"{self.id} {state}"
