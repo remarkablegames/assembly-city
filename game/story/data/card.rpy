@@ -62,9 +62,11 @@ init python:
             for action, data in self.action.items():
                 value = data["value"]
 
-                if value:
-                    label += action.capitalize()
-                    label += f" +{value}" if value > 0 else f" {value}"
+                if not value:
+                    continue
+
+                label += action.capitalize()
+                label += f" +{value}" if value > 0 else f" {value}"
 
                 if data.get("stun"):
                     label += " Stun"
@@ -188,25 +190,42 @@ init python:
             cards = []
 
             for _ in range(count):
-                cost = renpy.random.randint(1, 3)
+                if level.current <= 3:
+                    max_cost = 1
+                elif level.current <= 6:
+                    max_cost = 2
+                cost = renpy.random.randint(1, max_cost)
+
+                card_type = renpy.random.choice(
+                    ["moves"] * (1 if level.current > 1 else 0) +
+                    ["consensus"] +
+                    ["draw"] +
+                    ["energy"] +
+                    []
+                )
 
                 action = {
-                    renpy.random.choice(["consensus", "draw", "energy", "moves"]): {
-                        "value": renpy.random.randint(1, 6),
+                    card_type: {
+                        "value": renpy.random.randint(level.current, max(3, level.current)),
                     },
                 }
 
                 if action.get("consensus"):
                     image = "talk"
-                    action["energy"] = {"value": -renpy.random.randint(1, 3)}
+                    action["energy"] = {"value": -renpy.random.randint(0, 2)}
                 elif action.get("draw"):
                     image = "tea"
+                    action["draw"]["value"] = renpy.random.randint(2, 3) if level.current < 5 else renpy.random.randint(3, 6)
                 elif action.get("energy"):
                     image = "soda"
                 elif action.get("moves"):
                     image = "focus"
-                    action["moves"] = {"value": renpy.random.randint(1, 3)}
-                    cost = renpy.random.randint(0, 2)
+                    action["moves"] = {"value": renpy.random.randint(2, 3)}
+                    cost = renpy.random.randint(1, action["moves"]["value"] - 1)
+                    action["energy"] = {"value": -renpy.random.randint(0, 2)}
+
+                if not action.get("draw") and renpy.random.randint(0, 1):
+                    action["draw"] = {"value": renpy.random.randint(0, 2)}
 
                 card = Card(image=image, cost=cost, action=action)
                 cards.append(card)
