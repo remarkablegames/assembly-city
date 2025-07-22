@@ -42,6 +42,6 @@ image teacher lose consensus = Image("characters/teacher/teacher angry.png", ove
 image teacher lose energy = Image("characters/teacher/teacher tired.png", oversample=oversample)
 
 image trainer hover = Image("characters/trainer/trainer shocked.png", oversample=oversample)
-image trainer idle = Image("characters/trainer/trainer smile.png", oversample=oversample)
+image trainer idle = Image("characters/trainer/trainer delighted.png", oversample=oversample)
 image trainer lose consensus = Image("characters/trainer/trainer angry.png", oversample=oversample)
-image trainer lose energy = Image("characters/trainer/trainer tired.png", oversample=oversample)
+image trainer lose energy = Image("characters/trainer/trainer sleepy.png", oversample=oversample)
