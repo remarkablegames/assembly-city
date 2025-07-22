@@ -34,7 +34,7 @@ image secretary lose energy = Image("characters/secretary/secretary sleepy.png",
 image student hover = Image("characters/student/student shocked.png", oversample=oversample)
 image student idle = Image("characters/student/student smile.png", oversample=oversample)
 image student lose consensus = Image("characters/student/student angry.png", oversample=oversample)
-image student lose energy = Image("characters/student/student tired.png", oversample=oversample)
+image student lose energy = Image("characters/student/student sad.png", oversample=oversample)
 
 image teacher hover = Image("characters/teacher/teacher shocked.png", oversample=oversample)
 image teacher idle = Image("characters/teacher/teacher smile.png", oversample=oversample)
