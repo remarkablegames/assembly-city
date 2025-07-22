@@ -7,7 +7,7 @@ image commissioner lose consensus = Image("characters/commissioner/commissioner.
 image commissioner lose energy = Image("characters/commissioner/commissioner.webp", oversample=oversample)
 
 image detective hover = Image("characters/detective/detective shocked.png", oversample=oversample)
-image detective idle = Image("characters/detective/detective happy.png", oversample=oversample)
+image detective idle = Image("characters/detective/detective talking.png", oversample=oversample)
 image detective lose consensus = Image("characters/detective/detective angry.png", oversample=oversample)
 image detective lose energy = Image("characters/detective/detective tired.png", oversample=oversample)
 
