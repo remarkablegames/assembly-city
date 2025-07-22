@@ -3,6 +3,8 @@ init python:
 
 image commissioner hover = Image("characters/commissioner/commissioner smile 3.webp", oversample=oversample)
 image commissioner idle = Image("characters/commissioner/commissioner smile 1.png", oversample=oversample)
+image commissioner lose consensus = Image("characters/commissioner/commissioner.webp", oversample=oversample)
+image commissioner lose energy = Image("characters/commissioner/commissioner.webp", oversample=oversample)
 
 image detective hover = Image("characters/detective/detective shocked.png", oversample=oversample)
 image detective idle = Image("characters/detective/detective normal.png", oversample=oversample)

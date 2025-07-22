@@ -117,6 +117,10 @@ screen tutorial_battle:
     frame:
         background Solid((0, 0, 0, 200))
         padding (10, 10)
-        text "Drag the card to the person.\n\nPress {color=[colors.note]}End Turn{/color} when out of {color=[colors.note]}Moves{/color}."
+        text """Drag the card to the person.
+
+Press {color=[colors.note]}End Turn{/color} when out of {color=[colors.note]}Moves{/color}.
+
+Press the name to see their next action."""
         xsize 500
         xalign 1.0

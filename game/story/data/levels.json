@@ -7,17 +7,18 @@
                 "name": "Commissioner",
                 "consensus": 0,
                 "consensus_max": 12,
-                "energy": 5,
+                "energy": 4,
                 "energy_max": 5,
                 "actions": [
                     {
                         "say": "The top-left number on the card is the {{color=[colors.note]}}Moves{{/color}} cost."
                     },
                     {
-                        "say": "Hover/press the citizen’s name to see what they will do next."
+                        "say": "A citizen can gain or lose energy per turn.",
+                        "energy": 2
                     },
                     {
-                        "say": "A citizen can gain/lose energy/consensus per turn."
+                        "say": "A citizen can gain or lose consensus per turn."
                     }
                 ]
             }
