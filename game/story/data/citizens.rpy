@@ -108,13 +108,13 @@ init python:
 
                 energy = action.get("energy")
                 if energy:
-                    for citizen in citizens.citizens if action.get("all", False) else [citizen]:
-                        citizen.energize(energy)
+                    for current_citizen in self.citizens if action.get("all", False) else [citizen]:
+                        current_citizen.energize(energy)
 
                 consensus = action.get("consensus")
                 if consensus:
-                    for citizen in citizens.citizens if action.get("all", False) else [citizen]:
-                        citizen.consense(consensus)
+                    for current_citizen in self.citizens if action.get("all", False) else [citizen]:
+                        current_citizen.consense(consensus)
 
                 renpy.show(citizen.image())
                 citizen.actions.append(action)

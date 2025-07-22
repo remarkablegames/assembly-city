@@ -24,12 +24,11 @@ init python:
 
             self.stunned = False
 
-        def action(self, key=""):
+        def action(self, key: str):
             """
             Get first action.
             """
-            action = self.actions[0]
-            return action.get(key, 0) if key else action
+            return self.actions[0].get(key, 0)
 
         def image(self, state="") -> str:
             """
@@ -39,6 +38,8 @@ init python:
                 pass
             elif not player.turns:
                 state = "idle"
+            elif self.stunned:
+                state = "hover"
             elif self.action("consensus") < 0:
                 state = "lose consensus"
             elif self.action("energy") < 0:
