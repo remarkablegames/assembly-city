@@ -15,6 +15,7 @@ This game was made for [Citizens, Assemble!](https://itch.io/jam/citizens-assemb
 Play the game on:
 
 - [remarkablegames](https://remarkablegames.org/assembly-city)
+- [itch.io](https://remarkablegames.itch.io/assembly-city)
 
 ## Credits
 
