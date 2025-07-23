@@ -21,22 +21,26 @@ init python:
             if renpy.variant("mobile") or renpy.variant("touch"):
                 self.label_description_ypos = 220
 
-        def label_size(self, length=0) -> str:
+        def label_size(self, label: str) -> str:
             """
             Get label size.
             """
             size = 1.0
+            length = len(label)
+
+            if length < 5:
+                size = 0.95
+            elif length < 15:
+                size = 0.9
+            elif length < 25:
+                size = 0.85
+            elif length < 35:
+                size = 0.8
+            else:
+                size = 0.75
 
             if renpy.variant("mobile") or renpy.variant("touch"):
-                size = 0.85
-
-            if length:
-                if length < 15:
-                    size *= 0.9
-                elif length < 25:
-                    size *= 0.85
-                else:
-                    size *= 0.8
+                size -= 0.15
 
             return f"{{size=*{size}}}" if not size == 1.0 else ""
 
@@ -44,13 +48,13 @@ init python:
             """
             Name label.
             """
-            return self.label_size() + "{color=[colors.label]}{b}{k=-2}" + self.name.upper()
+            return self.label_size(self.name) + "{color=[colors.label]}{b}{k=-2}" + self.name.upper()
 
         def label_cost(self) -> str:
             """
             Cost label.
             """
-            return self.label_size() + emojis.get(self.cost)
+            return self.label_size(str(self.cost)) + emojis.get(self.cost)
 
         def label_description(self) -> str:
             """
@@ -81,7 +85,7 @@ init python:
 
             label = label.strip()
 
-            return self.label_size(len(label)) + color + label
+            return self.label_size(label) + color + label
 
         @staticmethod
         def label_upgrade(action: str, value=1) -> str:
