@@ -81,7 +81,7 @@ label reward_pizza:
         "No (+$5)
         {tooltip}Sell card and earn money":
             $ money += 5
-            play sound "sound/cash.ogg" volume 0.5
+            queue sound "sound/cash.ogg" volume 0.5
             hide screen card
             commissioner "Alright."
 
@@ -114,7 +114,7 @@ label reward_expert:
         "No (+$5)
         {tooltip}Sell card and earn money":
             $ money += 5
-            play sound "sound/cash.ogg" volume 0.5
+            queue sound "sound/cash.ogg" volume 0.5
             hide screen card
             commissioner "Sounds good."
 
@@ -147,7 +147,7 @@ label reward_vote:
         "No (+$5)
         {tooltip}Sell card and earn money":
             $ money += 5
-            play sound "sound/cash.ogg" volume 0.5
+            queue sound "sound/cash.ogg" volume 0.5
             hide screen card
             commissioner "All good."
 
@@ -180,7 +180,7 @@ label reward_focus:
         "No (+$5)
         {tooltip}Sell card and earn money":
             $ money += 5
-            play sound "sound/cash.ogg" volume 0.5
+            queue sound "sound/cash.ogg" volume 0.5
             hide screen card
             commissioner "Makes sense."
 
@@ -213,7 +213,7 @@ label reward_delay:
         "No (+$5)
         {tooltip}Sell card and earn money":
             $ money += 5
-            play sound "sound/cash.ogg" volume 0.5
+            queue sound "sound/cash.ogg" volume 0.5
             hide screen card
             commissioner "Understood."
 
@@ -246,7 +246,7 @@ label reward_deal:
         "No (+$5)
         {tooltip}Sell card and earn money":
             $ money += 5
-            play sound "sound/cash.ogg" volume 0.5
+            queue sound "sound/cash.ogg" volume 0.5
             hide screen card
             commissioner "Noted."
 

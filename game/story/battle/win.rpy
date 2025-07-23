@@ -44,6 +44,6 @@ label win:
     commissioner "[dialogue]"
     commissioner "You earned $[base_reward] + $[bonus] (bonus)."
 
-    play sound "sound/cash.ogg" volume 0.5
+    queue sound "sound/cash.ogg" volume 0.5
 
     jump reward
