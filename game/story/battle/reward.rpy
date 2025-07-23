@@ -72,7 +72,7 @@ label reward_pizza:
 
         "Yes":
             $ deck.cards.append(card)
-            queue sound "sound/draw.ogg"
+            play audio "sound/draw.ogg"
             hide screen card
             show commissioner smile 1 at center
             with moveinright
@@ -81,7 +81,7 @@ label reward_pizza:
         "No (+$5)
         {tooltip}Sell card and earn money":
             $ money += 5
-            queue sound "sound/cash.ogg" volume 0.5
+            play audio "sound/cash.ogg" volume 0.5
             hide screen card
             commissioner "Alright."
 
@@ -105,7 +105,7 @@ label reward_expert:
 
         "Yes":
             $ deck.cards.append(card)
-            queue sound "sound/draw.ogg"
+            play audio "sound/draw.ogg"
             hide screen card
             show commissioner smile 1 at center
             with moveinright
@@ -114,7 +114,7 @@ label reward_expert:
         "No (+$5)
         {tooltip}Sell card and earn money":
             $ money += 5
-            queue sound "sound/cash.ogg" volume 0.5
+            play audio "sound/cash.ogg" volume 0.5
             hide screen card
             commissioner "Sounds good."
 
@@ -138,7 +138,7 @@ label reward_vote:
 
         "Yes":
             $ deck.cards.append(card)
-            queue sound "sound/draw.ogg"
+            play audio "sound/draw.ogg"
             hide screen card
             show commissioner smile 1 at center
             with moveinright
@@ -147,7 +147,7 @@ label reward_vote:
         "No (+$5)
         {tooltip}Sell card and earn money":
             $ money += 5
-            queue sound "sound/cash.ogg" volume 0.5
+            play audio "sound/cash.ogg" volume 0.5
             hide screen card
             commissioner "All good."
 
@@ -171,7 +171,7 @@ label reward_focus:
 
         "Yes":
             $ deck.cards.append(card)
-            queue sound "sound/draw.ogg"
+            play audio "sound/draw.ogg"
             hide screen card
             show commissioner smile 1 at center
             with moveinright
@@ -180,7 +180,7 @@ label reward_focus:
         "No (+$5)
         {tooltip}Sell card and earn money":
             $ money += 5
-            queue sound "sound/cash.ogg" volume 0.5
+            play audio "sound/cash.ogg" volume 0.5
             hide screen card
             commissioner "Makes sense."
 
@@ -204,7 +204,7 @@ label reward_delay:
 
         "Yes":
             $ deck.cards.append(card)
-            queue sound "sound/draw.ogg"
+            play audio "sound/draw.ogg"
             hide screen card
             show commissioner smile 1 at center
             with moveinright
@@ -213,7 +213,7 @@ label reward_delay:
         "No (+$5)
         {tooltip}Sell card and earn money":
             $ money += 5
-            queue sound "sound/cash.ogg" volume 0.5
+            play audio "sound/cash.ogg" volume 0.5
             hide screen card
             commissioner "Understood."
 
@@ -237,7 +237,7 @@ label reward_deal:
 
         "Yes":
             $ deck.cards.append(card)
-            queue sound "sound/draw.ogg"
+            play audio "sound/draw.ogg"
             hide screen card
             show commissioner smile 1 at center
             with moveinright
@@ -246,7 +246,7 @@ label reward_deal:
         "No (+$5)
         {tooltip}Sell card and earn money":
             $ money += 5
-            queue sound "sound/cash.ogg" volume 0.5
+            play audio "sound/cash.ogg" volume 0.5
             hide screen card
             commissioner "Noted."
 

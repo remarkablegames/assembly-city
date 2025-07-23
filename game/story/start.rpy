@@ -1,12 +1,14 @@
 # Should the user be allowed to rollback the game? If set to False, the user cannot interactively rollback.
 define config.rollback_enabled = False
 
+
 init python:
     def say_allow_dismiss() -> bool:
         renpy.sound.play("ui/drop_004.ogg")
         return True
 
     config.say_allow_dismiss = say_allow_dismiss
+
 
 label start:
 
