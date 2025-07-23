@@ -17,6 +17,13 @@ Play the game on:
 - [remarkablegames](https://remarkablegames.org/assembly-city)
 - [itch.io](https://remarkablegames.itch.io/assembly-city)
 
+## How To Play
+
+- Drag the card to the citizen.
+- Click on the citizen name to see their next move.
+- Press **End Turn** when out of **Moves**.
+- The objective is to reach the **Consensus** goal.
+
 ## Credits
 
 ### Art
