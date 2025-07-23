@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.0.1](https://github.com/remarkablegames/assembly-city/compare/v1.0.0...v1.0.1) (2025-07-23)
+
+
+### Bug Fixes
+
+* **battle:** change from play to queue sound for cash ([c78082c](https://github.com/remarkablegames/assembly-city/commit/c78082c713d5bb364b81fbc7c9b5164fe3760d2d))
+* **battle:** fix audio in reward and win ([27eec87](https://github.com/remarkablegames/assembly-city/commit/27eec87f9c4a23e1050475c4d34407406b7d5b57))
+* **card:** update label size ([2ebc592](https://github.com/remarkablegames/assembly-city/commit/2ebc59232c3e055a13804fdfbadf04db1b94cd7c))
+* **citizen:** remove stunned image expression ([cfa44b2](https://github.com/remarkablegames/assembly-city/commit/cfa44b2ae7796feb68dedfc5cb62146d71c21c60))
+
 ## [1.0.0](https://github.com/remarkablegames/assembly-city/compare/v1.0.0-alpha...v1.0.0) (2025-07-23)
 
 ### Features
