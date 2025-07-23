@@ -38,8 +38,6 @@ init python:
                 pass
             elif not player.turns:
                 state = "idle"
-            elif self.stunned:
-                state = "hover"
             elif self.action("consensus") < 0:
                 state = "lose consensus"
             elif self.action("energy") < 0:
