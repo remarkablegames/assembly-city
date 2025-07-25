@@ -4,6 +4,7 @@ init python:
             self.citizens = []
             self.count = 0
 
+
         def generate(self, citizens: list) -> None:
             """
             Generate citizens.
@@ -13,6 +14,7 @@ init python:
 
             for citizen in citizens:
                 self.citizens.append(Citizen(**citizen))
+
 
         def show(self) -> None:
             """
@@ -25,6 +27,7 @@ init python:
 
             renpy.with_statement(dissolve)
 
+
         def hide(self, citizen: Citizen) -> None:
             """
             Hide citizen.
@@ -33,17 +36,20 @@ init python:
             renpy.with_statement(dissolve)
             renpy.hide_screen(f"citizen_stats{citizens.index(citizen)}")
 
+
         def get(self, citizen_id: str) -> Citizen:
             """
             Get citizen by id.
             """
-            return find_by_id(self.citizens, citizen_id)
+            return find(self.citizens, {"id": citizen_id})
+
 
         def index(self, citizen: Citizen) -> int:
             """
             Get citizen index.
             """
             return self.citizens.index(citizen)
+
 
         def xalign_position(self, citizen: Citizen) -> float:
             """
@@ -93,6 +99,7 @@ init python:
 
             return xalign_position
 
+
         def turn(self) -> None:
             """
             Citizen turn.
@@ -121,11 +128,13 @@ init python:
 
             self.end_turn()
 
+
         def end_turn(self) -> None:
             """
             Citizen end turn.
             """
             for citizen in self.citizens:
                 citizen.stunned = False
+
 
 default citizens = Citizens()

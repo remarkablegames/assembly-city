@@ -14,11 +14,13 @@ init python:
             self.disabled_pile = []
             self.hand = []
 
+
         def get_card(self, card_id: str) -> Card:
             """
             Get card by id.
             """
-            return find_by_id(self.cards, card_id)
+            return find(self.cards, {"id": card_id})
+
 
         def get_cards(self, count: int, upgrade="") -> Card:
             """
@@ -43,6 +45,7 @@ init python:
 
             return choices
 
+
         def draw_cards(self, count: int) -> None:
             """
             Add card(s) to hand.
@@ -62,6 +65,7 @@ init python:
                 renpy.sound.queue("sound/draw.ogg")
                 self.hand.append(self.draw_pile.pop(0))
 
+
         def discard_card(self, card: Card) -> None:
             """
             Discard card.
@@ -72,12 +76,14 @@ init python:
             else:
                 self.discard_pile.append(card)
 
+
         def discard_hand(self) -> None:
             """
             Discard hand at end of turn.
             """
             while len(self.hand):
                 self.discard_pile.append(self.hand.pop(0))
+
 
         def shuffle(self) -> None:
             """
@@ -88,5 +94,6 @@ init python:
             self.discard_pile = []
             self.disabled_pile = []
             self.hand = []
+
 
 default deck = Deck()
