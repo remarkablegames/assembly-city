@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.2](https://github.com/remarkablegames/assembly-city/compare/v1.0.1...v1.0.2) (2025-07-25)
+
+
+### Bug Fixes
+
+* **data:** reset deck and player on level restart ([f4edb36](https://github.com/remarkablegames/assembly-city/commit/f4edb367d83eb0c378aaf25f9a459b150f3ed73e))
+* **story:** improve tutorial level ([6eaba7c](https://github.com/remarkablegames/assembly-city/commit/6eaba7c544a203bfefefe2d06d406f0e3585f18a))
+
 ## [1.0.1](https://github.com/remarkablegames/assembly-city/compare/v1.0.0...v1.0.1) (2025-07-23)
 
 
