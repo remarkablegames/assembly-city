@@ -1,10 +1,12 @@
 init python:
     from json import load
 
+
     class Level:
         _data = load(renpy.file("story/data/levels.json"))
         battle = False
         current = 0
+
 
         def data(self) -> dict:
             """
@@ -20,6 +22,7 @@ init python:
                 return sum(list(map(lambda citizen: citizen.consensus, citizens.citizens)))
             if value == "goal":
                 return self.data().get("consensus_goal", 0)
+
 
         def start(self) -> None:
             """
@@ -44,6 +47,7 @@ init python:
 
             deck.shuffle()
 
+
         def end(self) -> None:
             """
             End level.
@@ -54,6 +58,7 @@ init python:
             else:
                 renpy.jump("win")
 
+
         def next(self, level=0) -> None:
             """
             Increment level.
@@ -63,10 +68,14 @@ init python:
             else:
                 self.current += 1
 
+
         def restart(self) -> None:
             """
             Restart level.
             """
             self.current = 0
+            deck = Deck()
+            player = Player()
+
 
 default level = Level()

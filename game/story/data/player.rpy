@@ -1,17 +1,19 @@
 init python:
     class Player:
-        # battle
-        draw_cards = 3
-        moves = 3
-        moves_max = 3
-        turns = 0
-        turns_max = 0
+        def __init__(self) -> None:
+            # battle
+            self.draw_cards = 3
+            self.moves = 3
+            self.moves_max = 3
+            self.turns = 0
+            self.turns_max = 0
 
-        # shop
-        cards_bought = 0
-        cards_removed = 0
-        cards_upgraded = 0
-        shop_cards = 2
+            # shop
+            self.cards_bought = 0
+            self.cards_removed = 0
+            self.cards_upgraded = 0
+            self.shop_cards = 2
+
 
         def end_turn(self) -> None:
             """
@@ -21,5 +23,6 @@ init python:
             deck.discard_hand()
             renpy.hide_screen("player_end_turn")
             renpy.jump("citizen_turn")
+
 
 default player = Player()
