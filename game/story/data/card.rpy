@@ -1,6 +1,7 @@
 init python:
     from uuid import uuid4
 
+
     class Card:
         label_description_ypos = 230
         label_name_ypos = 5
@@ -8,11 +9,11 @@ init python:
         height = 365
         offset = 80
 
+
         def __init__(self, **kwargs) -> None:
             self.id = str(uuid4())
             self.cost = kwargs.get("cost", 0)
             self.action = kwargs.get("action", {})
-            self.value = kwargs.get("value", 0)
 
             image = kwargs.get('image')
             self.image = f"cards/{image}.png"
@@ -20,6 +21,7 @@ init python:
 
             if renpy.variant("mobile") or renpy.variant("touch"):
                 self.label_description_ypos = 220
+
 
         def label_size(self, label: str) -> str:
             """
@@ -44,17 +46,20 @@ init python:
 
             return f"{{size=*{size}}}" if not size == 1.0 else ""
 
+
         def label_name(self) -> str:
             """
             Name label.
             """
             return self.label_size(self.name) + "{color=[colors.label]}{b}{k=-2}" + self.name.upper()
 
+
         def label_cost(self) -> str:
             """
             Cost label.
             """
             return self.label_size(str(self.cost)) + emojis.get(self.cost)
+
 
         def label_description(self) -> str:
             """
@@ -87,6 +92,7 @@ init python:
 
             return self.label_size(label) + color + label
 
+
         @staticmethod
         def label_upgrade(action: str, value=1) -> str:
             """
@@ -118,6 +124,7 @@ init python:
                 else:
                     self.action[action] = {"value": value}
 
+
         def get_xpos(self) -> int:
             """
             Calculate x-position.
@@ -127,17 +134,20 @@ init python:
             x += deck.hand.index(self) * self.offset
             return int(x)
 
+
         def get_ypos(self) -> int:
             """
             Calculate y-position.
             """
             return config.screen_height - self.height
 
+
         def get_pos(self) -> int:
             """
             Calculate xy-position.
             """
             return self.get_xpos(), self.get_ypos()
+
 
         def use(self, citizen) -> None:
             """
@@ -185,6 +195,7 @@ init python:
                         citizen.energize(energy["value"], self.name.lower())
 
             deck.discard_card(self)
+
 
         @staticmethod
         def generate(count=1) -> list:
