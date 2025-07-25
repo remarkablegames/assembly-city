@@ -63,9 +63,9 @@ label reward_pizza:
     with moveinleft
 
     $ card = Card(image="pizza", cost=2, action={"energy": {"value": 2, "all": True}, "draw": {"value": 2}})
-    show screen card(card, 0.75)
+    show screen card(card, 0.65)
 
-    commissioner "Pizza can raise the energy of all participants."
+    commissioner @ smile 2 "{b}Pizza{/b} raises the energy of all citizens."
 
     menu:
         "Add this card to your deck?"
@@ -96,9 +96,9 @@ label reward_expert:
     with moveinleft
 
     $ card = Card(image="expert", cost=2, action={"consensus": {"value": 4, "stun": True}, "energy": {"value": -2}})
-    show screen card(card, 0.75)
+    show screen card(card, 0.65)
 
-    commissioner "An expert can stun a participant with facts and logic."
+    commissioner @ smile 2 "{b}Expert{/b} can stun a citizen with facts and logic."
 
     menu:
         "Add this card to your deck?"
@@ -129,9 +129,9 @@ label reward_vote:
     with moveinleft
 
     $ card = Card(image="vote", cost=2, action={"consensus": {"value": 3, "all": True}, "energy": {"value": -2, "all": True}})
-    show screen card(card, 0.75)
+    show screen card(card, 0.65)
 
-    commissioner "Voting can help the group come to a decision."
+    commissioner @ smile 2 "{b}Vote{/b} helps the group come to a decision."
 
     menu:
         "Add this card to your deck?"
@@ -162,9 +162,9 @@ label reward_focus:
     with moveinleft
 
     $ card = Card(image="focus", cost=1, action={"moves": {"value": 2}, "energy": {"value": -1}})
-    show screen card(card, 0.75)
+    show screen card(card, 0.65)
 
-    commissioner "Focus takes a bit of energy, but gives you an extra move."
+    commissioner @ smile 2 "{b}Focus{/b} takes a bit of energy, but gives you an extra move."
 
     menu:
         "Add this card to your deck?"
@@ -195,9 +195,9 @@ label reward_delay:
     with moveinleft
 
     $ card = Card(image="delay", cost=2, action={"turns": {"value": 1}, "energy": {"value": -2}})
-    show screen card(card, 0.75)
+    show screen card(card, 0.65)
 
-    commissioner "Delay buys you extra turns, but you can only play it once per assembly."
+    commissioner @ smile 2 "{b}Delay{/b} buys you extra turns, but you can only play it once per assembly."
 
     menu:
         "Add this card to your deck?"
@@ -228,9 +228,9 @@ label reward_deal:
     with moveinleft
 
     $ card = Card(image="deal", cost=1, action={"consensus": {"value": -2}, "draw": {"value": 2}, "energy": {"value": 2}})
-    show screen card(card, 0.75)
+    show screen card(card, 0.65)
 
-    commissioner "Deal lowers consensus, but energizes the participant and allows you to draw cards."
+    commissioner @ smile 2 "{b}Deal{/b} lowers consensus, but energizes the citizen and allows you to draw cards."
 
     menu:
         "Add this card to your deck?"
