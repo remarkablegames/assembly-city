@@ -74,10 +74,38 @@ label tutorial_how_to_run_assembly:
     show screen player_stats
 
     commissioner "You have a number of {color=[colors.note]}Turns{/color} to reach the {color=[colors.note]}Consensus{/color} goal."
-    commissioner "Each turn, you draw cards into your hand and spend {color=[colors.note]}Moves{/color} to play them."
-    commissioner "Play your cards right and you can raise the citizens’ consensus."
-    commissioner "Don’t forget to manage the citizens’ energy levels."
-    commissioner "If it falls too low, it becomes hard to achieve consensus."
+    commissioner "Each turn, you draw [player.draw_cards] cards into your hand and spend {color=[colors.note]}Moves{/color} to play them."
+
+    show commissioner smile 1 at right
+    with moveinright
+
+    $ card = find(deck.cards, {"name": "Talk"})
+    show screen card(card, 0.35)
+    play audio "sound/draw.ogg"
+
+    commissioner @ smile 2 "{b}Talk{/b} increases a citizen’s {color=[colors.note]}Consensus{/color}."
+    commissioner "But it can only be played if the citizen has enough {color=[colors.note]}Energy{/color}."
+    commissioner "It costs 1 {color=[colors.note]}Move{/color} to play."
+
+    $ card = find(deck.cards, {"name": "Soda"})
+    show screen card(card, 0.35)
+    play audio "sound/draw.ogg"
+
+    commissioner @ smile 2 "{b}Soda{/b} increases a citizen’s {color=[colors.note]}Energy{/color}."
+    commissioner "It costs 1 {color=[colors.note]}Move{/color} to play."
+
+    $ card = find(deck.cards, {"name": "Tea"})
+    show screen card(card, 0.35)
+    play audio "sound/draw.ogg"
+
+    commissioner @ smile 2 "{b}Tea{/b} allows you to draw cards."
+    commissioner "It costs 1 {color=[colors.note]}Move{/color} to play."
+
+    hide screen card
+
+    show commissioner smile 1 at center
+    with moveinleft
+
     commissioner "Press {color=[colors.note]}View Deck{/color} to see your cards."
     commissioner smile 2 "Would you like to perform a trial run?"
 
@@ -108,7 +136,7 @@ label tutorial_battle_end:
     show commissioner smile 1 with dissolve
 
     commissioner "All assembly participants are fairly compensated for their time."
-    commissioner "I included a bonus if you go above the consensus goal."
+    commissioner @ smile 3 "I included a bonus if you go beyond the {color=[colors.note]}Consensus{/color} goal."
 
     jump tutorial_questions
 
@@ -117,10 +145,10 @@ screen tutorial_battle:
     frame:
         background Solid((0, 0, 0, 200))
         padding (10, 10)
-        text """Drag the card to the person.
+        text """Drag the card to the citizen.
 
-Press {color=[colors.note]}End Turn{/color} when out of {color=[colors.note]}Moves{/color}.
+Press the name to see the citizen’s next action.
 
-Press the name to see their next action."""
+Press {color=[colors.note]}End Turn{/color} when out of {color=[colors.note]}Moves{/color}."""
         xsize 500
         xalign 1.0
