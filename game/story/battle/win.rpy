@@ -1,8 +1,10 @@
 init python:
     from math import ceil
 
+
 default money = 0
 default bonus = 0
+
 
 label win:
 
