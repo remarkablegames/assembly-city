@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/remarkablegames/assembly-city/compare/v1.0.2...v1.0.3) (2025-07-29)
+
+
+### Bug Fixes
+
+* **story:** improve tutorial dialogue and level ([aa7f3e7](https://github.com/remarkablegames/assembly-city/commit/aa7f3e7f912b581f5d5802e1f86a307c2d1ff368))
+
 ## [1.0.2](https://github.com/remarkablegames/assembly-city/compare/v1.0.1...v1.0.2) (2025-07-25)
 
 
