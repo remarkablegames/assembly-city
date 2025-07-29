@@ -10,12 +10,14 @@
 
 ⚖️ Roguelike deck-building card game about facilitating a Citizens' Assembly.
 
-This game was made for the [Citizens, Assemble!](https://itch.io/jam/citizens-assemble) game jam. Read the [Game Design Document](https://docs.google.com/document/d/1PNHJMR5JvdEDIB-idLO4p4yMY9trMl1CO2deXqtjP_8/edit) and [blog post](https://remarkablegames.org/posts/assembly-city/).
+This game was made for the [Citizens, Assemble!](https://itch.io/jam/citizens-assemble) game jam.
 
 Play the game on:
 
 - [remarkablegames](https://remarkablegames.org/assembly-city)
 - [itch.io](https://remarkablegames.itch.io/assembly-city)
+
+Read the [Game Design Document](https://docs.google.com/document/d/1PNHJMR5JvdEDIB-idLO4p4yMY9trMl1CO2deXqtjP_8/edit) and [blog post](https://remarkablegames.org/posts/assembly-city/). Watch the [YouTube demo](https://youtu.be/R2FQy8yn7dM).
 
 ## How To Play
 
