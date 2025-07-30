@@ -13,17 +13,18 @@ label shop:
         "What do you want to do?"
 
         "Buy a card (-$[cost_card_buy])
-        {tooltip}Add 1 card to your deck ([player.shop_cards] choices)" if money >= cost_card_buy:
+        {tooltip}Add 1 card to your deck ([player.shop_cards] choices, {i}nonrefundable{/i})" if money >= cost_card_buy:
             python:
                 config.menu_include_disabled = False
                 money -= cost_card_buy
                 player.cards_bought += 1
                 cards = Card.generate(player.shop_cards)
 
+            play audio "sound/cash.ogg" volume 0.5
             call screen add_card(cards)
 
         "Upgrade a card (-$[cost_card_upgrade])
-        {tooltip}Upgrade 1 card in your deck (max [player.shop_cards] choices)" if money >= cost_card_upgrade:
+        {tooltip}Upgrade 1 card in your deck ([player.shop_cards] choices, {i}nonrefundable{/i})" if money >= cost_card_upgrade:
             python:
                 config.menu_include_disabled = False
                 money -= cost_card_upgrade
@@ -47,15 +48,17 @@ label shop:
                 else:
                     card_value = 1
 
+            play audio "sound/cash.ogg" volume 0.5
             call screen upgrade_card(card_type, card_value)
 
         "Remove a card (-$[cost_card_remove])
-        {tooltip}Remove 1 card from your deck" if money >= cost_card_remove:
+        {tooltip}Remove 1 card from your deck ({i}nonrefundable{/i})" if money >= cost_card_remove:
             python:
                 config.menu_include_disabled = False
                 money -= cost_card_remove
                 player.cards_removed += 1
 
+            play audio "sound/cash.ogg" volume 0.5
             call screen remove_card
 
         "Run assembly":
@@ -83,7 +86,11 @@ screen add_card(cards):
             spacing 25
             for card in cards:
                 button:
-                    action [Function(deck.cards.append, card), Jump("shop")]
+                    action [
+                        Function(deck.cards.append, card),
+                        Queue("audio", "sound/draw.ogg"),
+                        Jump("shop"),
+                    ]
                     hover_background colors.shop_card_hover
                     use card_frame(card)
 
@@ -112,7 +119,11 @@ screen upgrade_card(card_type, card_value):
 
             for card in deck.get_cards(player.shop_cards, card_type):
                 button:
-                    action [Function(card.upgrade, card_type, card_value), Jump("shop")]
+                    action [
+                        Function(card.upgrade, card_type, card_value),
+                        Queue("audio", "sound/draw.ogg"),
+                        Jump("shop"),
+                    ]
                     hover_background colors.shop_card_hover
                     use card_frame(card)
 
@@ -141,7 +152,11 @@ screen remove_card:
 
                 for card in deck.cards:
                     button:
-                        action [Function(deck.cards.remove, card), Jump("shop")]
+                        action [
+                            Function(deck.cards.remove, card),
+                            Queue("audio", "sound/draw.ogg"),
+                            Jump("shop"),
+                        ]
                         hover_background colors.shop_card_hover
                         use card_frame(card)
 
