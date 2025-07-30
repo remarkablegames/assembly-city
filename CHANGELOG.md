@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.4](https://github.com/remarkablegames/assembly-city/compare/v1.0.3...v1.0.4) (2025-07-30)
+
+
+### Bug Fixes
+
+* **shop:** improve tooltip text and play audio ([904c7f9](https://github.com/remarkablegames/assembly-city/commit/904c7f9125d2d438de0a91d8d7a80e34dd8f9270))
+
 ## [1.0.3](https://github.com/remarkablegames/assembly-city/compare/v1.0.2...v1.0.3) (2025-07-29)
 
 
