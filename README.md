@@ -22,9 +22,9 @@ Read the [Game Design Document](https://docs.google.com/document/d/1PNHJMR5JvdED
 ## How To Play
 
 - Drag the card to the citizen.
-- Click on the citizen name to see their next move.
+- Hover over the citizen name to see his or her next move.
 - Press **End Turn** when out of **Moves**.
-- The objective is to reach the **Consensus** goal.
+- Reach the **Consensus** goal (on the bottom-left).
 
 ## Credits
 
