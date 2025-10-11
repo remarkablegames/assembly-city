@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.1](https://github.com/remarkablegames/assembly-city/compare/v1.1.0...v1.1.1) (2025-10-11)
+
+
+### Bug Fixes
+
+* fix web build ([6a44145](https://github.com/remarkablegames/assembly-city/commit/6a4414521a025da47d8db3e90ba3f4d861669534))
+* **tutorial:** remove broken link for comic book explainer ([4022b37](https://github.com/remarkablegames/assembly-city/commit/4022b37da52356a01c8c8cafd1073f8d74143ada))
+
 ## [1.1.0](https://github.com/remarkablegames/assembly-city/compare/v1.0.4...v1.1.0) (2025-10-11)
 
 
