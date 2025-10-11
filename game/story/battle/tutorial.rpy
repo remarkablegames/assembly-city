@@ -85,21 +85,21 @@ label tutorial_how_to_run_assembly:
 
     commissioner @ smile 2 "{b}Talk{/b} increases a citizen’s {color=[colors.note]}Consensus{/color} by 3."
     commissioner "But the citizen must have enough {color=[colors.note]}Energy{/color} for you to use it."
-    commissioner "It costs 1 {color=[colors.note]}Move{/color} to play."
+    commissioner "It costs [emojis.get(1)] {color=[colors.note]}Move{/color} to play."
 
     $ card = find(deck.cards, {"name": "Soda"})
     show screen card(card, 0.35)
     play audio "sound/draw.ogg"
 
     commissioner @ smile 2 "{b}Soda{/b} increases a citizen’s {color=[colors.note]}Energy{/color} by 2."
-    commissioner "It costs 1 {color=[colors.note]}Move{/color} to play."
+    commissioner "It costs [emojis.get(1)] {color=[colors.note]}Move{/color} to play."
 
     $ card = find(deck.cards, {"name": "Tea"})
     show screen card(card, 0.35)
     play audio "sound/draw.ogg"
 
     commissioner @ smile 2 "{b}Tea{/b} draws 2 cards into your hand."
-    commissioner "It costs 1 {color=[colors.note]}Move{/color} to play."
+    commissioner "It costs [emojis.get(1)] {color=[colors.note]}Move{/color} to play."
 
     hide screen card
 
