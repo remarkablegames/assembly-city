@@ -57,8 +57,7 @@ label tutorial_assembly_questions:
             jump tutorial_assembly_questions
 
         "Where can I learn more about citizens assemblies?":
-            commissioner @ smile 2 "You can learn more about citizens assemblies in this {a=https://oneworldornone.world/the-comic-book-explainer}comic book{/a}."
-            commissioner "Alternatively, you can check out this helpful {a=https://assemblyexplainer.com/}explainer{/a}."
+            commissioner @ smile 2 "You can check out this helpful {a=https://assemblyexplainer.com/}explainer{/a}."
             jump tutorial_assembly_questions
 
         "Nevermind":
