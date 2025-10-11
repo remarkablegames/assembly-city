@@ -21,7 +21,7 @@ label shop:
                 cards = Card.generate(player.shop_cards)
 
             play audio "sound/cash.ogg" volume 0.5
-            call screen add_card(cards)
+            call screen card_add(cards)
 
         "Upgrade a card (-$[cost_card_upgrade])
         {tooltip}Upgrade 1 card in your deck ([player.shop_cards] choices, {i}nonrefundable{/i})" if money >= cost_card_upgrade:
@@ -49,7 +49,7 @@ label shop:
                     card_value = 1
 
             play audio "sound/cash.ogg" volume 0.5
-            call screen upgrade_card(card_type, card_value)
+            call screen card_upgrade(card_type, card_value)
 
         "Remove a card (-$[cost_card_remove])
         {tooltip}Remove 1 card from your deck ({i}nonrefundable{/i})" if money >= cost_card_remove:
@@ -59,7 +59,7 @@ label shop:
                 player.cards_removed += 1
 
             play audio "sound/cash.ogg" volume 0.5
-            call screen remove_card
+            call screen card_remove
 
         "Run assembly":
             python:
@@ -70,7 +70,7 @@ label shop:
             jump battle
 
 
-screen add_card(cards):
+screen card_add(cards):
 
     frame:
         modal True
@@ -95,14 +95,10 @@ screen add_card(cards):
                     use card_frame(card)
 
         null height 25
-
-        frame:
-            xalign 0.5
-            textbutton "Skip":
-                action Jump("shop")
+        use shop_return
 
 
-screen upgrade_card(card_type, card_value):
+screen card_upgrade(card_type, card_value):
 
     frame:
         modal True
@@ -128,14 +124,10 @@ screen upgrade_card(card_type, card_value):
                     use card_frame(card)
 
         null height 25
-
-        frame:
-            xalign 0.5
-            textbutton "Skip":
-                action Jump("shop")
+        use shop_return
 
 
-screen remove_card():
+screen card_remove():
 
     frame:
         modal True
@@ -161,8 +153,12 @@ screen remove_card():
                         use card_frame(card)
 
         null height 50
+        use shop_return
 
-        frame:
-            xalign 0.5
-            textbutton "Skip":
-                action Jump("shop")
+
+screen shop_return():
+
+    frame:
+        xalign 0.5
+        textbutton "Skip":
+            action Jump("shop")
