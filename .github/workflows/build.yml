@@ -21,8 +21,8 @@ jobs:
       - name: Delete unnecessary files
         run: >
           find .
-          ! -name 'progressive_download.txt'
-          ! -name 'web-presplash.jpg'
+          ! -name "progressive_download.txt"
+          ! -name "web-*"
           ! -path "*/.*"
           ! -path "*game*"
           -delete
@@ -42,5 +42,5 @@ jobs:
         if: github.ref_name == 'master'
         uses: actions/upload-artifact@v4
         with:
-          name: web_build
+          name: web
           path: web
