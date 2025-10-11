@@ -32,6 +32,12 @@ jobs:
           renpy-launcher web_build . --destination web
           cp web-presplash.jpg web/web-presplash.jpg
 
+      - name: Update presplash image
+        run: |
+          rm web/web-presplash.jpg
+          mv web-presplash.webp web
+          grep -lr web-presplash.jpg web | xargs sed -i 's/web-presplash.jpg/web-presplash.webp/g'
+
       - name: Deploy
         if: github.ref_name == 'master'
         uses: remarkablemark/gitploy-action@v1
