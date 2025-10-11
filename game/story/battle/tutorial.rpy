@@ -141,7 +141,7 @@ label tutorial_battle_end:
     jump tutorial_questions
 
 
-screen tutorial_battle:
+screen tutorial_battle():
     frame:
         background Solid((0, 0, 0, 200))
         padding (10, 10)

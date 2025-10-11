@@ -135,7 +135,7 @@ screen upgrade_card(card_type, card_value):
                 action Jump("shop")
 
 
-screen remove_card:
+screen remove_card():
 
     frame:
         modal True

@@ -10,9 +10,11 @@ label player_turn:
 
     jump player_hand
 
+
 label player_hand:
 
     call screen player_hand
+
 
 init python:
     def ondrag(drags, drop) -> None:
@@ -38,7 +40,8 @@ init python:
     def onhovered(draggable) -> None:
         draggable.top()
 
-screen player_hand:
+
+screen player_hand():
     draggroup:
         for citizen in citizens.citizens:
             drag:
