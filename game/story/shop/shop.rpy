@@ -48,8 +48,10 @@ label shop:
                 else:
                     card_value = 1
 
+                cards = deck.get_cards(player.shop_cards, card_type)
+
             play audio "sound/cash.ogg" volume 0.5
-            call screen card_upgrade(card_type, card_value)
+            call screen card_upgrade(cards, card_type, card_value)
 
         "Remove a card (-$[cost_card_remove])
         {tooltip}Remove 1 card from your deck ({i}nonrefundable{/i})" if money >= cost_card_remove:
@@ -98,7 +100,7 @@ screen card_add(cards):
         use shop_return
 
 
-screen card_upgrade(card_type, card_value):
+screen card_upgrade(cards, card_type, card_value):
 
     frame:
         modal True
@@ -113,7 +115,7 @@ screen card_upgrade(card_type, card_value):
         hbox:
             spacing 25
 
-            for card in deck.get_cards(player.shop_cards, card_type):
+            for card in cards:
                 button:
                     action [
                         Function(card.upgrade, card_type, card_value),
