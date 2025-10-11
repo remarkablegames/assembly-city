@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0](https://github.com/remarkablegames/assembly-city/compare/v1.0.4...v1.1.0) (2025-10-11)
+
+
+### Features
+
+* **characters:** play callback for narrator and dismiss ([813f227](https://github.com/remarkablegames/assembly-city/commit/813f227f2a06f624e2bff7045f5b60c43956eeab))
+* **tutorial:** use number emoji for move ([4077ddb](https://github.com/remarkablegames/assembly-city/commit/4077ddbbca23ad988f8a6ac5f4d06b797cfa5cd4))
+
 ## [1.0.4](https://github.com/remarkablegames/assembly-city/compare/v1.0.3...v1.0.4) (2025-07-30)
 
 
