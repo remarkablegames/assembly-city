@@ -8,14 +8,14 @@ screen stat(name, current, max, color=colors.label):
         xsize (400 if renpy.variant("mobile") or renpy.variant("touch") else 300)
 
 
-screen player_money:
+screen player_money():
     frame:
         background Solid((0, 0, 0, 100))
         text "Money: $[money]"
         xpos (40 if renpy.variant("web") else 0)
 
 
-screen player_stats:
+screen player_stats():
     vbox:
         yalign 1.0
         use player_deck
@@ -28,7 +28,7 @@ screen player_stats:
                 use stat("Consensus", level.consensus("current"), level.consensus("goal"))
 
 
-screen player_end_turn:
+screen player_end_turn():
     frame:
         if renpy.variant("mobile") or renpy.variant("touch"):
             padding (20, 20)
@@ -48,7 +48,7 @@ screen player_deck(xalign_pos=0, yalign_pos=0):
         xalign xalign_pos yalign yalign_pos
 
 
-screen tooltip:
+screen tooltip():
     $ tooltip = GetTooltip()
     if tooltip:
         nearrect:
@@ -97,7 +97,7 @@ screen citizen_stats4(citizen, xalign_pos):
     use citizen_stats(citizen, xalign_pos)
 
 
-screen draw_pile:
+screen draw_pile():
 
     dismiss action Hide("draw_pile")
 
