@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.3](https://github.com/remarkablegames/assembly-city/compare/v1.1.2...v1.1.3) (2025-10-12)
+
+
+### Bug Fixes
+
+* **story:** stop dialogue audio when starting level ([5f25f0a](https://github.com/remarkablegames/assembly-city/commit/5f25f0ad64c31eecdf461e8ff398c74d915f75d6))
+
 ## [1.1.2](https://github.com/remarkablegames/assembly-city/compare/v1.1.1...v1.1.2) (2025-10-12)
 
 
