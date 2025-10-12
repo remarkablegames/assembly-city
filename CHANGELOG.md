@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/remarkablegames/assembly-city/compare/v1.1.1...v1.1.2) (2025-10-12)
+
+
+### Bug Fixes
+
+* **shop:** maintain state of screen during card upgrade ([71407de](https://github.com/remarkablegames/assembly-city/commit/71407de3f059514cfd2434ba91828874e351f75f))
+
 ## [1.1.1](https://github.com/remarkablegames/assembly-city/compare/v1.1.0...v1.1.1) (2025-10-11)
 
 
