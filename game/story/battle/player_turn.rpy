@@ -15,31 +15,6 @@ label player_hand:
     call screen player_hand
 
 
-init python:
-    def ondrag(drags, drop) -> None:
-        drag = drags[0]
-        card_id = drag.drag_name
-        card = deck.get_card(card_id)
-
-        if not drop:
-            drag.snap(card.get_xpos(), card.get_ypos(), 0.2)
-            return
-
-        character_id = drop.drag_name
-        if character_id:
-            citizen = citizens.get(character_id)
-            card.use(citizen)
-
-        # snap unused card back
-        if card in deck.hand:
-            drag.snap(card.get_xpos(), card.get_ypos(), 0.2)
-
-        renpy.jump("player_hand")
-
-    def onhovered(draggable) -> None:
-        draggable.top()
-
-
 screen player_hand():
     draggroup:
         for citizen in citizens.citizens:
@@ -63,3 +38,25 @@ screen player_hand():
                 pos card.get_pos()
 
                 use card_frame(card, draggable)
+
+
+init python:
+    def ondrag(drags, drop) -> None:
+        drag = drags[0]
+        card_id = drag.drag_name
+        card = deck.get_card(card_id)
+
+        if not drop:
+            drag.snap(card.get_xpos(), card.get_ypos(), 0.2)
+            return
+
+        character_id = drop.drag_name
+        if character_id:
+            citizen = citizens.get(character_id)
+            card.use(citizen)
+
+        # snap unused card back
+        if card in deck.hand:
+            drag.snap(card.get_xpos(), card.get_ypos(), 0.2)
+
+        renpy.jump("player_hand")
