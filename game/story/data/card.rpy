@@ -15,7 +15,7 @@ init python:
             self.cost = kwargs.get("cost", 0)
             self.action = kwargs.get("action", {})
 
-            image = kwargs.get('image')
+            image = kwargs.get("image")
             self.image = f"cards/{image}.png"
             self.name = image.capitalize()
 
@@ -101,11 +101,12 @@ init python:
             if action == "all":
                 return f"Select a card to apply effects to {{b}}{{color=[colors.note]}}all{{/color}}{{/b}} citizens:"
             elif action == "cost":
-                return f"Select a card to decrease {{b}}{{color=[colors.note]}}cost{{/color}}{{/b}} by {{b}}{emojis.get(1)}{{/b}}:"
+                return f"Select a card to decrease {{b}}{{color=[colors.note]}}cost{{/color}}{{/b}} by {emojis.get(1)}:"
             elif action == "stun":
                 return f"Select a card to {{b}}{{color=[colors.note]}}stun{{/color}}{{/b}} an citizen:"
             else:
                 return f"Select a card to increase {{b}}{{color=[colors.note]}}{action}{{/color}}{{/b}} by {{b}}{value}{{/b}}:"
+
 
         def upgrade(self, action: str, value=1) -> None:
             """
@@ -142,7 +143,7 @@ init python:
             return config.screen_height - self.height
 
 
-        def get_pos(self) -> int:
+        def get_pos(self):
             """
             Calculate xy-position.
             """

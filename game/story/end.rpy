@@ -62,8 +62,6 @@ label the_end:
     scene black
     with fade
 
-    $ level.restart()
-
     "{b}End{/b}."
 
     return

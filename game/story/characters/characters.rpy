@@ -10,7 +10,7 @@ init python:
             renpy.music.stop(channel=MUSIC_CHANNEL_DIALOGUE, fadeout=0.2)
 
     def dismiss_callback() -> bool:
-        renpy.play("ui/click_003.ogg")
+        renpy.sound.play("ui/drop_004.ogg")
         return True
 
     config.say_allow_dismiss = dismiss_callback

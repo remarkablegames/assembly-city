@@ -1,12 +1,6 @@
-init python:
-    def say_allow_dismiss() -> bool:
-        renpy.sound.play("ui/drop_004.ogg")
-        return True
-
-    config.say_allow_dismiss = say_allow_dismiss
-
-
 label start:
+
+    $ level.restart()
 
     play music "music/BGM8 Harukaze.ogg" volume 0.5 fadein 1
 

@@ -1,3 +1,6 @@
+default player = Player()
+
+
 init python:
     class Player:
         def __init__(self) -> None:
@@ -23,6 +26,3 @@ init python:
             deck.discard_hand()
             renpy.hide_screen("player_end_turn")
             renpy.jump("citizen_turn")
-
-
-default player = Player()
