@@ -1,3 +1,6 @@
+default citizens = Citizens()
+
+
 init python:
     class Citizens:
         def __init__(self) -> None:
@@ -135,6 +138,3 @@ init python:
             """
             for citizen in self.citizens:
                 citizen.stunned = False
-
-
-default citizens = Citizens()

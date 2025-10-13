@@ -1,13 +1,12 @@
 init python:
     from math import ceil
-    from uuid import uuid4
+
 
     class Citizen():
-        ypos = 170
+        YPOS = 170
+
 
         def __init__(self, **kwargs) -> None:
-            self.id = str(uuid4())
-
             self.name = kwargs.get("name", "")
             self.id = kwargs.get("id", self.name.lower())
 
@@ -24,11 +23,13 @@ init python:
 
             self.stunned = False
 
+
         def action(self, key: str):
             """
             Get first action.
             """
             return self.actions[0].get(key, 0)
+
 
         def image(self, state="") -> str:
             """
@@ -46,6 +47,7 @@ init python:
                 state = "idle"
             return f"{self.id} {state}"
 
+
         def say(self) -> str:
             """
             Get say.
@@ -53,6 +55,7 @@ init python:
             if self.stunned:
                 return f"{self.name} is stunned!"
             return self.action("say").format(name=self.name)
+
 
         def consense(self, value: int) -> None:
             """
@@ -72,6 +75,7 @@ init python:
 
             renpy.show(self.image(), at_list=[shake])
 
+
         def energize(self, value: int, sound="powerup") -> None:
             """
             Update energy.
@@ -90,6 +94,7 @@ init python:
                 self.energy = self.energy_max
             elif self.energy < 0:
                 self.energy = 0
+
 
         def stun(self, stunned: bool) -> None:
             """

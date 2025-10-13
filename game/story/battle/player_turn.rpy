@@ -26,7 +26,7 @@ screen player_hand():
                 idle_child Solid((0, 0, 0, 0), xsize=citizen.width, ysize=citizen.height)
                 selected_idle_child citizen.image("hover")
                 xalign citizens.xalign_position(citizen)
-                ypos citizen.ypos
+                ypos citizen.YPOS
 
         for card in deck.hand:
             drag:
