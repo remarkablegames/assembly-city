@@ -3,6 +3,9 @@ define config.rollback_enabled = False
 
 
 init python:
+    MUSIC_CHANNEL_UI="ui"
+    renpy.music.register_channel(MUSIC_CHANNEL_UI, "sound", loop=False)
+
     def tooltip_custom_text_tag(tag, argument):
         return [(renpy.TEXT_TAG, "tooltip")]
 
