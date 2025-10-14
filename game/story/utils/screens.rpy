@@ -1,7 +1,3 @@
-init python:
-    citizen_name_ypos = 628
-
-
 screen stat(name, current, max, color=colors.label):
     text "[name]: {color=[color]}[current]/[max]"
     bar value AnimatedValue(current, max):
@@ -67,13 +63,16 @@ screen citizen_stats(citizen, xalign_pos):
             use stat("Consensus", citizen.consensus, citizen.consensus_max)
             null height 10
             use stat("Energy", citizen.energy, citizen.energy_max)
+
     button:
         action NullAction()
         background Solid((0, 0, 0, 200))
         text "[citizen.name]" xalign 0.5
         tooltip citizen.say()
-        xalign xalign_pos ypos citizen_name_ypos
+        xalign xalign_pos
+        ypos Citizen.NAME_YPOS
         xsize 400
+
     use tooltip
 
 

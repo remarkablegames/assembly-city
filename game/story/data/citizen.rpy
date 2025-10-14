@@ -3,6 +3,7 @@ init python:
 
 
     class Citizen():
+        NAME_YPOS = 628
         YPOS = 170
 
 
