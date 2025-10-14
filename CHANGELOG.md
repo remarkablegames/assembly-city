@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.5](https://github.com/remarkablegames/assembly-city/compare/v1.1.4...v1.1.5) (2025-10-14)
+
+
+### Bug Fixes
+
+* **story:** remove redundant fade after lose ([ef1df6b](https://github.com/remarkablegames/assembly-city/commit/ef1df6b1c68c391137968fe016e1f3c26734bb5a))
+
 ## [1.1.4](https://github.com/remarkablegames/assembly-city/compare/v1.1.3...v1.1.4) (2025-10-13)
 
 
