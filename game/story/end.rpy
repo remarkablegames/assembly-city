@@ -22,8 +22,7 @@ label good_ending:
 
     play music "music/BGM6 Graduation.ogg" volume 0.5 fadein 1
 
-    scene bg courtyard2 day
-    with fade
+    scene bg courtyard2 day with fade
 
     show commissioner smile 1
     with dissolve
@@ -59,8 +58,7 @@ label bad_ending:
 
 label the_end:
 
-    scene black
-    with fade
+    scene black with fade
 
     "{b}End{/b}."
 

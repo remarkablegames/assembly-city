@@ -23,6 +23,4 @@ label lose:
     if level.current == 0:
         jump tutorial_battle_end
 
-    scene black with fade
-
     jump end
