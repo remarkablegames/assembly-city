@@ -1,5 +1,6 @@
 label start:
 
+    $ quick_menu = False # hide bottom menu
     $ level.restart()
 
     play music "music/BGM8 Harukaze.ogg" volume 0.5 fadein 1
