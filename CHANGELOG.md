@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/remarkablegames/assembly-city/compare/v1.1.5...v1.2.0) (2025-10-18)
+
+
+### Features
+
+* **start:** hide quick_menu ([41f2244](https://github.com/remarkablegames/assembly-city/commit/41f224458c1a8286afbe48f44db16dae3ea511ef))
+
 ## [1.1.5](https://github.com/remarkablegames/assembly-city/compare/v1.1.4...v1.1.5) (2025-10-14)
 
 
