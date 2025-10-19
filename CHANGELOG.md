@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/remarkablegames/assembly-city/compare/v1.2.0...v1.2.1) (2025-10-19)
+
+
+### Bug Fixes
+
+* **reward:** correct draw cards tooltip text ([a61221b](https://github.com/remarkablegames/assembly-city/commit/a61221be9b23ab4bdd14bf9b8e260c67556041d8))
+
 ## [1.2.0](https://github.com/remarkablegames/assembly-city/compare/v1.1.5...v1.2.0) (2025-10-18)
 
 
