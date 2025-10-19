@@ -43,7 +43,7 @@ label reward_upgrade:
             $ player.turns_max += 1
 
         "Draw cards +1
-        {tooltip}Increase cards per hand to [player.draw_cards + 1] and shop cards from [player.draw_cards + 1]":
+        {tooltip}Increase cards per hand to [player.draw_cards + 1] and shop cards to [player.shop_cards + 1]":
             $ player.draw_cards += 1
             $ player.shop_cards += 1
 
