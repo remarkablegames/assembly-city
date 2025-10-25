@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.2](https://github.com/remarkablegames/assembly-city/compare/v1.2.1...v1.2.2) (2025-10-25)
+
+
+### Performance Improvements
+
+* **screens:** optimize tooltip with const text ([314a6ca](https://github.com/remarkablegames/assembly-city/commit/314a6cad837fd3b3ebf6e1da4a18725bd798c946))
+
 ## [1.2.1](https://github.com/remarkablegames/assembly-city/compare/v1.2.0...v1.2.1) (2025-10-19)
 
 
