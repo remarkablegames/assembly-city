@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.3](https://github.com/remarkablegames/assembly-city/compare/v1.2.2...v1.2.3) (2025-10-25)
+
+
+### Build System
+
+* **icon:** add Windows and Macintosh icons ([9406913](https://github.com/remarkablegames/assembly-city/commit/9406913fc4b8e3a2f0764487e6788962ca200040))
+
 ## [1.2.2](https://github.com/remarkablegames/assembly-city/compare/v1.2.1...v1.2.2) (2025-10-25)
 
 
