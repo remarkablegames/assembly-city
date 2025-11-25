@@ -4,7 +4,7 @@
 
 # Assembly City
 
-![release](https://img.shields.io/github/v/release/remarkablegames/assembly-city)
+[![release](https://img.shields.io/github/v/release/remarkablegames/assembly-city)](https://github.com/remarkablegames/assembly-city/releases)
 [![build](https://github.com/remarkablegames/assembly-city/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablegames/assembly-city/actions/workflows/build.yml)
 [![lint](https://github.com/remarkablegames/assembly-city/actions/workflows/lint.yml/badge.svg)](https://github.com/remarkablegames/assembly-city/actions/workflows/lint.yml)
 
