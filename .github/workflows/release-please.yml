@@ -62,7 +62,7 @@ jobs:
           grep -lr web-presplash.jpg ../dists/web | xargs sed -i 's/web-presplash.jpg/web-presplash.webp/g'
 
       - name: Setup butler
-        uses: remarkablegames/setup-butler@v2
+        uses: remarkablegames/setup-butler@v3
 
       # https://www.renpy.org/doc/html/build.html#var-build.itch_channels
       - name: Upload to itch.io
