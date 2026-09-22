@@ -133,7 +133,3 @@ renpy game lint
 
 - [Citizens' Assembly Explained](https://assemblyexplainer.com/)
 - [Assembling an Assembly Guide](https://assemblyguide.demnext.org/)
-
-## License
-
-[MIT](LICENSE)
