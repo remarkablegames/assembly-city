@@ -12,11 +12,17 @@
 
 This game was made for the [Citizens, Assemble!](https://itch.io/jam/citizens-assemble) game jam.
 
-Play the game on:
+Play in your browser:
 
 - [Wavedash](https://wavedash.com/games/assembly-city)
 - [itch.io](https://remarkablegames.itch.io/assembly-city)
 - [remarkablegames](https://remarkablegames.org/assembly-city)
+
+Or download for desktop:
+
+- [Windows](https://github.com/remarkablegames/assembly-city/releases/latest/download/win.zip)
+- [Mac](https://github.com/remarkablegames/assembly-city/releases/latest/download/mac.zip)
+- [Linux](https://github.com/remarkablegames/assembly-city/releases/latest/download/linux.tar.bz2)
 
 Read the [Game Design Document](https://docs.google.com/document/d/1PNHJMR5JvdEDIB-idLO4p4yMY9trMl1CO2deXqtjP_8/edit) and [blog post](https://remarkablegames.org/posts/assembly-city/). Watch the [YouTube video](https://youtu.be/R2FQy8yn7dM).
 
