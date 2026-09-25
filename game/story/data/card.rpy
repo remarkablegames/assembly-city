@@ -16,7 +16,7 @@ init python:
             self.action = kwargs.get("action", {})
 
             image = kwargs.get("image")
-            self.image = f"cards/{image}.png"
+            self.image = f"cards/{image}.webp"
             self.name = image.capitalize()
 
             if renpy.variant("mobile") or renpy.variant("touch"):
