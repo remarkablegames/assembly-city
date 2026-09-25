@@ -26,6 +26,14 @@ Read the [Game Design Document](https://docs.google.com/document/d/1PNHJMR5JvdED
 - Press **End Turn** when out of **Moves**.
 - Reach the **Consensus** goal (on the bottom-left).
 
+## Features
+
+- **Turn-based assemblies** against citizens with deterministic action loops. Hover over a name to see the next move.
+- **Card play**: build consensus, ration citizen energy, draw cards, gain extra moves/turns, or stun citizens.
+- **Roguelike run** across 10 levels. Earn money and rewards. Shop between battles to buy, upgrade, or remove cards.
+- **Tight resources**: reach the consensus goal before you run out of turns. Earn bonus cash for exceeding it.
+- **Tutorial** with good and bad endings.
+
 ## Credits
 
 ### Art
