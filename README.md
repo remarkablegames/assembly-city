@@ -14,6 +14,7 @@ This game was made for the [Citizens, Assemble!](https://itch.io/jam/citizens-as
 
 Play the game on:
 
+- [Wavedash](https://wavedash.com/games/assembly-city)
 - [itch.io](https://remarkablegames.itch.io/assembly-city)
 - [remarkablegames](https://remarkablegames.org/assembly-city)
 
