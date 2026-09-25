@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.4](https://github.com/remarkablegames/assembly-city/compare/v1.2.3...v1.2.4) (2026-09-25)
+
+
+### Performance Improvements
+
+* **images:** convert png to webp ([8cf0988](https://github.com/remarkablegames/assembly-city/commit/8cf098838ba6ce767ec51d49aa4e6d331a0e3eec))
+
 ## [1.2.3](https://github.com/remarkablegames/assembly-city/compare/v1.2.2...v1.2.3) (2025-10-25)
 
 
